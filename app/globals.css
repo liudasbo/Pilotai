@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-dark: #1a2332;
+  --accent-orange: #e85d04;
+  --neutral-100: #F8F9FA;
+}
+
+body {
+  color: var(--text-dark, #212529);
+  background: #fff;
+}
