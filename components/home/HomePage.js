@@ -12,7 +12,7 @@ import WhyLithuaniaSection from "@/components/home/WhyLithuaniaSection";
 
 export default function HomePage() {
   return (
-    <div className="w-full relative bg-white overflow-x-hidden overflow-y-auto flex flex-col items-stretch justify-start leading-[normal] tracking-[normal] text-left text-[25px] text-white font-jost">
+    <div className="page-root">
       <HeroSection />
       <BecomePilotSection />
       <UltralightLicenseSection />

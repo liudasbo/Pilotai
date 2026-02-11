@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Button from "@/components/ui/Button";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function TheClubSection() {
   return (
-    <section className="self-stretch flex items-center justify-center py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px] box-border gap-10 desktop:gap-[60px] max-w-full flex-col desktop:flex-row">
+    <section id="the-club" className="self-stretch flex items-center justify-center py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px] box-border gap-10 desktop:gap-[60px] max-w-full flex-col desktop:flex-row">
       <Image
         className="w-full max-w-[550px] relative max-h-full object-cover"
         width={550}
@@ -14,9 +16,9 @@ export default function TheClubSection() {
       <section className="w-full max-w-[486px] flex flex-col items-start gap-8 desktop:gap-9 text-left text-num-37 text-black font-jost">
         <div className="self-stretch flex flex-col items-start gap-6">
           <div className="self-stretch flex flex-col items-start gap-6">
-            <h2 className="section-heading self-stretch relative flex items-center">
+            <SectionHeading className="self-stretch relative flex items-center">
               The club
-            </h2>
+            </SectionHeading>
             <div className="text-section-body w-full max-w-[448.8px] relative flex items-center">
               Pilotai Club brings together a select circle of ambitious,
               high-caliber individuals united by a shared passion for excellence,
@@ -50,11 +52,11 @@ export default function TheClubSection() {
             </div>
           </div>
         </div>
-        <button className="cta-button-base cta-button-accent pl-[41px] pr-10 flex flex-col items-start">
+        <Button variant="accent" className="pl-[41px] pr-10 flex flex-col items-start">
           <div className="relative text-left">
             View More
           </div>
-        </button>
+        </Button>
       </section>
     </section>
   );

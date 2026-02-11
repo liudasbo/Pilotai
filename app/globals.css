@@ -15,6 +15,10 @@ body {
 }
 
 @layer components {
+  .page-root {
+    @apply w-full relative bg-white overflow-x-hidden overflow-y-auto flex flex-col items-stretch justify-start leading-[normal] tracking-[normal] text-left text-[25px] text-white font-jost;
+  }
+
   .section-container {
     @apply w-full max-w-[1274px] mx-auto;
   }

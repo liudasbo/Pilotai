@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Button from "@/components/ui/Button";
+import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function BecomePilotSection() {
   return (
     <section className="w-full shrink-0 py-16 sm:py-20 desktop:py-[110px] px-4 sm:px-6 desktop:px-[60px]">
-      <div className="section-container flex flex-col items-center gap-10 desktop:flex-row desktop:items-start desktop:justify-between desktop:gap-16">
+      <Container className="flex flex-col items-center gap-10 desktop:flex-row desktop:items-start desktop:justify-between desktop:gap-16">
         <div className="hidden desktop:flex desktop:order-1 justify-center desktop:justify-start desktop:pt-[97px]">
           <Image
             className="w-[150px] sm:w-[180px] desktop:w-[193px] relative h-auto object-cover"
@@ -26,9 +29,9 @@ export default function BecomePilotSection() {
             src="/images/Logo-symbol.svg"
           />
           <div className="self-stretch flex flex-col items-center gap-6">
-            <h2 className="section-heading self-stretch relative">
+            <SectionHeading className="self-stretch relative">
               Become a Pilot in Lithuania
-            </h2>
+            </SectionHeading>
             <div className="text-section-body w-full max-w-[521.5px] relative flex items-center justify-center">
               Experience unique 20-day journey in Lithuania that blends aviation
               training, premium comfort, and memorable adventures. This program
@@ -36,11 +39,11 @@ export default function BecomePilotSection() {
               enjoying a refined and exciting getaway.
             </div>
           </div>
-          <button className="cta-button-base cta-button-dark pl-[41px] pr-10 flex flex-col items-start">
+          <Button className="pl-[41px] pr-10 flex flex-col items-start">
             <div className="relative text-left">
               See the package
             </div>
-          </button>
+          </Button>
         </section>
         <div className="order-2 desktop:hidden w-full flex items-center justify-center gap-6">
           <Image
@@ -73,7 +76,7 @@ export default function BecomePilotSection() {
             src="/images/Left-img@2x.png"
           />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

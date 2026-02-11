@@ -2,7 +2,8 @@ import Image from "next/image";
 
 export default function Footer({ className = "" }) {
   return (
-    <section
+    <footer
+      id="contacts"
       className={`self-stretch flex flex-col items-center text-left text-[21px] text-white font-jost bg-darkslategray-200 ${className}`}
     >
       <div className="self-stretch flex flex-col desktop:flex-row desktop:items-start desktop:justify-between py-16 sm:py-20 desktop:py-[124px] px-4 sm:px-6 desktop:px-num-119 gap-12 desktop:gap-5">
@@ -110,6 +111,6 @@ export default function Footer({ className = "" }) {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

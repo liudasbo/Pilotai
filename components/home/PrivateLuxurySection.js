@@ -1,18 +1,20 @@
 import Image from "next/image";
+import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function PrivateLuxurySection() {
   return (
     <section className="w-full bg-gray-300 shrink-0 flex flex-col items-center py-16 sm:py-20 desktop:py-[98px] px-4 sm:px-6 desktop:px-[99px] box-border">
       <div className="w-full flex items-start justify-center py-0 px-0 box-border max-w-full">
-        <div className="section-container flex flex-col items-start gap-8 desktop:gap-9">
+        <Container className="flex flex-col items-start gap-8 desktop:gap-9">
           <section className="flex flex-col items-start text-left text-num-13 text-gray-200 font-jost">
             <div className="self-stretch relative tracking-[0.46px] leading-[26px] font-medium">
               Hand-selected residences, tailored to each client
             </div>
             <div className="w-full max-w-[652px] flex flex-col items-start gap-4 text-num-37 text-gainsboro-100 font-jost">
-              <h2 className="section-heading relative">
+              <SectionHeading className="relative">
                 Private Luxury Living
-              </h2>
+              </SectionHeading>
               <div className="self-stretch relative text-num-16 leading-num-24 font-jost text-gray-100">
                 Each participant stays in premium apartments selected to match
                 their lifestyle and privacy expectations.
@@ -57,7 +59,7 @@ export default function PrivateLuxurySection() {
               </section>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </section>
   );
