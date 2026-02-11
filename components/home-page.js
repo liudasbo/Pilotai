@@ -1,6 +1,6 @@
 import Image from "next/image";
 import FrameComponent from "./frame-component";
-import Footer from "./footer";
+import Footer from "./Footer";
 
 export default function HomePage() {
   return (
