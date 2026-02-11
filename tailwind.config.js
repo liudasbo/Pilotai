@@ -1,36 +1,74 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        "primary-dark": "#1a2332",
-        "primary-dark-alt": "#252d3d",
-        "accent-orange": "#e85d04",
-        "accent-orange-hover": "#d35400",
-        "neutral-100": "#F8F9FA",
-        "neutral-200": "#e9ecef",
-        "section-light": "#F8F9FA",
-        "text-dark": "#212529",
-        "text-muted": "#6c757d",
-      },
-      fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-      },
-      fontSize: {
-        "section-label": ["0.75rem", { letterSpacing: "0.2em", lineHeight: "1.2" }],
-        "heading-hero": ["3.5rem", { lineHeight: "1.1", fontWeight: "700" }],
-        "heading-section": ["2.5rem", { lineHeight: "1.2", fontWeight: "700" }],
-        "heading-sub": ["1.5rem", { lineHeight: "1.3" }],
-        body: ["1rem", { lineHeight: "1.6" }],
-        "body-sm": ["0.875rem", { lineHeight: "1.5" }],
+        "neutral-100": "#f8f9fa",
+        blanchedalmond: "#e7d9be",
+        gray: {
+          100: "#fcfcfc",
+          200: "#808080",
+          300: "#171717",
+          400: "rgba(255, 255, 255, 0.3)",
+        },
+        gainsboro: {
+          100: "#e6e6e6",
+          200: "rgba(217, 217, 217, 0.25)",
+        },
+        whitesmoke: { 100: "#f1f2f3" },
+        darkslategray: {
+          100: "#474747",
+          200: "#263c54",
+          300: "#333",
+        },
+        chocolate: {
+          100: "#cc6e36",
+          200: "#b3541c",
+        },
+        silver: "#b2bdc2",
+        slategray: "#647881",
       },
       spacing: {
-        "section-x": "clamp(1.5rem, 5vw, 4rem)",
-        "section-y": "clamp(3rem, 6vw, 5rem)",
+        "num-1512": "1512px",
+        "num-140_6": "140.6px",
+        "num-402": "402px",
+        "num-23": "23px",
+        "num-22": "22px",
+      },
+      fontFamily: {
+        jost: "Jost",
+        "zt-nature": "ZT Nature",
+        "playfair-display": "Playfair Display",
+        "red-hat-display": "Red Hat Display",
+        "albert-sans": "Albert Sans",
+      },
+      padding: {
+        "num-0": "0px",
+        "num-14": "14px",
+        "num-20": "20px",
+        "num-119": "119px",
+      },
+      fontSize: {
+        "num-13": "13px",
+        "num-37": "37px",
+        "num-16": "16px",
+      },
+      lineHeight: {
+        "num-23": "23px",
+        "num-25": "25px",
+        "num-42": "42px",
+        "num-24": "24px",
+        "num-15_6": "15.6px",
+        "num-22": "22px",
+      },
+      letterSpacing: {
+        "num-0_56": "0.56px",
+        "num-0_39": "0.39px",
+        "num-0_24": "0.24px",
+      },
+      screens: {
+        lg: { raw: "screen and (max-width: 1200px)" },
       },
     },
   },
