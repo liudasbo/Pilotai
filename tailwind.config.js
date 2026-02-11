@@ -30,18 +30,13 @@ module.exports = {
         slategray: "#647881",
       },
       spacing: {
-        "num-1512": "1512px",
         "num-140_6": "140.6px",
         "num-402": "402px",
         "num-23": "23px",
         "num-22": "22px",
       },
       fontFamily: {
-        jost: "Jost",
-        "zt-nature": "ZT Nature",
-        "playfair-display": "Playfair Display",
-        "red-hat-display": "Red Hat Display",
-        "albert-sans": "Albert Sans",
+        jost: ["var(--font-jost)", "Jost", "system-ui", "sans-serif"],
       },
       padding: {
         "num-0": "0px",
@@ -69,6 +64,7 @@ module.exports = {
       },
       screens: {
         lg: { raw: "screen and (max-width: 1200px)" },
+        desktop: "1024px",
       },
     },
   },
