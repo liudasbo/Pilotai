@@ -63,7 +63,6 @@ module.exports = {
         "num-0_24": "0.24px",
       },
       screens: {
-        lg: { raw: "screen and (max-width: 1200px)" },
         desktop: "1024px",
       },
     },

@@ -8,6 +8,42 @@ body {
   font-family: var(--font-jost), "Jost", system-ui, sans-serif;
 }
 
+@layer utilities {
+  .text-section-body {
+    @apply text-num-16 leading-num-24 font-jost text-darkslategray-100;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply w-full max-w-[1274px] mx-auto;
+  }
+
+  .section-heading {
+    @apply m-0 text-[30px] leading-[36px] desktop:text-num-37 tracking-num-0_56 desktop:leading-num-42 uppercase font-medium;
+  }
+
+  .cta-button-base {
+    @apply cursor-pointer border-none py-num-14 text-num-13 tracking-num-0_39 leading-num-15_6 uppercase font-medium font-jost text-white;
+  }
+
+  .cta-button-dark {
+    @apply bg-black hover:bg-darkslategray-300;
+  }
+
+  .cta-button-accent {
+    @apply bg-chocolate-100 hover:bg-chocolate-200;
+  }
+
+  .nav-link-base {
+    @apply text-white text-num-13 leading-num-23 uppercase font-medium hover:opacity-90;
+  }
+
+  .social-link {
+    @apply h-full inline-flex items-center px-2 leading-[13.2px] font-medium hover:opacity-80;
+  }
+}
+
 @keyframes ticker-right-to-left {
   0% {
     transform: translateX(0);

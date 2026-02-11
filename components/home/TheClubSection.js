@@ -14,16 +14,16 @@ export default function TheClubSection() {
       <section className="w-full max-w-[486px] flex flex-col items-start gap-8 desktop:gap-9 text-left text-num-37 text-black font-jost">
         <div className="self-stretch flex flex-col items-start gap-6">
           <div className="self-stretch flex flex-col items-start gap-6">
-            <h2 className="m-0 self-stretch relative text-[30px] leading-[36px] desktop:text-[length:inherit] tracking-num-0_56 desktop:leading-num-42 uppercase font-medium font-[inherit] flex items-center">
+            <h2 className="section-heading self-stretch relative flex items-center">
               The club
             </h2>
-            <div className="w-full max-w-[448.8px] relative text-num-16 leading-num-24 font-jost text-darkslategray-100 flex items-center">
+            <div className="text-section-body w-full max-w-[448.8px] relative flex items-center">
               Pilotai Club brings together a select circle of ambitious,
               high-caliber individuals united by a shared passion for excellence,
               aviation, and extraordinary experiences.
             </div>
           </div>
-          <div className="self-stretch flex flex-col sm:flex-row items-start pt-num-0 px-num-0 pb-[13px] box-border gap-8 sm:gap-12 desktop:gap-16 text-num-16 font-jost">
+          <div className="self-stretch flex flex-col sm:flex-row items-start pt-0 px-0 pb-[13px] box-border gap-8 sm:gap-12 desktop:gap-16 text-num-16 font-jost">
             <div className="flex flex-col items-start gap-8 desktop:gap-12">
               <div className="flex items-center">
                 <div className="w-[199px] relative tracking-num-0_24 leading-num-24 uppercase font-medium flex items-center shrink-0">
@@ -50,8 +50,8 @@ export default function TheClubSection() {
             </div>
           </div>
         </div>
-        <button className="cursor-pointer border-none py-num-14 pl-[41px] pr-10 bg-chocolate-100 flex flex-col items-start hover:bg-chocolate-200">
-          <div className="relative text-num-13 tracking-num-0_39 leading-num-15_6 uppercase font-medium font-jost text-white text-left">
+        <button className="cta-button-base cta-button-accent pl-[41px] pr-10 flex flex-col items-start">
+          <div className="relative text-left">
             View More
           </div>
         </button>

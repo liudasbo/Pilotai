@@ -12,15 +12,15 @@ export default function BristellSection() {
           alt=""
           src="/images/Frame-7654767@2x.png"
         />
-        <h2 className="m-0 w-full max-w-[287.6px] relative text-[28px] leading-[34px] desktop:text-[length:inherit] tracking-[0.47px] desktop:leading-9 uppercase font-medium font-jost flex items-center z-[1] shrink-0">
+        <h2 className="m-0 w-full max-w-[287.6px] relative text-[28px] leading-[34px] desktop:text-[31px] tracking-[0.47px] desktop:leading-9 uppercase font-medium font-jost flex items-center z-[1] shrink-0">
           You will fly with Bristell
         </h2>
-        <div className="flex items-start pt-num-0 px-num-0 pb-[13.5px] shrink-0 text-[17px]">
+        <div className="flex items-start pt-0 px-0 pb-[13.5px] shrink-0 text-[17px]">
           <div className="h-num-23 w-[163.4px] relative leading-num-23 flex items-center z-[1]">
             Air crafrs
           </div>
         </div>
-        <div className="w-[76px] h-[15.6px] flex items-start py-num-0 px-num-0 box-border z-[1] shrink-0 text-num-13">
+        <div className="w-[76px] h-[15.6px] flex items-start py-0 px-0 box-border z-[1] shrink-0 text-num-13">
           <div className="mt-[-1px] flex flex-col items-start gap-px shrink-0">
             <div className="w-[85px] h-4 relative tracking-[0.26px] leading-num-15_6 uppercase font-medium inline-block">
               know more
@@ -30,7 +30,7 @@ export default function BristellSection() {
         </div>
       </div>
       <Image
-        className="h-[680px] sm:h-[820px] desktop:h-[977px] w-[640px] sm:w-[780px] desktop:w-[945px] absolute m-0 top-[calc(50%_-_340px)] sm:top-[calc(50%_-_420px)] desktop:top-[calc(50%_-_486.5px)] left-[calc(50%_-_320px)] sm:left-[calc(50%_-_390px)] desktop:left-[calc(50%_-_469px)] z-[2] shrink-0"
+        className="h-[680px] sm:h-[820px] desktop:h-[977px] w-[640px] sm:w-[780px] desktop:w-[945px] absolute m-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] shrink-0"
         width={945}
         height={977}
         sizes="100vw"

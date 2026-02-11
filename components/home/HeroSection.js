@@ -3,7 +3,7 @@ import Header from "@/components/layout/Header";
 
 export default function HeroSection() {
   return (
-    <main className="w-full min-h-[920px] sm:min-h-[800px] desktop:min-h-[900px] bg-blanchedalmond flex flex-col items-start pt-num-0 px-num-0 box-border relative isolate">
+    <main className="w-full min-h-[920px] sm:min-h-[800px] desktop:min-h-[900px] bg-blanchedalmond flex flex-col items-start pt-0 px-0 box-border relative isolate">
       <Image
         className="w-full h-full absolute m-0 top-[0px] left-[0px] object-cover shrink-0"
         width={1512}
@@ -33,7 +33,7 @@ export default function HeroSection() {
             <div className="h-px w-full max-w-[830px] bg-gainsboro-200 flex flex-col items-start">
               <div className="w-[344px] h-px relative bg-neutral-100" />
             </div>
-            <div className="border-neutral-100 border-solid border-b-[1px] flex items-center pt-1 px-num-0 pb-0.5 gap-2">
+            <div className="border-neutral-100 border-solid border-b-[1px] flex items-center pt-1 px-0 pb-0.5 gap-2">
               <div className="relative leading-4 font-medium">
                 Pilot License
               </div>
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 src="/images/SVG.svg"
               />
             </div>
-            <div className="border-neutral-100 border-solid border-b-[1px] flex items-center pt-1 px-num-0 pb-0.5 gap-2">
+            <div className="border-neutral-100 border-solid border-b-[1px] flex items-center pt-1 px-0 pb-0.5 gap-2">
               <div className="relative leading-4 font-medium">The Club</div>
               <Image
                 className="h-[9.3px] w-[9.3px] relative"

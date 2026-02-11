@@ -17,8 +17,10 @@ function NavLink({ link, onClick, mobile }) {
   return (
     <Link
       href={link.href}
-      className={`text-white text-num-13 leading-num-23 uppercase font-medium hover:opacity-90 ${
-        mobile ? "py-4 min-h-[44px] flex items-center justify-center" : ""
+      className={`nav-link-base ${
+        mobile
+          ? "w-full py-3 min-h-[44px] flex items-center justify-between text-[22px] leading-[28px] tracking-[0.6px]"
+          : ""
       }`}
       onClick={onClick}
     >
@@ -54,14 +56,14 @@ export default function Header({ className = "" }) {
             <a
               href="#"
               aria-label="Facebook"
-              className="h-full inline-flex items-center px-2 leading-[13.2px] font-medium hover:opacity-80"
+              className="social-link"
             >
               FB.
             </a>
             <a
               href="#"
               aria-label="Instagram"
-              className="h-full inline-flex items-center px-2 leading-[13.2px] font-medium hover:opacity-80"
+              className="social-link"
             >
               IN.
             </a>
@@ -111,7 +113,7 @@ export default function Header({ className = "" }) {
 
       <div className="flex desktop:hidden w-full flex-col items-start">
         <div
-          className={`self-stretch flex items-center justify-between py-num-14 px-4 sm:px-6 relative ${menuOpen ? "z-[10001]" : "z-50"}`}
+          className="self-stretch flex items-center justify-between py-num-14 px-4 sm:px-6 relative z-[10020]"
         >
           <Link href="/" className="flex items-center gap-2">
             <Image
@@ -167,7 +169,7 @@ export default function Header({ className = "" }) {
 
       <div
         id="frame-mobile-menu"
-        className={`fixed inset-0 z-[10000] desktop:hidden transition-opacity duration-300 ${
+        className={`fixed inset-x-0 bottom-0 top-[72px] z-[10000] desktop:hidden transition-opacity duration-300 ${
           menuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -175,15 +177,45 @@ export default function Header({ className = "" }) {
         aria-hidden={!menuOpen}
       >
         <div
-          className="absolute inset-0 bg-black/90"
+          className="absolute inset-0 bg-black/65 backdrop-blur-[2px]"
           onClick={closeMenu}
           aria-hidden
         />
-        <nav className="absolute inset-0 flex flex-col items-center justify-center gap-6 pt-20">
-          {NAV_LINKS.map((link) => (
-            <NavLink key={link.label} link={link} onClick={closeMenu} mobile />
-          ))}
-        </nav>
+        <aside
+          className={`absolute top-0 right-0 h-full w-[88%] max-w-[420px] bg-[#122232]/95 backdrop-blur-xl border-l border-white/10 shadow-2xl transition-transform duration-300 ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="h-full flex flex-col px-6 sm:px-8 pb-8 pt-24">
+            <div className="text-white/60 text-[11px] uppercase tracking-[2px] mb-6">
+              Navigation
+            </div>
+
+            <nav className="flex flex-col gap-2">
+              {NAV_LINKS.map((link) => (
+                <NavLink key={link.label} link={link} onClick={closeMenu} mobile />
+              ))}
+            </nav>
+
+            <div className="mt-auto pt-8">
+              <a
+                href="#contacts"
+                onClick={closeMenu}
+                className="inline-flex items-center justify-center w-full min-h-[48px] px-5 bg-white text-[#122232] text-[12px] font-semibold uppercase tracking-[1px] hover:bg-white/90 transition-colors"
+              >
+                Contact Us
+              </a>
+              <div className="mt-5 flex items-center justify-between text-white/70 text-[12px] tracking-[1px]">
+                <a href="#" className="hover:text-white transition-colors">
+                  Facebook
+                </a>
+                <a href="#" className="hover:text-white transition-colors">
+                  Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </header>
   );

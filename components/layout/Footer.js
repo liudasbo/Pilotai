@@ -5,9 +5,9 @@ export default function Footer({ className = "" }) {
     <section
       className={`self-stretch flex flex-col items-center text-left text-[21px] text-white font-jost bg-darkslategray-200 ${className}`}
     >
-      <div className="self-stretch flex flex-col desktop:flex-row desktop:items-start desktop:justify-between py-16 sm:py-20 desktop:py-[124px] px-4 sm:px-6 desktop:px-[119px] gap-12 desktop:gap-5">
+      <div className="self-stretch flex flex-col desktop:flex-row desktop:items-start desktop:justify-between py-16 sm:py-20 desktop:py-[124px] px-4 sm:px-6 desktop:px-num-119 gap-12 desktop:gap-5">
         <div className="flex flex-col items-start gap-8">
-          <h3 className="m-0 relative text-[length:inherit] tracking-[0.31px] leading-[26px] uppercase font-normal font-[inherit]">
+          <h3 className="m-0 relative text-[21px] tracking-[0.31px] leading-[26px] uppercase font-normal">
             In partnership with:
           </h3>
           <div className="flex flex-wrap items-center gap-6 desktop:gap-[38.5px]">
@@ -74,7 +74,7 @@ export default function Footer({ className = "" }) {
       </div>
 
       <div className="self-stretch border-slategray border-solid border-t-[1px] box-border text-num-13 text-silver font-jost">
-        <div className="max-w-[1274px] mx-auto py-6 sm:py-8 desktop:py-[26px] px-4 sm:px-6 desktop:px-[119px] flex flex-col desktop:flex-row items-center desktop:items-start justify-between gap-6">
+        <div className="max-w-[1274px] mx-auto py-6 sm:py-8 desktop:py-[26px] px-4 sm:px-6 flex flex-col desktop:flex-row items-center desktop:items-start justify-between gap-6">
           <div className="order-2 desktop:order-1 leading-num-23 text-center desktop:text-left">
             © 2026 Pilotai program. Web Solutions P.idea
           </div>
