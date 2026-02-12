@@ -20,5 +20,11 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: "https://pilotaiprogram.com/the-club",
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
 }

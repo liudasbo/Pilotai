@@ -53,7 +53,7 @@ export default function Footer({ className = "" }) {
                 Home
               </Link>
               <Link
-                href="/#the-club"
+                href="/the-club"
                 className="relative leading-num-23 hover:text-white"
               >
                 The club
