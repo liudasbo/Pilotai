@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BristellSection() {
   return (
@@ -17,17 +18,21 @@ export default function BristellSection() {
         </h2>
         <div className="flex items-start pt-0 px-0 pb-[13.5px] shrink-0 text-[17px]">
           <div className="h-num-23 w-[163.4px] relative leading-num-23 flex items-center z-[1]">
-            Air crafrs
+            Aircraft
           </div>
         </div>
-        <div className="w-[76px] h-[15.6px] flex items-start py-0 px-0 box-border z-[1] shrink-0 text-num-13">
-          <div className="mt-[-1px] flex flex-col items-start gap-px shrink-0">
-            <div className="w-[85px] h-4 relative tracking-[0.26px] leading-num-15_6 uppercase font-medium inline-block">
+        <Link
+          href="/aircraft"
+          className="w-[85px] flex items-start py-0 px-0 box-border z-[1] shrink-0 text-num-13 text-white no-underline hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          aria-label="Know more about aircraft"
+        >
+          <span className="mt-[-1px] flex flex-col items-start gap-px shrink-0">
+            <span className="w-[85px] h-4 relative tracking-[0.26px] leading-num-15_6 uppercase font-medium inline-block">
               know more
-            </div>
-            <div className="w-[83px] h-px relative bg-white" />
-          </div>
-        </div>
+            </span>
+            <span className="w-[83px] h-px relative bg-white" />
+          </span>
+        </Link>
       </div>
       <Image
         className="h-[680px] sm:h-[820px] desktop:h-[977px] w-[640px] sm:w-[780px] desktop:w-[945px] absolute m-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] shrink-0"

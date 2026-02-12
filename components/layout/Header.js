@@ -5,12 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#" },
-  { label: "Activities", href: "#activities" },
-  { label: "Aircraft", href: "#aircraft" },
-  { label: "The Club", href: "#the-club" },
-  { label: "About US", href: "#about" },
-  { label: "Contacts", href: "#contacts" },
+  { label: "Home", href: "/" },
+  { label: "Activities", href: "/#activities" },
+  { label: "Aircraft", href: "/aircraft" },
+  { label: "The Club", href: "/#the-club" },
+  { label: "About US", href: "/#about" },
+  { label: "Contacts", href: "/#contacts" },
 ];
 
 function NavLink({ link, onClick, mobile }) {
@@ -198,13 +198,13 @@ export default function Header({ className = "" }) {
             </nav>
 
             <div className="mt-auto pt-8">
-              <a
-                href="#contacts"
+              <Link
+                href="/#contacts"
                 onClick={closeMenu}
                 className="inline-flex items-center justify-center w-full min-h-[48px] px-5 bg-white text-[#122232] text-[12px] font-semibold uppercase tracking-[1px] hover:bg-white/90 transition-colors"
               >
                 Contact Us
-              </a>
+              </Link>
               <div className="mt-5 flex items-center justify-between text-white/70 text-[12px] tracking-[1px]">
                 <a href="#" className="hover:text-white transition-colors">
                   Facebook

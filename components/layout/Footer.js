@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer({ className = "" }) {
   return (
@@ -48,9 +49,21 @@ export default function Footer({ className = "" }) {
               Pages
             </div>
             <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
-              <div className="relative leading-num-23">Home</div>
-              <div className="relative leading-num-23">The club</div>
-              <div className="relative leading-num-23">Aircraft</div>
+              <Link href="/" className="relative leading-num-23 hover:text-white">
+                Home
+              </Link>
+              <Link
+                href="/#the-club"
+                className="relative leading-num-23 hover:text-white"
+              >
+                The club
+              </Link>
+              <Link
+                href="/aircraft"
+                className="relative leading-num-23 hover:text-white"
+              >
+                Aircraft
+              </Link>
             </div>
           </div>
           <div className="flex-1 flex flex-col items-start gap-5">
@@ -58,8 +71,12 @@ export default function Footer({ className = "" }) {
               Our Company
             </div>
             <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
-              <div className="leading-num-23">About Us</div>
-              <div className="leading-num-23">Contacts</div>
+              <Link href="/#about" className="leading-num-23 hover:text-white">
+                About Us
+              </Link>
+              <Link href="/#contacts" className="leading-num-23 hover:text-white">
+                Contacts
+              </Link>
             </div>
           </div>
           <div className="flex-1 flex flex-col items-start gap-5">
@@ -67,7 +84,12 @@ export default function Footer({ className = "" }) {
               CUSTOMER CARE
             </div>
             <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
-              <div className="leading-num-23">Activities</div>
+              <Link
+                href="/#activities"
+                className="leading-num-23 hover:text-white"
+              >
+                Activities
+              </Link>
               <div className="leading-num-23">Privacy policy</div>
             </div>
           </div>
