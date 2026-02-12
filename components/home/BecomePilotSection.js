@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -39,7 +40,11 @@ export default function BecomePilotSection() {
               enjoying a refined and exciting getaway.
             </div>
           </div>
-          <Button className="pl-[41px] pr-10 flex flex-col items-start">
+          <Button
+            as={Link}
+            href="/contact-us"
+            className="pl-[41px] pr-10 flex flex-col items-start"
+          >
             <div className="relative text-left">
               See the package
             </div>

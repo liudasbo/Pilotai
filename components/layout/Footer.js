@@ -96,7 +96,9 @@ export default function Footer({ className = "" }) {
               >
                 Activities
               </Link>
-              <div className="leading-num-23">Privacy policy</div>
+              <Link href="/contact-us" className="leading-num-23 hover:text-white">
+                Privacy policy
+              </Link>
             </div>
           </div>
         </div>

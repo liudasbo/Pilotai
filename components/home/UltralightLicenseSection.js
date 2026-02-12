@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -48,6 +49,8 @@ export default function UltralightLicenseSection() {
             </div>
           </div>
           <Button
+            as={Link}
+            href="/activities"
             variant="accent"
             className="px-10 flex flex-col items-center justify-center"
           >

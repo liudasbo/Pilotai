@@ -64,20 +64,20 @@ export default function Header({
           }`}
         >
           <div className="h-full flex items-center justify-end pr-[60px] gap-3">
-            <a
-              href="#"
+            <Link
+              href="/"
               aria-label="Facebook"
               className="social-link"
             >
               FB.
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/"
               aria-label="Instagram"
               className="social-link"
             >
               IN.
-            </a>
+            </Link>
           </div>
         </div>
         <div className="self-stretch flex items-center py-num-14 px-[60px] gap-[260px]">
@@ -254,12 +254,12 @@ export default function Header({
                 Contact Us
               </Link>
               <div className="mt-5 flex items-center justify-between text-white/70 text-[12px] tracking-[1px]">
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/" className="hover:text-white transition-colors">
                   Facebook
-                </a>
-                <a href="#" className="hover:text-white transition-colors">
+                </Link>
+                <Link href="/" className="hover:text-white transition-colors">
                   Instagram
-                </a>
+                </Link>
               </div>
             </div>
           </div>
