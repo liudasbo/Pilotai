@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -29,7 +30,11 @@ export default function RecreationalActivitiesSection() {
               room for more, depending on your hobbies and preferences.
             </div>
           </div>
-          <Button className="px-[41px] flex flex-col items-start">
+          <Button
+            as={Link}
+            href="/activities"
+            className="px-[41px] flex flex-col items-start"
+          >
             <div className="relative text-left">
               All Activities
             </div>

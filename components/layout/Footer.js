@@ -53,6 +53,12 @@ export default function Footer({ className = "" }) {
                 Home
               </Link>
               <Link
+                href="/activities"
+                className="relative leading-num-23 hover:text-white"
+              >
+                Activities
+              </Link>
+              <Link
                 href="/the-club"
                 className="relative leading-num-23 hover:text-white"
               >
@@ -74,7 +80,7 @@ export default function Footer({ className = "" }) {
               <Link href="/about-us" className="leading-num-23 hover:text-white">
                 About Us
               </Link>
-              <Link href="/#contacts" className="leading-num-23 hover:text-white">
+              <Link href="/contact-us" className="leading-num-23 hover:text-white">
                 Contacts
               </Link>
             </div>
@@ -85,7 +91,7 @@ export default function Footer({ className = "" }) {
             </div>
             <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
               <Link
-                href="/#activities"
+                href="/activities"
                 className="leading-num-23 hover:text-white"
               >
                 Activities

@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const CLUB_PRIVILEGES = [
@@ -55,7 +56,7 @@ function TheClubHero() {
   return (
     <section className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate">
       <Image
-        src="/images/IMG-7135@2x.png"
+        src="/images/Photo@3x.png"
         alt="The Club hero with aircraft backdrop"
         fill
         priority
@@ -81,7 +82,7 @@ function TheClubHero() {
           </p>
           <Button
             as={Link}
-            href="/#contacts"
+            href="/contact-us"
             variant="accent"
             className="px-[42px] flex items-center justify-center"
           >
@@ -187,23 +188,6 @@ function ClubPrivilegesSection() {
   );
 }
 
-function ClubTickerBand() {
-  return (
-    <div className="w-full bg-darkslategray-200 py-[13px] overflow-hidden">
-      <div className="ticker-track flex w-max items-center gap-8 desktop:gap-14 whitespace-nowrap px-4">
-        {Array.from({ length: 6 }).map((_, index) => (
-          <i
-            key={`club-ticker-${index}`}
-            className="text-white relative leading-num-25 inline-block shrink-0"
-          >
-            More than flying. A way of being.
-          </i>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 function ClubPartnersStrip() {
   return (
     <section className="w-full bg-whitesmoke-100 py-10 desktop:py-[70px] px-4 desktop:px-10">
@@ -250,7 +234,7 @@ function ClubIdentitySection() {
           </div>
           <Button
             as={Link}
-            href="/#contacts"
+            href="/contact-us"
             variant="accent"
             className="pl-[41px] pr-10 flex items-start"
           >
@@ -277,7 +261,7 @@ function NewsletterSection() {
             type="email"
             placeholder="Email Address"
             aria-label="Email Address"
-            className="w-full border-none outline-none bg-transparent text-num-16 leading-num-24 text-darkslategray-100 font-jost"
+            className="w-full border-none outline-none bg-transparent text-num-16 leading-num-24 text-darkslategray-100 placeholder:text-darkslategray-100 placeholder:opacity-100 font-jost"
           />
           <button type="submit" aria-label="Subscribe to newsletter">
             <Image
@@ -305,7 +289,7 @@ export default function TheClubPage() {
         <ClubOverviewSection />
         <ClubParallaxImage />
         <ClubPrivilegesSection />
-        <ClubTickerBand />
+        <RunningTicker text="More than flying. A way of being." />
         <ClubPartnersStrip />
         <ClubIdentitySection />
         <NewsletterSection />

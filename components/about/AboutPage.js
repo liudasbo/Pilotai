@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const ABOUT_PILLARS = [
@@ -45,7 +46,7 @@ function AboutHero() {
   return (
     <section className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate">
       <Image
-        src="/images/IMG-7135@2x.png"
+        src="/images/Parallax-Image@3x.png"
         alt="Pilotai Program team near aircraft"
         fill
         priority
@@ -154,7 +155,7 @@ function AboutCtaSection() {
           </div>
           <Button
             as={Link}
-            href="/#contacts"
+            href="/contact-us"
             variant="accent"
             className="pl-[41px] pr-10 flex items-start"
           >
@@ -255,23 +256,6 @@ function StorySection() {
   );
 }
 
-function AboutTickerBand() {
-  return (
-    <div className="w-full bg-darkslategray-200 py-[13px] overflow-hidden">
-      <div className="ticker-track flex w-max items-center gap-8 desktop:gap-14 whitespace-nowrap px-4">
-        {Array.from({ length: 6 }).map((_, index) => (
-          <i
-            key={`about-ticker-${index}`}
-            className="text-white relative leading-num-25 inline-block shrink-0"
-          >
-            More than flying. A way of being.
-          </i>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function AboutPage() {
   return (
     <div className="page-root">
@@ -282,7 +266,7 @@ export default function AboutPage() {
         <AboutCtaSection />
         <HubSection />
         <StorySection />
-        <AboutTickerBand />
+        <RunningTicker text="More than flying. A way of being." />
         <AboutCtaSection />
       </main>
       <Footer />

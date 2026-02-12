@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const AIRCRAFT_STATS = [
@@ -142,23 +143,6 @@ function AircraftSafetySection() {
   );
 }
 
-function AircraftTickerBand() {
-  return (
-    <div className="w-full bg-darkslategray-200 py-[13px] overflow-hidden">
-      <div className="ticker-track flex w-max items-center gap-8 desktop:gap-14 whitespace-nowrap px-4">
-        {Array.from({ length: 6 }).map((_, index) => (
-          <i
-            key={`aircraft-ticker-${index}`}
-            className="text-white relative leading-num-25 inline-block shrink-0"
-          >
-            More than flying. A way of being.
-          </i>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 function AircraftDetailsSection() {
   return (
     <section className="w-full bg-white py-16 sm:py-20 desktop:py-[121px] px-4 sm:px-6 desktop:px-num-119">
@@ -196,7 +180,7 @@ function AircraftDetailsSection() {
           </div>
           <Button
             as={Link}
-            href="/#contacts"
+            href="/contact-us"
             variant="accent"
             className="pl-[41px] pr-10 flex items-start"
           >
@@ -223,7 +207,7 @@ export default function AircraftPage() {
           className="w-full h-[320px] sm:h-[420px] desktop:h-[560px] object-cover"
         />
         <AircraftSafetySection />
-        <AircraftTickerBand />
+        <RunningTicker text="More than flying. A way of being." />
         <AircraftDetailsSection />
       </main>
       <Footer />
