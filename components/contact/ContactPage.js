@@ -146,7 +146,7 @@ function ContactNewsletterSection() {
 
 export default function ContactPage() {
   return (
-    <div className="w-full bg-white overflow-x-hidden flex flex-col items-stretch">
+    <div className="w-full bg-white overflow-x-hidden flex flex-col items-stretch motion-scope">
       <main className="w-full">
         <Header textColor="black" topSocialGray />
         <ContactFormSection />

@@ -258,7 +258,7 @@ function StorySection() {
 
 export default function AboutPage() {
   return (
-    <div className="page-root">
+    <div className="page-root motion-scope">
       <AboutHero />
       <main className="w-full flex flex-col items-stretch">
         <PurposeSection />

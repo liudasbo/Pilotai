@@ -283,7 +283,7 @@ function NewsletterSection() {
 
 export default function TheClubPage() {
   return (
-    <div className="page-root">
+    <div className="page-root motion-scope">
       <TheClubHero />
       <main className="w-full flex flex-col items-stretch">
         <ClubOverviewSection />

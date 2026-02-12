@@ -194,7 +194,7 @@ function AircraftDetailsSection() {
 
 export default function AircraftPage() {
   return (
-    <div className="page-root">
+    <div className="page-root motion-scope">
       <AircraftHero />
       <main className="w-full flex flex-col items-stretch">
         <AircraftIntroSection />

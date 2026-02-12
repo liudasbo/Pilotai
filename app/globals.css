@@ -6,6 +6,14 @@ body {
   margin: 0;
   line-height: normal;
   font-family: var(--font-jost), "Jost", system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 280ms;
+  --dur-base: 520ms;
 }
 
 @layer utilities {
@@ -28,7 +36,8 @@ body {
   }
 
   .cta-button-base {
-    @apply cursor-pointer border-none py-num-14 text-num-13 tracking-num-0_39 leading-num-15_6 uppercase font-medium font-jost text-white;
+    @apply cursor-pointer border-none py-num-14 text-num-13 tracking-num-0_39 leading-num-15_6 uppercase font-medium font-jost text-white transition-all duration-500;
+    transition-timing-function: var(--ease-premium);
   }
 
   .cta-button-dark {
@@ -40,11 +49,13 @@ body {
   }
 
   .nav-link-base {
-    @apply text-white text-num-13 leading-num-23 uppercase font-medium hover:opacity-90;
+    @apply text-white text-num-13 leading-num-23 uppercase font-medium hover:opacity-90 transition-opacity duration-500;
+    transition-timing-function: var(--ease-premium);
   }
 
   .social-link {
-    @apply h-full inline-flex items-center px-2 leading-[13.2px] font-medium hover:opacity-80;
+    @apply h-full inline-flex items-center px-2 leading-[13.2px] font-medium hover:opacity-80 transition-opacity duration-500;
+    transition-timing-function: var(--ease-premium);
   }
 }
 
@@ -60,4 +71,18 @@ body {
 .ticker-track {
   animation: ticker-right-to-left 24s linear infinite;
   will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .ticker-track {
+    animation: none !important;
+    transform: none !important;
+  }
 }

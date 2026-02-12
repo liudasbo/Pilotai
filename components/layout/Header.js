@@ -35,6 +35,7 @@ export default function Header({
   topSocialGray = false,
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const isDarkText = textColor === "black";
 
   const closeMenu = () => setMenuOpen(false);
@@ -51,11 +52,27 @@ export default function Header({
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <header
       className={`w-full flex flex-col items-start z-10 shrink-0 text-left text-[12px] ${
         isDarkText ? "text-black" : "text-white"
-      } font-jost relative ${className}`}
+      } font-jost relative transition-colors duration-500 ${
+        isScrolled
+          ? isDarkText
+            ? "bg-white/85 backdrop-blur-sm"
+            : "bg-[#0f2943]/35 backdrop-blur-sm"
+          : ""
+      } ${className}`}
     >
       <div className="hidden desktop:flex w-full flex-col items-start">
         <div

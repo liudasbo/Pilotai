@@ -12,6 +12,7 @@ export default function HeroBackgroundMedia() {
         className="absolute inset-0 w-full h-full object-cover object-[62%_center] sm:object-center scale-[1.18] sm:scale-[1.12] desktop:scale-[1.08]"
       />
       <video
+        data-motion="parallax"
         className="absolute inset-0 block w-full h-full motion-reduce:hidden scale-[1.18] sm:scale-[1.12] desktop:scale-[1.08]"
         autoPlay
         muted

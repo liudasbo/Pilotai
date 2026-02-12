@@ -286,7 +286,7 @@ function NewsletterSection() {
 
 export default function ActivitiesPage() {
   return (
-    <div className="page-root">
+    <div className="page-root motion-scope">
       <ActivitiesHero />
       <main className="w-full flex flex-col items-stretch">
         <ActivitySplitSection {...AEROBATIC_ACTIVITY} />

@@ -12,7 +12,7 @@ import WhyLithuaniaSection from "@/components/home/WhyLithuaniaSection";
 
 export default function HomePage() {
   return (
-    <div className="page-root">
+    <div className="page-root motion-scope">
       <HeroSection />
       <BecomePilotSection />
       <UltralightLicenseSection />
