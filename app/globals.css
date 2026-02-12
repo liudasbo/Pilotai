@@ -49,13 +49,11 @@ body {
   }
 
   .nav-link-base {
-    @apply text-white text-num-13 leading-num-23 uppercase font-medium hover:opacity-90 transition-opacity duration-500;
-    transition-timing-function: var(--ease-premium);
+    @apply text-white text-num-13 leading-num-23 uppercase font-medium hover:opacity-90;
   }
 
   .social-link {
-    @apply h-full inline-flex items-center px-2 leading-[13.2px] font-medium hover:opacity-80 transition-opacity duration-500;
-    transition-timing-function: var(--ease-premium);
+    @apply h-full inline-flex items-center px-2 leading-[13.2px] font-medium hover:opacity-80;
   }
 }
 

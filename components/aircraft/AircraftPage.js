@@ -30,7 +30,10 @@ const AIRCRAFT_STATS = [
 
 function AircraftHero() {
   return (
-    <section className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate">
+    <section
+      data-motion="text-only"
+      className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
+    >
       <Image
         src="/images/IMG-7135@2x.png"
         alt="Bristell NG5 aircraft in flight"

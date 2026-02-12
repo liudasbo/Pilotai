@@ -89,7 +89,10 @@ const PARTNERS = [
 
 function ActivitiesHero() {
   return (
-    <section className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate">
+    <section
+      data-motion="text-only"
+      className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
+    >
       <Image
         src="/images/IMG-71351@2x.png"
         alt="Activities hero with aircraft background"

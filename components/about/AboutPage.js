@@ -44,7 +44,10 @@ const ABOUT_PILLARS = [
 
 function AboutHero() {
   return (
-    <section className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate">
+    <section
+      data-motion="text-only"
+      className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
+    >
       <Image
         src="/images/Parallax-Image@3x.png"
         alt="Pilotai Program team near aircraft"

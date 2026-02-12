@@ -13,6 +13,9 @@ import {
 
 const AUTO_REVEAL_SELECTOR =
   ".motion-scope section, .motion-scope footer, .motion-scope [data-motion='reveal']";
+const TEXT_ONLY_SELECTOR =
+  "h1, h2, h3, p, li, a, button, input, textarea, [data-motion='stagger-item']";
+const DEFAULT_SELECTOR = `${TEXT_ONLY_SELECTOR}, img`;
 
 export function useRevealMotion() {
   const pathname = usePathname();
@@ -43,7 +46,7 @@ export function useRevealMotion() {
         const preset = isHeroBlock ? HERO_REVEAL_PRESET : REVEAL_PRESET;
 
         const children = target.querySelectorAll(
-          "h1, h2, h3, p, li, a, button, img, input, textarea, [data-motion='stagger-item']"
+          target.dataset.motion === "text-only" ? TEXT_ONLY_SELECTOR : DEFAULT_SELECTOR
         );
 
         if (children.length > 0) {

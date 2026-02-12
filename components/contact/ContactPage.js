@@ -7,7 +7,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 function ContactFormSection() {
   return (
-    <section className="w-full bg-white">
+    <section data-motion="text-only" className="w-full bg-white">
       <div className="w-full flex flex-col desktop:flex-row items-stretch desktop:h-[602px]">
         <Image
           src="/images/a@2x.png"
