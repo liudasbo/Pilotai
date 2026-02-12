@@ -14,5 +14,11 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: "https://pilotaiprogram.com/about-us",
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
 }

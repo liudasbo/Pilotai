@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -60,7 +61,12 @@ export default function WhyLithuaniaSection() {
               </span>
             </div>
           </div>
-          <Button variant="accent" className="pl-[41px] pr-10 flex flex-col items-start">
+          <Button
+            as={Link}
+            href="/about-us"
+            variant="accent"
+            className="pl-[41px] pr-10 flex flex-col items-start"
+          >
             <div className="relative text-left">View More</div>
           </Button>
         </section>

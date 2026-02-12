@@ -71,7 +71,7 @@ export default function Footer({ className = "" }) {
               Our Company
             </div>
             <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
-              <Link href="/#about" className="leading-num-23 hover:text-white">
+              <Link href="/about-us" className="leading-num-23 hover:text-white">
                 About Us
               </Link>
               <Link href="/#contacts" className="leading-num-23 hover:text-white">
