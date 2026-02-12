@@ -36,7 +36,7 @@ body {
   }
 
   .cta-button-base {
-    @apply cursor-pointer border-none py-num-14 text-num-13 tracking-num-0_39 leading-num-15_6 uppercase font-medium font-jost text-white transition-all duration-500;
+    @apply cursor-pointer border-none py-num-14 text-num-13 tracking-num-0_39 leading-num-15_6 uppercase font-medium font-jost text-white transition-colors duration-500;
     transition-timing-function: var(--ease-premium);
   }
 
@@ -68,7 +68,6 @@ body {
 
 .ticker-track {
   animation: ticker-right-to-left 24s linear infinite;
-  will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {

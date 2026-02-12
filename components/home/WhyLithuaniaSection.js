@@ -6,7 +6,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function WhyLithuaniaSection() {
   return (
-    <section id="about" className="self-stretch bg-whitesmoke-100 shrink-0 flex flex-col items-start py-16 sm:py-20 desktop:py-[86px] px-4 sm:px-6 desktop:px-num-119 box-border">
+    <section
+      id="about"
+      data-motion="reveal"
+      className="self-stretch bg-whitesmoke-100 shrink-0 flex flex-col items-start py-16 sm:py-20 desktop:py-[86px] px-4 sm:px-6 desktop:px-num-119 box-border"
+    >
       <Container className="flex flex-col gap-10 desktop:flex-row desktop:items-center desktop:gap-[116px]">
         <section className="w-full desktop:w-[627px] flex items-start justify-center pt-0 pb-0 desktop:pb-[53px] pl-0 desktop:pl-[329px] pr-0 desktop:pr-0 box-border gap-4 desktop:gap-[29px]">
           <Image

@@ -12,10 +12,10 @@ import {
 } from "@/lib/animations/presets";
 
 const AUTO_REVEAL_SELECTOR =
-  ".motion-scope section, .motion-scope footer, .motion-scope [data-motion='reveal']";
+  ".motion-scope > [data-motion='reveal'], .motion-scope > [data-motion='text-only'], .motion-scope main [data-motion='reveal'], .motion-scope main [data-motion='text-only']";
 const TEXT_ONLY_SELECTOR =
   "h1, h2, h3, p, li, a, button, input, textarea, [data-motion='stagger-item']";
-const DEFAULT_SELECTOR = `${TEXT_ONLY_SELECTOR}, img`;
+const DEFAULT_SELECTOR = TEXT_ONLY_SELECTOR;
 
 export function useRevealMotion() {
   const pathname = usePathname();
@@ -37,6 +37,7 @@ export function useRevealMotion() {
 
       revealTargets.forEach((target) => {
         if (!(target instanceof HTMLElement)) return;
+        if (target.closest("footer")) return;
 
         const isHeroBlock =
           target.closest("main")?.querySelector("h1") &&
@@ -46,7 +47,9 @@ export function useRevealMotion() {
         const preset = isHeroBlock ? HERO_REVEAL_PRESET : REVEAL_PRESET;
 
         const children = target.querySelectorAll(
-          target.dataset.motion === "text-only" ? TEXT_ONLY_SELECTOR : DEFAULT_SELECTOR
+          target.dataset.motion === "text-only"
+            ? TEXT_ONLY_SELECTOR
+            : DEFAULT_SELECTOR
         );
 
         if (children.length > 0) {
@@ -80,6 +83,7 @@ export function useRevealMotion() {
 
       parallaxTargets.forEach((target) => {
         if (!(target instanceof HTMLElement)) return;
+        if (target.closest("footer")) return;
 
         gsap.to(target, {
           ...PARALLAX_LIGHT_PRESET,

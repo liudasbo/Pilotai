@@ -5,7 +5,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function TheClubSection() {
   return (
-    <section id="the-club" className="self-stretch flex items-center justify-center py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px] box-border gap-10 desktop:gap-[60px] max-w-full flex-col desktop:flex-row">
+    <section
+      id="the-club"
+      data-motion="reveal"
+      className="self-stretch flex items-center justify-center py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px] box-border gap-10 desktop:gap-[60px] max-w-full flex-col desktop:flex-row"
+    >
       <Image
         className="w-full max-w-[550px] relative max-h-full object-cover"
         width={550}

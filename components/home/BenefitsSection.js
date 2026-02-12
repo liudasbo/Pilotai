@@ -16,7 +16,10 @@ export default function BenefitsSection() {
     "m-0 w-full relative text-left text-[36px] leading-[42px] sm:text-[48px] sm:leading-[52px] desktop:text-[60px] tracking-[0.9px] desktop:leading-[60px] uppercase font-medium font-jost bg-transparent border-none p-0 pb-1 cursor-pointer transition-all";
 
   return (
-    <section className="w-full flex items-start justify-center py-16 sm:py-20 desktop:py-[95px] px-4 sm:px-6 desktop:px-num-20 box-border max-w-full">
+    <section
+      data-motion="reveal"
+      className="w-full flex items-start justify-center py-16 sm:py-20 desktop:py-[95px] px-4 sm:px-6 desktop:px-num-20 box-border max-w-full"
+    >
       <div className="section-container max-w-[1153.7px] flex flex-col gap-10 desktop:flex-row desktop:items-center desktop:justify-between desktop:gap-6">
         <section className="w-full desktop:w-[550px] flex flex-col items-start gap-8 desktop:gap-[42px] max-w-full text-left text-black font-jost desktop:flex-1">
           <div className="flex flex-col items-start gap-2.5 text-num-16 text-darkslategray-100 font-jost">

@@ -70,7 +70,10 @@ function ContactFormSection() {
 
 function ContactInfoBand() {
   return (
-    <section className="w-full bg-whitesmoke-100 py-[70px] px-[30px] text-num-16 text-black font-red-hat-display">
+    <section
+      data-motion="reveal"
+      className="w-full bg-whitesmoke-100 py-[70px] px-[30px] text-num-16 text-black font-red-hat-display"
+    >
       <Container className="max-w-[1374px] flex flex-wrap items-start justify-between gap-8">
         <div className="flex flex-col items-start gap-[2.5px]">
           <h3 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
@@ -111,7 +114,10 @@ function ContactInfoBand() {
 
 function ContactNewsletterSection() {
   return (
-    <section className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[119px] px-4 sm:px-6 text-center">
+    <section
+      data-motion="reveal"
+      className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[119px] px-4 sm:px-6 text-center"
+    >
       <Container className="max-w-[802px] flex flex-col items-center gap-[22px]">
         <SectionHeading as="h2" className="text-black text-center">
           Our Newsletter

@@ -3,7 +3,11 @@ import Link from "next/link";
 
 export default function BristellSection() {
   return (
-    <section id="aircraft" className="w-full flex items-start relative isolate text-left text-[31px] text-white font-jost">
+    <section
+      id="aircraft"
+      data-motion="reveal"
+      className="w-full flex items-start relative isolate text-left text-[31px] text-white font-jost"
+    >
       <div className="w-full overflow-hidden shrink-0 flex flex-col items-start justify-end pt-[260px] sm:pt-[340px] desktop:pt-[433px] pb-12 desktop:pb-[66.9px] pl-4 sm:pl-8 desktop:pl-[70px] pr-4 sm:pr-6 desktop:pr-num-20 box-border relative isolate gap-1">
         <Image
           className="w-full h-full absolute m-0 bottom-[-2.5px] left-[-6px] object-cover shrink-0"

@@ -63,7 +63,10 @@ function AircraftHero() {
 
 function AircraftIntroSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]">
+    <section
+      data-motion="reveal"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]"
+    >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
           src="/images/Photos@2x.png"
@@ -94,7 +97,10 @@ function AircraftIntroSection() {
 
 function AircraftStatsSection() {
   return (
-    <section className="w-full bg-whitesmoke-100 py-12 desktop:py-[110px] px-4 sm:px-6 desktop:px-[60px]">
+    <section
+      data-motion="reveal"
+      className="w-full bg-whitesmoke-100 py-12 desktop:py-[110px] px-4 sm:px-6 desktop:px-[60px]"
+    >
       <Container className="flex flex-col desktop:flex-row items-start desktop:items-center justify-between gap-10 desktop:gap-8">
         {AIRCRAFT_STATS.map((item) => (
           <div key={item.text} className="flex items-center gap-5">
@@ -117,7 +123,10 @@ function AircraftStatsSection() {
 
 function AircraftSafetySection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]">
+    <section
+      data-motion="reveal"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]"
+    >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
           src="/images/Photos1@2x.png"
@@ -148,7 +157,10 @@ function AircraftSafetySection() {
 
 function AircraftDetailsSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 desktop:py-[121px] px-4 sm:px-6 desktop:px-num-119">
+    <section
+      data-motion="reveal"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[121px] px-4 sm:px-6 desktop:px-num-119"
+    >
       <Container className="max-w-[1274px] grid grid-cols-1 desktop:grid-cols-[631px_443px] gap-10 desktop:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image

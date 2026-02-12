@@ -99,7 +99,10 @@ function TheClubHero() {
 
 function ClubOverviewSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]">
+    <section
+      data-motion="reveal"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]"
+    >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
           src="/images/Photo@3x.png"
@@ -142,7 +145,10 @@ function ClubParallaxImage() {
 
 function ClubPrivilegesSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]">
+    <section
+      data-motion="reveal"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]"
+    >
       <Container className="grid grid-cols-1 desktop:grid-cols-[551px_1fr] gap-10 desktop:gap-[60px] items-center">
         <div className="relative w-full max-w-[551px] h-[500px] overflow-hidden">
           <Image
@@ -193,7 +199,10 @@ function ClubPrivilegesSection() {
 
 function ClubPartnersStrip() {
   return (
-    <section className="w-full bg-whitesmoke-100 py-10 desktop:py-[70px] px-4 desktop:px-10">
+    <section
+      data-motion="reveal"
+      className="w-full bg-whitesmoke-100 py-10 desktop:py-[70px] px-4 desktop:px-10"
+    >
       <Container className="flex flex-wrap items-center justify-center gap-8 desktop:gap-[30px]">
         {CLUB_PARTNERS.map((partner) => (
           <Image
@@ -212,7 +221,10 @@ function ClubPartnersStrip() {
 
 function ClubIdentitySection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]">
+    <section
+      data-motion="reveal"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]"
+    >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
           src="/images/Photo1@3x.png"
@@ -251,7 +263,10 @@ function ClubIdentitySection() {
 
 function NewsletterSection() {
   return (
-    <section className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[119px] px-4 sm:px-6 text-center">
+    <section
+      data-motion="reveal"
+      className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[119px] px-4 sm:px-6 text-center"
+    >
       <Container className="max-w-[802px] flex flex-col items-center gap-[22px]">
         <SectionHeading as="h2" className="text-black text-center">
           Our Newsletter

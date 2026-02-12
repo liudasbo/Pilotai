@@ -6,7 +6,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function UltralightLicenseSection() {
   return (
-    <section id="license" className="self-stretch bg-whitesmoke-100 shrink-0 flex flex-col items-start py-16 sm:py-20 desktop:py-[86px] px-4 sm:px-6 desktop:px-num-119 box-border max-w-full">
+    <section
+      id="license"
+      data-motion="reveal"
+      className="self-stretch bg-whitesmoke-100 shrink-0 flex flex-col items-start py-16 sm:py-20 desktop:py-[86px] px-4 sm:px-6 desktop:px-num-119 box-border max-w-full"
+    >
       <Container className="flex flex-col gap-10 desktop:flex-row desktop:items-center desktop:gap-28">
         <section className="w-full desktop:w-[631px] flex items-start justify-center pt-0 pb-0 desktop:pb-[53px] pl-0 desktop:pl-[329px] pr-0 box-border gap-4 desktop:gap-[29px] max-w-full">
           <Image

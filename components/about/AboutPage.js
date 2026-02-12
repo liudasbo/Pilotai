@@ -77,7 +77,10 @@ function AboutHero() {
 
 function PurposeSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 desktop:py-[97px] px-4 sm:px-6 desktop:px-num-119">
+    <section
+      data-motion="reveal"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[97px] px-4 sm:px-6 desktop:px-num-119"
+    >
       <Container className="grid grid-cols-1 desktop:grid-cols-[631px_1fr] gap-10 desktop:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image
@@ -113,7 +116,10 @@ function PurposeSection() {
 
 function PillarsSection() {
   return (
-    <section className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[129px] px-4 sm:px-6">
+    <section
+      data-motion="reveal"
+      className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[129px] px-4 sm:px-6"
+    >
       <Container className="grid grid-cols-1 sm:grid-cols-2 desktop:grid-cols-3 gap-x-8 desktop:gap-x-[72px] gap-y-12">
         {ABOUT_PILLARS.map((pillar) => (
           <article key={pillar.number} className="flex items-start gap-5">
@@ -137,7 +143,10 @@ function PillarsSection() {
 
 function AboutCtaSection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]">
+    <section
+      data-motion="reveal"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]"
+    >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
           src="/images/Photos@2x.png"
@@ -172,7 +181,10 @@ function AboutCtaSection() {
 
 function HubSection() {
   return (
-    <section className="w-full relative overflow-hidden min-h-[560px] desktop:min-h-[560px]">
+    <section
+      data-motion="reveal"
+      className="w-full relative overflow-hidden min-h-[560px] desktop:min-h-[560px]"
+    >
       <Image
         src="/images/Parallax-Image@3x.png"
         alt="Vilnius city skyline at sunset"
@@ -211,7 +223,10 @@ function HubSection() {
 
 function StorySection() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 desktop:py-[102px] px-4 sm:px-6 desktop:px-[206px]">
+    <section
+      data-motion="reveal"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[102px] px-4 sm:px-6 desktop:px-[206px]"
+    >
       <Container className="flex flex-col gap-16 desktop:gap-[70px]">
         <div className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[70px] items-center">
           <Image

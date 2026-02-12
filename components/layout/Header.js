@@ -37,6 +37,7 @@ export default function Header({
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const isDarkText = textColor === "black";
 
   const closeMenu = () => setMenuOpen(false);
@@ -57,13 +58,34 @@ export default function Header({
     setIsMounted(true);
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => {
+      setHasScrolled(window.scrollY > 24);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  const desktopHeaderTone = hasScrolled
+    ? isDarkText
+      ? "bg-white/86 backdrop-blur-md border-b border-black/10"
+      : "bg-[#0f2235]/36 backdrop-blur-md border-b border-white/12"
+    : "bg-transparent border-b border-transparent";
+
   return (
     <header
       className={`w-full flex flex-col items-start z-10 shrink-0 text-left text-[12px] ${
         isDarkText ? "text-black" : "text-white"
-      } font-jost relative ${className}`}
+      } font-jost relative transition-[background-color,border-color,backdrop-filter] duration-500 ${className}`}
     >
-      <div className="hidden desktop:flex w-full flex-col items-start">
+      <div
+        className={`hidden desktop:flex w-full flex-col items-start transition-[background-color,border-color,backdrop-filter] duration-500 ${desktopHeaderTone}`}
+      >
         <div
           className={`self-stretch h-8 border-gray-400 border-solid border-b-[1px] box-border ${
             topSocialGray ? "bg-whitesmoke-100" : ""

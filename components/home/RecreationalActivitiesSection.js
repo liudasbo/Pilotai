@@ -5,7 +5,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function RecreationalActivitiesSection() {
   return (
-    <section id="activities" className="w-full bg-whitesmoke-100 flex items-end justify-center py-16 sm:py-20 desktop:py-[147px] px-4 sm:px-6 desktop:px-num-119 box-border gap-10 desktop:gap-[52px] flex-col desktop:flex-row">
+    <section
+      id="activities"
+      data-motion="reveal"
+      className="w-full bg-whitesmoke-100 flex items-end justify-center py-16 sm:py-20 desktop:py-[147px] px-4 sm:px-6 desktop:px-num-119 box-border gap-10 desktop:gap-[52px] flex-col desktop:flex-row"
+    >
       <section className="flex flex-col items-start justify-end pt-0 px-0 pb-[8.2px] box-border w-full max-w-[536px] text-left text-num-37 text-black font-jost">
         <div className="w-full flex flex-col items-start gap-8 desktop:gap-9 max-w-full">
           <div className="self-stretch flex flex-col items-start gap-5">
