@@ -33,6 +33,18 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: "https://pilotaiprogram.com/pilot-license",
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "https://pilotaiprogram.com/pilot-license-policy",
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: "https://pilotaiprogram.com/contact-us",
       lastModified,
       changeFrequency: "weekly",

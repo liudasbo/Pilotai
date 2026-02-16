@@ -96,7 +96,10 @@ export default function Footer({ className = "" }) {
               >
                 Activities
               </Link>
-              <Link href="/contact-us" className="leading-num-23 hover:text-white">
+              <Link
+                href="/pilot-license-policy"
+                className="leading-num-23 hover:text-white"
+              >
                 Privacy policy
               </Link>
             </div>

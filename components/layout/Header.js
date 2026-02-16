@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Activities", href: "/activities" },
   { label: "Aircraft", href: "/aircraft" },
+  { label: "Pilot License", href: "/pilot-license" },
   { label: "The Club", href: "/the-club" },
   { label: "About Us", href: "/about-us" },
   { label: "Contacts", href: "/contact-us" },
