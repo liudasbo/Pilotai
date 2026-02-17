@@ -21,35 +21,31 @@ const CLUB_PARTNERS = [
     alt: "Partner logo",
     width: 262.4,
     height: 42.2,
-    className: "w-[180px] desktop:w-[220px] h-auto",
+    featured: true,
   },
   {
     src: "/images/Baltic-Bees-Jet-team-emblem@2x.png",
     alt: "Baltic Bees Jet Team emblem",
     width: 73.7,
     height: 72.2,
-    className: "w-[44px] desktop:w-[62px] h-auto",
   },
   {
     src: "/images/logo-en-white-1@2x.png",
     alt: "Partner logo",
     width: 104,
     height: 50,
-    className: "w-[74px] desktop:w-[96px] h-auto",
   },
   {
     src: "/images/313Cablepark-Logotipas-BLACK-RGB@2x.png",
     alt: "313 Cable Park logo",
     width: 70.2,
     height: 70.2,
-    className: "w-[44px] desktop:w-[62px] h-auto",
   },
   {
     src: "/images/logo-en-white-11@2x.png",
     alt: "Partner logo",
     width: 76.2,
     height: 49.9,
-    className: "w-[58px] desktop:w-[76px] h-auto",
   },
 ];
 
@@ -204,17 +200,32 @@ function ClubPartnersStrip() {
       data-motion="reveal"
       className="w-full bg-whitesmoke-100 py-10 desktop:py-[70px] px-4 desktop:px-10"
     >
-      <Container className="flex flex-wrap items-center justify-center gap-8 desktop:gap-[30px]">
-        {CLUB_PARTNERS.map((partner) => (
-          <Image
-            key={partner.src}
-            src={partner.src}
-            alt={partner.alt}
-            width={partner.width}
-            height={partner.height}
-            className={partner.className}
-          />
-        ))}
+      <Container className="max-w-[1274px]">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-6 desktop:grid-cols-12 gap-4 sm:gap-5 desktop:gap-6">
+          {CLUB_PARTNERS.map((partner) => (
+            <div
+              key={partner.src}
+              className={`rounded-sm border border-black/5 bg-white/60 min-h-[88px] sm:min-h-[96px] desktop:min-h-[104px] px-4 sm:px-5 flex items-center justify-center ${
+                partner.featured
+                  ? "col-span-2 sm:col-span-2 desktop:col-span-4"
+                  : "col-span-1 sm:col-span-1 desktop:col-span-2"
+              }`}
+            >
+              <Image
+                src={partner.src}
+                alt={partner.alt}
+                width={partner.width}
+                height={partner.height}
+                sizes="(min-width: 1024px) 16vw, (min-width: 640px) 28vw, 42vw"
+                className={`w-full h-auto object-contain max-h-[44px] sm:max-h-[48px] desktop:max-h-[54px] ${
+                  partner.featured
+                    ? "max-w-[240px] desktop:max-w-[280px]"
+                    : "max-w-[110px] desktop:max-w-[130px]"
+                }`}
+              />
+            </div>
+          ))}
+        </div>
       </Container>
     </section>
   );

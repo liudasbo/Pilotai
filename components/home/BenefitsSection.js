@@ -10,88 +10,86 @@ const BENEFIT_ITEMS = [
   { label: "Membership in The Club", image: "/images/Photos@2x.png" },
 ];
 
+const STACK_LAYER_CLASSES = [
+  "z-40 rotate-[-2deg] scale-100",
+  "z-30 translate-x-[2%] translate-y-[2%] rotate-[3deg] scale-[0.96]",
+  "z-20 -translate-x-[2%] translate-y-[4%] rotate-[-4deg] scale-[0.92]",
+  "z-10 translate-x-[1%] translate-y-[6%] rotate-[5deg] scale-[0.88]",
+];
+
 export default function BenefitsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const benefitButtonBaseClass =
-    "m-0 w-full relative text-left text-[36px] leading-[42px] sm:text-[48px] sm:leading-[52px] desktop:text-[60px] tracking-[0.9px] desktop:leading-[60px] uppercase font-medium font-jost bg-transparent border-none p-0 pb-1 cursor-pointer transition-all";
+  const orderedIndices = BENEFIT_ITEMS.map(
+    (_, index) => (activeIndex + index) % BENEFIT_ITEMS.length,
+  );
 
   return (
     <section
       data-motion="reveal"
-      className="w-full flex items-start justify-center py-16 sm:py-20 desktop:py-[95px] px-4 sm:px-6 desktop:px-num-20 box-border max-w-full"
+      className="w-full max-w-full px-4 py-16 sm:px-6 sm:py-20 desktop:px-num-20 desktop:py-[95px]"
     >
-      <div className="section-container max-w-[1153.7px] flex flex-col gap-10 desktop:flex-row desktop:items-center desktop:justify-between desktop:gap-6">
-        <section className="w-full desktop:w-[550px] flex flex-col items-start gap-8 desktop:gap-[42px] max-w-full text-left text-black font-jost desktop:flex-1">
-          <div className="flex flex-col items-start gap-2.5 text-num-16 text-darkslategray-100 font-jost">
-            <div className="w-[172.3px] h-num-23 relative leading-num-23 flex items-center">
+      <div className="section-container max-w-[1154px]">
+        <div className="flex flex-col gap-10 desktop:flex-row desktop:items-center desktop:gap-6">
+          <section className="w-full desktop:max-w-[550px] desktop:flex-1">
+            <div className="flex flex-col gap-2.5 text-num-16 text-darkslategray-100">
               What You Get
             </div>
-            {BENEFIT_ITEMS.map((item, index) => {
-              const isActive = activeIndex === index;
+            <ul className="mt-8 flex list-none flex-col gap-8 p-0 desktop:mt-[42px]">
+              {BENEFIT_ITEMS.map((item, index) => {
+                const isActive = activeIndex === index;
 
-              return (
-                <button
-                  key={item.label}
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
-                  className={`${benefitButtonBaseClass} ${
-                    isActive
-                      ? "opacity-100 text-black border-b border-black"
-                      : "opacity-70 text-black/90 border-b border-transparent hover:opacity-100"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              );
-            })}
-          </div>
-        </section>
+                return (
+                  <li key={item.label}>
+                    <button
+                      type="button"
+                      aria-pressed={isActive}
+                      onClick={() => setActiveIndex(index)}
+                      className={`group inline-flex bg-transparent p-0 text-left text-[36px] font-medium uppercase tracking-[0.9px] transition-[color,opacity] duration-300 sm:text-[48px] sm:leading-[52px] desktop:text-[60px] desktop:leading-[60px] ${
+                        isActive
+                          ? "text-black opacity-100"
+                          : "text-black/65 opacity-90 hover:text-black"
+                      }`}
+                    >
+                      <span
+                        className={`inline-block border-b pb-1 transition-colors duration-300 ${
+                          isActive ? "border-black" : "border-transparent"
+                        }`}
+                      >
+                        {item.label}
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
 
-        <div className="w-full max-w-[602.7px] desktop:flex-1">
-          <div className="relative h-[360px] sm:h-[500px] desktop:h-[660.5px] w-full overflow-hidden">
-            <Image
-              className="w-full h-full object-cover desktop:hidden"
-              width={602.7}
-              height={660.5}
-              sizes="100vw"
-              alt={BENEFIT_ITEMS[activeIndex].label}
-              src={BENEFIT_ITEMS[activeIndex].image}
-            />
+          <div className="w-full desktop:flex-1">
+            <div className="relative h-[400px] w-full overflow-hidden sm:h-[520px] desktop:h-[660px]">
+              <div className="absolute inset-0">
+                <div className="relative isolate h-full w-full overflow-hidden">
+                  {orderedIndices.map((itemIndex, layerIndex) => {
+                    const item = BENEFIT_ITEMS[itemIndex];
+                    const layerClassName =
+                      STACK_LAYER_CLASSES[layerIndex] || STACK_LAYER_CLASSES[3];
 
-            <div className="hidden desktop:block h-full w-full relative isolate">
-              <Image
-                className="w-[551.9px] absolute m-0 top-[calc(50%_-_306.45px)] right-[25px] max-h-full object-contain shrink-0"
-                width={551.9}
-                height={618.6}
-                sizes="100vw"
-                alt=""
-                src="/images/interactive-links-h1@2x.png"
-              />
-              <Image
-                className="w-[80%] max-w-[495px] absolute top-[50.9px] left-[54px] bottom-[39.6px] object-cover z-[1]"
-                loading="lazy"
-                width={495}
-                height={570}
-                sizes="100vw"
-                alt={BENEFIT_ITEMS[activeIndex].label}
-                src={BENEFIT_ITEMS[activeIndex].image}
-              />
-              <Image
-                className="w-full absolute m-0 top-[calc(50%_-_330.25px)] right-[0px] max-h-full object-contain h-full z-[2] shrink-0"
-                width={602.7}
-                height={660.5}
-                sizes="100vw"
-                alt=""
-                src="/images/interactive-links-h1-2@2x.png"
-              />
-              <Image
-                className="w-[551.9px] absolute m-0 top-[calc(50%_-_300.75px)] right-[25px] max-h-full object-contain z-[3] shrink-0"
-                width={551.9}
-                height={618.6}
-                sizes="100vw"
-                alt={BENEFIT_ITEMS[activeIndex].label}
-                src={BENEFIT_ITEMS[activeIndex].image}
-              />
+                    return (
+                      <figure
+                        key={item.label}
+                        className={`absolute inset-[4%] origin-center overflow-hidden transition-all duration-500 ease-out will-change-transform sm:inset-[5%] desktop:inset-[6%] ${layerClassName}`}
+                      >
+                        <Image
+                          className="h-full w-full object-cover object-center"
+                          fill
+                          sizes="(min-width: 1024px) 42vw, (min-width: 640px) 92vw, 100vw"
+                          alt={item.label}
+                          src={item.image}
+                        />
+                      </figure>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
