@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
+import ScenicSection from "@/components/ui/ScenicSection";
 
 const AIRCRAFT_STATS = [
   {
@@ -214,12 +215,11 @@ export default function AircraftPage() {
       <main className="w-full flex flex-col items-stretch">
         <AircraftIntroSection />
         <AircraftStatsSection />
-        <Image
-          src="/images/Container@2x.png"
-          alt="Lithuanian landscape from above"
-          width={1512}
-          height={560}
-          className="w-full h-[320px] sm:h-[420px] desktop:h-[560px] object-cover"
+        <ScenicSection
+          backgroundSrc="/images/Container@2x.png"
+          backgroundAlt="Lithuanian landscape from above"
+          showOverlay={false}
+          tintClassName=""
         />
         <AircraftSafetySection />
         <RunningTicker text="More than flying. A way of being." />

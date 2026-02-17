@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
+import ScenicSection from "@/components/ui/ScenicSection";
 
 const ABOUT_PILLARS = [
   {
@@ -181,43 +182,28 @@ function AboutCtaSection() {
 
 function HubSection() {
   return (
-    <section
-      data-motion="reveal"
-      className="w-full relative overflow-hidden min-h-[560px] desktop:min-h-[560px]"
+    <ScenicSection
+      backgroundSrc="/images/Parallax-Image@3x.png"
+      backgroundAlt="Vilnius city skyline at sunset"
+      overlaySrc="/images/Vector1.svg"
+      tintClassName="bg-[#182739]/45"
     >
-      <Image
-        src="/images/Parallax-Image@3x.png"
-        alt="Vilnius city skyline at sunset"
-        fill
-        className="object-cover"
-      />
-      <Image
-        src="/images/Vector1.svg"
-        alt=""
-        width={945}
-        height={560}
-        className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] desktop:w-[62%] max-w-none opacity-70"
-      />
-      <div className="absolute inset-0 bg-[#182739]/45" />
-      <Container className="relative z-[1] min-h-[560px] flex items-end py-14 desktop:py-[92px] px-4 sm:px-6 desktop:px-[70px]">
-        <div className="w-full max-w-[707px] flex flex-col items-start gap-2">
-          <p className="m-0 text-num-13 tracking-[0.46px] leading-num-26 font-medium text-whitesmoke-100">
-            Redefining how the world experiences flight, lifestyle, and
-            destination
-          </p>
-          <SectionHeading as="h2" className="text-white">
-            Europe&apos;s New Luxury Aviation Hub
-          </SectionHeading>
-          <p className="m-0 text-num-16 leading-num-24 text-whitesmoke-100">
-            Pilotai Program positions Lithuania at the forefront of luxury
-            aviation in Europe where elite pilot training meets curated
-            lifestyle experiences. More than a destination, it is a new
-            reference point for those who seek exclusivity, mastery, and access
-            beyond the obvious.
-          </p>
-        </div>
-      </Container>
-    </section>
+      <div className="w-full max-w-[707px] flex flex-col items-start gap-2">
+        <p className="m-0 text-num-13 tracking-[0.46px] leading-num-26 font-medium text-whitesmoke-100">
+          Redefining how the world experiences flight, lifestyle, and
+          destination
+        </p>
+        <SectionHeading as="h2" className="text-white">
+          Europe&apos;s New Luxury Aviation Hub
+        </SectionHeading>
+        <p className="m-0 text-num-16 leading-num-24 text-whitesmoke-100">
+          Pilotai Program positions Lithuania at the forefront of luxury
+          aviation in Europe where elite pilot training meets curated lifestyle
+          experiences. More than a destination, it is a new reference point for
+          those who seek exclusivity, mastery, and access beyond the obvious.
+        </p>
+      </div>
+    </ScenicSection>
   );
 }
 

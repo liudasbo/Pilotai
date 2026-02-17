@@ -6,7 +6,7 @@ export default function Home() {
     "@type": "Organization",
     name: "Pilotai Program",
     url: "https://pilotaiprogram.com",
-    logo: "https://pilotaiprogram.com/images/Group-18.svg",
+    logo: "https://pilotaiprogram.com/images/logo.svg",
     description:
       "Premium pilot training and aviation lifestyle experiences in Lithuania.",
   };

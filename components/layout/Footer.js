@@ -112,36 +112,15 @@ export default function Footer({ className = "" }) {
           <div className="order-2 desktop:order-1 leading-num-23 text-center desktop:text-left">
             © 2026 Pilotai program. Web Solutions P.idea
           </div>
-          <div className="order-1 desktop:order-2 w-num-140_6 flex flex-col items-center gap-[8.2px]">
-            <div className="self-stretch flex flex-col items-center gap-[4.9px]">
-              <Image
-                className="w-6 h-[18.2px] relative"
-                width={24}
-                height={18.2}
-                sizes="100vw"
-                alt=""
-                src="/images/Group-17.svg"
-              />
-              <Image
-                className="w-num-140_6 h-[27.3px] relative"
-                loading="lazy"
-                width={140.6}
-                height={27.3}
-                sizes="100vw"
-                alt=""
-                src="/images/Group-18.svg"
-              />
-            </div>
-            <Image
-              className="w-[72.5px] h-[5.2px] relative"
-              loading="lazy"
-              width={72.5}
-              height={5.2}
-              sizes="100vw"
-              alt=""
-              src="/images/Program.svg"
-            />
-          </div>
+          <Image
+            className="order-1 desktop:order-2 w-num-140_6 h-auto"
+            loading="lazy"
+            width={140.6}
+            height={63.8}
+            sizes="140.6px"
+            alt="Pilotai Program"
+            src="/images/logo.svg"
+          />
         </div>
       </div>
     </footer>

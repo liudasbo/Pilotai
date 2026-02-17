@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
+import ScenicSection from "@/components/ui/ScenicSection";
 
 function PilotLicenseHero() {
   return (
@@ -87,42 +88,26 @@ function IntroSplitSection() {
 
 function EntryRequirementsSection() {
   return (
-    <section
-      data-motion="reveal"
-      className="relative w-full min-h-[560px] desktop:min-h-[560px] overflow-hidden"
+    <ScenicSection
+      backgroundSrc="/images/Parallax-Image@3x.png"
+      backgroundAlt="Entry requirements background"
+      overlaySrc="/images/Vector1.svg"
+      tintClassName="bg-[#182739]/35"
     >
-      <Image
-        src="/images/Parallax-Image@3x.png"
-        alt="Entry requirements background"
-        fill
-        className="object-cover"
-      />
-      <Image
-        src="/images/Vector1.svg"
-        alt=""
-        width={945}
-        height={977}
-        className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] desktop:w-[62%] max-w-none opacity-70"
-      />
-      <div className="absolute inset-0 bg-[#182739]/35" />
-      <Container className="relative z-[1] min-h-[560px] flex items-end py-14 desktop:py-[92px] px-4 sm:px-6 desktop:px-[70px]">
-        <div className="w-full max-w-[707px] flex flex-col items-start gap-[13px] text-white">
-          <SectionHeading as="h2" className="text-white">
-            Entry Requirements
-          </SectionHeading>
-          <p className="m-0 text-num-16 leading-num-24 text-whitesmoke-100 font-jost">
-            <span>Minimum age:</span>
-            <strong> 16+</strong>
-            <br />
-            <span>Valid Medical Certificate</span>
-            <br />
-            <span>
-              Commitment to complete a full professional training program
-            </span>
-          </p>
-        </div>
-      </Container>
-    </section>
+      <div className="w-full max-w-[707px] flex flex-col items-start gap-[13px] text-white">
+        <SectionHeading as="h2" className="text-white">
+          Entry Requirements
+        </SectionHeading>
+        <p className="m-0 text-num-16 leading-num-24 text-whitesmoke-100 font-jost">
+          <span>Minimum age:</span>
+          <strong> 16+</strong>
+          <br />
+          <span>Valid Medical Certificate</span>
+          <br />
+          <span>Commitment to complete a full professional training program</span>
+        </p>
+      </div>
+    </ScenicSection>
   );
 }
 

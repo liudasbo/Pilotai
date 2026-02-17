@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
+import ScenicSection from "@/components/ui/ScenicSection";
 
 const AEROBATIC_ACTIVITY = {
   image: "/images/Photo@2x.png",
@@ -164,41 +165,27 @@ function ActivitySplitSection({ image, title, description }) {
 
 function JetExperienceSection() {
   return (
-    <section
-      data-motion="reveal"
-      className="w-full relative overflow-hidden min-h-[560px] desktop:min-h-[560px]"
+    <ScenicSection
+      backgroundSrc="/images/IMG-71351@2x.png"
+      backgroundAlt="Jet team flight experience"
+      overlaySrc="/images/Vector.svg"
+      tintClassName="bg-[#182739]/45"
     >
-      <Image
-        src="/images/IMG-71351@2x.png"
-        alt="Jet team flight experience"
-        fill
-        className="object-cover"
-      />
-      <Image
-        src="/images/Vector.svg"
-        alt=""
-        width={945}
-        height={977}
-        className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] desktop:w-[62%] max-w-none opacity-70"
-      />
-      <div className="absolute inset-0 bg-[#182739]/45" />
-      <Container className="relative z-[1] min-h-[560px] flex items-end py-14 desktop:py-[92px] px-4 sm:px-6 desktop:px-[70px]">
-        <div className="w-full max-w-[473px] flex flex-col items-start gap-[13px]">
-          <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-whitesmoke-100">
-            Activities
-          </div>
-          <SectionHeading as="h2" className="text-white">
-            Jet Experience
-          </SectionHeading>
-          <p className="m-0 text-num-16 leading-num-23 text-whitesmoke-100 font-jost">
-            You fly yourself from Kaunas to Riga, turning the journey itself
-            into part of the adventure. Upon arrival, you join an elite jet
-            team for an unforgettable jet flight, bridging general and
-            high-performance aviation in one seamless experience.
-          </p>
+      <div className="w-full max-w-[473px] flex flex-col items-start gap-[13px]">
+        <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-whitesmoke-100">
+          Activities
         </div>
-      </Container>
-    </section>
+        <SectionHeading as="h2" className="text-white">
+          Jet Experience
+        </SectionHeading>
+        <p className="m-0 text-num-16 leading-num-23 text-whitesmoke-100 font-jost">
+          You fly yourself from Kaunas to Riga, turning the journey itself
+          into part of the adventure. Upon arrival, you join an elite jet team
+          for an unforgettable jet flight, bridging general and
+          high-performance aviation in one seamless experience.
+        </p>
+      </div>
+    </ScenicSection>
   );
 }
 
@@ -226,41 +213,27 @@ function PartnerStrip() {
 
 function WakeboardingSection() {
   return (
-    <section
-      data-motion="reveal"
-      className="w-full relative overflow-hidden min-h-[560px] desktop:min-h-[560px]"
+    <ScenicSection
+      backgroundSrc="/images/Parallax-Image@3x.png"
+      backgroundAlt="Wakeboarding activity scene"
+      overlaySrc="/images/Vector1.svg"
+      tintClassName="bg-[#182739]/45"
     >
-      <Image
-        src="/images/Parallax-Image@3x.png"
-        alt="Wakeboarding activity scene"
-        fill
-        className="object-cover"
-      />
-      <Image
-        src="/images/Vector1.svg"
-        alt=""
-        width={945}
-        height={977}
-        className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] desktop:w-[62%] max-w-none opacity-70"
-      />
-      <div className="absolute inset-0 bg-[#182739]/45" />
-      <Container className="relative z-[1] min-h-[560px] flex items-end py-14 desktop:py-[92px] px-4 sm:px-6 desktop:px-[70px]">
-        <div className="w-full max-w-[473px] flex flex-col items-start gap-[13px]">
-          <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-whitesmoke-100">
-            Activities
-          </div>
-          <SectionHeading as="h2" className="text-white">
-            Wakeboarding
-          </SectionHeading>
-          <p className="m-0 text-num-16 leading-num-23 text-whitesmoke-100 font-jost">
-            Lithuania is famous for its lakes, offering a wide variety of
-            wakeboarding locations, each with its own character and style. You
-            explore different setups and environments, making every session
-            fresh and exciting.
-          </p>
+      <div className="w-full max-w-[473px] flex flex-col items-start gap-[13px]">
+        <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-whitesmoke-100">
+          Activities
         </div>
-      </Container>
-    </section>
+        <SectionHeading as="h2" className="text-white">
+          Wakeboarding
+        </SectionHeading>
+        <p className="m-0 text-num-16 leading-num-23 text-whitesmoke-100 font-jost">
+          Lithuania is famous for its lakes, offering a wide variety of
+          wakeboarding locations, each with its own character and style. You
+          explore different setups and environments, making every session fresh
+          and exciting.
+        </p>
+      </div>
+    </ScenicSection>
   );
 }
 

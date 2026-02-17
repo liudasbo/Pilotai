@@ -40,6 +40,7 @@ export default function Header({
   const [isMounted, setIsMounted] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const isDarkText = textColor === "black";
+  const useDarkTone = isDarkText || hasScrolled;
 
   const closeMenu = () => setMenuOpen(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
@@ -73,16 +74,17 @@ export default function Header({
   }, []);
 
   const desktopHeaderTone = hasScrolled
-    ? isDarkText
-      ? "bg-white/86 backdrop-blur-md border-b border-black/10"
-      : "bg-[#0f2235]/36 backdrop-blur-md border-b border-white/12"
+    ? "bg-white/92 backdrop-blur-md border-b border-black/10"
+    : "bg-transparent border-b border-transparent";
+  const mobileHeaderTone = hasScrolled
+    ? "bg-white/92 backdrop-blur-md border-b border-black/10"
     : "bg-transparent border-b border-transparent";
 
   return (
     <header
       className={`w-full flex flex-col items-start z-10 shrink-0 text-left text-[12px] ${
-        isDarkText ? "text-black" : "text-white"
-      } font-jost relative transition-[background-color,border-color,backdrop-filter] duration-500 ${className}`}
+        useDarkTone ? "text-black" : "text-white"
+      } font-jost fixed top-0 left-0 z-[2147482000] transition-[background-color,border-color,backdrop-filter,color] duration-500 ${className}`}
     >
       <div
         className={`hidden desktop:flex w-full flex-col items-start transition-[background-color,border-color,backdrop-filter] duration-500 ${desktopHeaderTone}`}
@@ -114,59 +116,26 @@ export default function Header({
             href="/"
             className="w-num-140_6 flex flex-col items-center gap-[8.2px]"
           >
-            {isDarkText ? (
-              <Image
-                className="w-num-140_6 h-auto"
-                loading="lazy"
-                width={140.6}
-                height={63.8}
-                sizes="140.6px"
-                alt="Pilotai Program"
-                src="/images/Frame-7654679@2x.png"
-              />
-            ) : (
-              <>
-                <div className="self-stretch flex flex-col items-center gap-[4.9px]">
-                  <Image
-                    className="cursor-pointer border-none p-num-0 bg-[transparent] w-6 h-[18.2px] relative"
-                    width={24}
-                    height={18.2}
-                    sizes="24px"
-                    alt=""
-                    src="/images/Group-17.svg"
-                  />
-                  <Image
-                    className="w-num-140_6 h-[27.3px] relative"
-                    loading="lazy"
-                    width={140.6}
-                    height={27.3}
-                    sizes="140.6px"
-                    alt="Pilotai"
-                    src="/images/Group-18.svg"
-                  />
-                </div>
-                <Image
-                  className="w-[72.5px] h-[5.2px] relative"
-                  loading="lazy"
-                  width={72.5}
-                  height={5.2}
-                  sizes="72.5px"
-                  alt=""
-                  src="/images/Program.svg"
-                />
-              </>
-            )}
+            <Image
+              className="w-num-140_6 h-auto"
+              loading="lazy"
+              width={140.6}
+              height={63.8}
+              sizes="140.6px"
+              alt="Pilotai Program"
+              src={useDarkTone ? "/images/logoBlack.svg" : "/images/logo.svg"}
+            />
           </Link>
           <nav
             className={`m-0 flex items-center gap-12 text-left text-num-13 ${
-              isDarkText ? "text-black" : "text-white"
+              useDarkTone ? "text-black" : "text-white"
             } font-jost`}
           >
             {NAV_LINKS.map((link) => (
               <NavLink
                 key={link.label}
                 link={link}
-                className={isDarkText ? "!text-black" : ""}
+                className={useDarkTone ? "!text-black" : ""}
               />
             ))}
           </nav>
@@ -175,43 +144,22 @@ export default function Header({
 
       <div className="flex desktop:hidden w-full flex-col items-start">
         <div
-          className="self-stretch flex items-center justify-between py-num-14 px-4 sm:px-6 relative z-[10020]"
+          className={`self-stretch flex items-center justify-between py-num-14 px-4 sm:px-6 relative z-[10020] transition-[background-color,border-color,backdrop-filter] duration-500 ${mobileHeaderTone}`}
         >
           <Link href="/" className="flex items-center gap-2">
-            {isDarkText ? (
-              <Image
-                className="h-[40px] w-auto"
-                width={140.6}
-                height={63.8}
-                sizes="120px"
-                alt="Pilotai Program"
-                src="/images/Frame-7654679@2x.png"
-              />
-            ) : (
-              <>
-                <Image
-                  className="w-6 h-[18.2px]"
-                  width={24}
-                  height={18.2}
-                  sizes="24px"
-                  alt=""
-                  src="/images/Group-17.svg"
-                />
-                <Image
-                  className="h-[27.3px] w-auto"
-                  width={140.6}
-                  height={27.3}
-                  sizes="120px"
-                  alt="Pilotai"
-                  src="/images/Group-18.svg"
-                />
-              </>
-            )}
+            <Image
+              className="h-[40px] w-auto"
+              width={140.6}
+              height={63.8}
+              sizes="120px"
+              alt="Pilotai Program"
+              src={useDarkTone ? "/images/logoBlack.svg" : "/images/logo.svg"}
+            />
           </Link>
           <button
             type="button"
             className={`w-10 h-10 flex items-center justify-center ${
-              isDarkText ? "text-black" : "text-white"
+              useDarkTone ? "text-black" : "text-white"
             }`}
             aria-expanded={menuOpen}
             aria-controls="frame-mobile-menu"

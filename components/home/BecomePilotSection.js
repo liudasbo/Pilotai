@@ -48,9 +48,7 @@ export default function BecomePilotSection() {
             href="/contact-us"
             className="pl-[41px] pr-10 flex flex-col items-start"
           >
-            <div className="relative text-left">
-              See the package
-            </div>
+            <div className="relative text-left">Request your invitation</div>
           </Button>
         </section>
         <div className="order-2 desktop:hidden w-full flex items-center justify-center gap-6">
