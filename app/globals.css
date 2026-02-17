@@ -16,6 +16,17 @@ body {
   --dur-base: 520ms;
 }
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
 @layer utilities {
   .text-section-body {
     @apply text-num-16 leading-num-24 font-jost text-darkslategray-100;
@@ -32,7 +43,7 @@ body {
   }
 
   .section-heading {
-    @apply m-0 text-[30px] leading-[36px] desktop:text-num-37 tracking-num-0_56 desktop:leading-num-42 uppercase font-medium;
+    @apply m-0 text-[30px] leading-[36px] desktop:text-num-37 tracking-num-0_56 desktop:leading-num-42 uppercase font-medium font-heading;
   }
 
   .cta-button-base {

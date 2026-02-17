@@ -13,7 +13,7 @@ export default function BristellSection() {
       sectionClassName="text-left text-[31px] text-white font-jost isolate"
     >
       <div className="w-full max-w-[474px] flex flex-col items-start gap-1">
-        <h2 className="m-0 w-full max-w-[287.6px] text-[28px] leading-[34px] desktop:text-[31px] tracking-[0.47px] desktop:leading-9 uppercase font-medium font-jost">
+        <h2 className="m-0 w-full max-w-[287.6px] text-[28px] leading-[34px] desktop:text-[31px] tracking-[0.47px] desktop:leading-9 uppercase font-medium">
           You will fly with Bristell
         </h2>
         <div className="text-[17px] leading-num-23">Aircraft</div>
