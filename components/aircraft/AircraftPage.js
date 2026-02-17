@@ -36,7 +36,7 @@ function AircraftHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image
-        src="/images/IMG-7135@2x.png"
+        src="/images/aircraftBg.jpg"
         alt="Bristell NG5 aircraft in flight"
         fill
         priority
@@ -189,9 +189,9 @@ function AircraftDetailsSection() {
             </SectionHeading>
             <p className="m-0 text-section-body">
               Comfortable, efficient, and forgiving, the Bristell NG5 offers a
-              smooth, modern flying experience, making learning to fly both
-              safe and enjoyable. It is a perfect aircraft for the next
-              generation of ultralight pilots.
+              smooth, modern flying experience, making learning to fly both safe
+              and enjoyable. It is a perfect aircraft for the next generation of
+              ultralight pilots.
             </p>
           </div>
           <Button

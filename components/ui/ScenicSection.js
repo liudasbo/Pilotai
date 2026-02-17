@@ -6,6 +6,7 @@ export default function ScenicSection({
   backgroundAlt,
   overlaySrc = "/images/Vector1.svg",
   overlayAlt = "",
+  overlayClassName = "absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] desktop:w-[62%] max-w-none opacity-70",
   showOverlay = true,
   tintClassName = "bg-[#182739]/45",
   sectionClassName = "",
@@ -30,7 +31,7 @@ export default function ScenicSection({
           alt={overlayAlt}
           width={945}
           height={977}
-          className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] desktop:w-[62%] max-w-none opacity-70"
+          className={overlayClassName}
         />
       ) : null}
       {tintClassName ? (

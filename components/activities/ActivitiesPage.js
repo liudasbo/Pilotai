@@ -60,19 +60,13 @@ function ActivitiesHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image
-        src="/images/IMG-71351@2x.png"
+        src="/images/activitiesBg.jpg"
         alt="Activities hero with aircraft background"
         fill
         priority
         className="object-cover"
       />
-      <Image
-        src="/images/Vector.svg"
-        alt=""
-        width={2052}
-        height={1306}
-        className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[145%] desktop:w-[120%] max-w-none opacity-80"
-      />
+
       <div className="absolute inset-0 bg-[#0f2943]/60" />
       <div className="relative z-[1] min-h-[500px] desktop:min-h-[600px] flex flex-col">
         <Header />
