@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Red_Hat_Display } from "next/font/google";
+
+const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"],
+  weight: ["500"],
+});
 
 const BENEFIT_ITEMS = [
   { label: "Pilot licence", image: "/images/j@2x.png" },
@@ -44,7 +50,7 @@ export default function BenefitsSection() {
                       type="button"
                       aria-pressed={isActive}
                       onClick={() => setActiveIndex(index)}
-                      className={`group inline-flex bg-transparent p-0 text-left text-[36px] font-medium uppercase tracking-[0.9px] transition-[color,opacity] duration-300 sm:text-[48px] sm:leading-[52px] desktop:text-[60px] desktop:leading-[60px] ${
+                      className={`${redHatDisplay.className} group inline-flex bg-transparent p-0 text-left text-[36px] font-medium uppercase tracking-[0.9px] transition-[color,opacity] duration-300 sm:text-[48px] sm:leading-[52px] desktop:text-[60px] desktop:leading-[60px] ${
                         isActive
                           ? "text-black opacity-100"
                           : "text-black/65 opacity-90 hover:text-black"

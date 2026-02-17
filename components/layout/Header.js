@@ -20,16 +20,16 @@ const SOCIAL_LINKS = [
   {
     label: "FB.",
     mobileLabel: "Facebook",
-    href: SITE_CONFIG.socials.facebook,
+    href: SITE_CONFIG.socials.facebook || "https://facebook.com",
     ariaLabel: "Facebook",
   },
   {
     label: "IN.",
     mobileLabel: "Instagram",
-    href: SITE_CONFIG.socials.instagram,
+    href: SITE_CONFIG.socials.instagram || "https://instagram.com",
     ariaLabel: "Instagram",
   },
-].filter((item) => Boolean(item.href));
+];
 
 function NavLink({ link, onClick, mobile, className = "" }) {
   return (
@@ -73,14 +73,11 @@ export default function Header({
   }, [menuOpen]);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
     const onScroll = () => {
       setHasScrolled(window.scrollY > 24);
     };
 
+    setIsMounted(true);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -96,11 +93,15 @@ export default function Header({
     ? "bg-white border-b border-black/10"
     : "bg-transparent border-b border-transparent";
 
+  if (!isMounted) {
+    return null;
+  }
+
   const headerContent = (
     <header
       className={`w-full flex flex-col items-start shrink-0 text-left text-[12px] ${
         useDarkTone ? "text-black" : "text-white"
-      } font-jost fixed top-0 left-0 z-[2147483647] transition-[background-color,border-color,backdrop-filter,color] duration-500 ${className}`}
+      } font-jost fixed top-0 left-0 z-[1200] transition-[background-color,border-color,backdrop-filter,color] duration-500 ${className}`}
     >
       <div
         className={`hidden desktop:flex w-full flex-col items-start transition-[background-color,border-color,backdrop-filter] duration-500 ${desktopHeaderTone}`}
@@ -214,7 +215,7 @@ export default function Header({
         ? createPortal(
             <div
               id="frame-mobile-menu"
-              className={`desktop:hidden fixed inset-0 z-[2147483000] transition-opacity duration-300 ease-out ${
+              className={`desktop:hidden fixed inset-0 z-[1300] transition-opacity duration-300 ease-out ${
                 menuOpen
                   ? "opacity-100 pointer-events-auto"
                   : "opacity-0 pointer-events-none"
@@ -275,21 +276,19 @@ export default function Header({
                     >
                       Contact Us
                     </Link>
-                    {SOCIAL_LINKS.length > 0 ? (
-                      <div className="mt-5 flex items-center justify-between text-white/70 text-[12px] tracking-[1px]">
-                        {SOCIAL_LINKS.map((social) => (
-                          <a
-                            key={social.mobileLabel}
-                            href={social.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-white"
-                          >
-                            {social.mobileLabel}
-                          </a>
-                        ))}
-                      </div>
-                    ) : null}
+                    <div className="mt-5 flex items-center justify-between text-white/70 text-[12px] tracking-[1px]">
+                      {SOCIAL_LINKS.map((social) => (
+                        <a
+                          key={social.mobileLabel}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-white"
+                        >
+                          {social.mobileLabel}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </aside>
@@ -301,5 +300,5 @@ export default function Header({
   );
 
   // Render header at document root to avoid local stacking-context clipping.
-  return isMounted ? createPortal(headerContent, document.body) : headerContent;
+  return createPortal(headerContent, document.body);
 }

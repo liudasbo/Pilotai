@@ -8,6 +8,8 @@ import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScenicSection from "@/components/ui/ScenicSection";
 import NewsletterSection from "@/components/forms/NewsletterSection";
+import PartnerStrip from "@/components/ui/PartnerStrip";
+import { PARTNER_LOGOS } from "@/lib/content/partners";
 
 const AEROBATIC_ACTIVITY = {
   image: "/images/Photo@2x.png",
@@ -50,44 +52,6 @@ const CONCIERGE_ACTIVITY = {
   description:
     "Pilotai Program is a fully curated, concierge-level journey. Flights, ground transportation, and additional activities are arranged seamlessly. Each 20-day program is personally tailored around your interests, lifestyle, and pace, so every detail is handled from arrival to departure.",
 };
-
-const PARTNERS = [
-  {
-    src: "/images/Container.svg",
-    alt: "Partner logo",
-    width: 262.4,
-    height: 42.2,
-    className: "w-[180px] desktop:w-[220px] h-auto",
-  },
-  {
-    src: "/images/Baltic-Bees-Jet-team-emblem@2x.png",
-    alt: "Baltic Bees Jet Team emblem",
-    width: 73.7,
-    height: 72.2,
-    className: "w-[44px] desktop:w-[62px] h-auto",
-  },
-  {
-    src: "/images/logo-en-white-1@2x.png",
-    alt: "Partner logo",
-    width: 104,
-    height: 50,
-    className: "w-[74px] desktop:w-[96px] h-auto",
-  },
-  {
-    src: "/images/313Cablepark-Logotipas-BLACK-RGB@2x.png",
-    alt: "313 Cable Park logo",
-    width: 70.2,
-    height: 70.2,
-    className: "w-[44px] desktop:w-[62px] h-auto",
-  },
-  {
-    src: "/images/logo-en-white-11@2x.png",
-    alt: "Partner logo",
-    width: 76.2,
-    height: 49.9,
-    className: "w-[58px] desktop:w-[76px] h-auto",
-  },
-];
 
 function ActivitiesHero() {
   return (
@@ -180,35 +144,13 @@ function JetExperienceSection() {
           Jet Experience
         </SectionHeading>
         <p className="m-0 text-num-16 leading-num-23 text-whitesmoke-100 font-jost">
-          You fly yourself from Kaunas to Riga, turning the journey itself
-          into part of the adventure. Upon arrival, you join an elite jet team
-          for an unforgettable jet flight, bridging general and
-          high-performance aviation in one seamless experience.
+          You fly yourself from Kaunas to Riga, turning the journey itself into
+          part of the adventure. Upon arrival, you join an elite jet team for an
+          unforgettable jet flight, bridging general and high-performance
+          aviation in one seamless experience.
         </p>
       </div>
     </ScenicSection>
-  );
-}
-
-function PartnerStrip() {
-  return (
-    <section
-      data-motion="reveal"
-      className="w-full bg-whitesmoke-100 py-10 desktop:py-[70px] px-4 desktop:px-10"
-    >
-      <Container className="flex flex-wrap items-center justify-center gap-8 desktop:gap-[30px]">
-        {PARTNERS.map((partner) => (
-          <Image
-            key={partner.src}
-            src={partner.src}
-            alt={partner.alt}
-            width={partner.width}
-            height={partner.height}
-            className={partner.className}
-          />
-        ))}
-      </Container>
-    </section>
   );
 }
 
@@ -247,7 +189,7 @@ export default function ActivitiesPage() {
         <JetExperienceSection />
         <ActivitySplitSection {...GOLF_ACTIVITY} />
         <ActivitySplitSection {...TENNIS_ACTIVITY} />
-        <PartnerStrip />
+        <PartnerStrip partners={PARTNER_LOGOS} />
         <ActivitySplitSection {...RACE_CAR_ACTIVITY} />
         <WakeboardingSection />
         <ActivitySplitSection {...HORSE_RIDING_ACTIVITY} />
