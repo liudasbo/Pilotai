@@ -108,6 +108,12 @@ export default function Footer({ className = "" }) {
               >
                 Terms &amp; Conditions
               </Link>
+              <Link
+                href="/pilot-license-policy"
+                className="leading-num-23 hover:text-white"
+              >
+                Pilot License Policy
+              </Link>
             </div>
           </div>
         </div>
