@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Container from "@/components/ui/Container";
 
 export default function ScenicSection({
   id,
@@ -37,11 +36,11 @@ export default function ScenicSection({
       {tintClassName ? (
         <div className={`absolute inset-0 ${tintClassName}`} />
       ) : null}
-      <Container
+      <div
         className={`relative z-[1] min-h-[560px] flex items-end py-14 desktop:py-[92px] px-4 sm:px-6 desktop:px-[70px] ${containerClassName}`.trim()}
       >
         {children}
-      </Container>
+      </div>
     </section>
   );
 }

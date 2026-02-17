@@ -46,6 +46,7 @@ module.exports = {
       },
       fontSize: {
         "num-13": "13px",
+        "num-14": "14px",
         "num-37": "37px",
         "num-16": "16px",
       },
@@ -56,6 +57,7 @@ module.exports = {
         "num-24": "24px",
         "num-15_6": "15.6px",
         "num-22": "22px",
+        "num-26": "26px",
       },
       letterSpacing: {
         "num-0_56": "0.56px",

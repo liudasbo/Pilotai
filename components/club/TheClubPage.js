@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
+import NewsletterSection from "@/components/forms/NewsletterSection";
 
 const CLUB_PRIVILEGES = [
   "Private aviation and flight experiences",
@@ -256,44 +257,6 @@ function ClubIdentitySection() {
             Request Membership Access
           </Button>
         </div>
-      </Container>
-    </section>
-  );
-}
-
-function NewsletterSection() {
-  return (
-    <section
-      data-motion="reveal"
-      className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[119px] px-4 sm:px-6 text-center"
-    >
-      <Container className="max-w-[802px] flex flex-col items-center gap-[22px]">
-        <SectionHeading as="h2" className="text-black text-center">
-          Our Newsletter
-        </SectionHeading>
-        <p className="m-0 text-num-16 leading-num-24 text-darkslategray-100 font-jost">
-          No invitations, only pure fly content
-        </p>
-        <form className="w-full border-b border-black flex items-center justify-between gap-4 py-2">
-          <input
-            type="email"
-            placeholder="Email Address"
-            aria-label="Email Address"
-            className="w-full border-none outline-none bg-transparent text-num-16 leading-num-24 text-darkslategray-100 placeholder:text-darkslategray-100 placeholder:opacity-100 font-jost"
-          />
-          <button type="submit" aria-label="Subscribe to newsletter">
-            <Image
-              src="/images/Button.svg"
-              alt=""
-              width={17}
-              height={12}
-              className="w-[17px] h-3"
-            />
-          </button>
-        </form>
-        <p className="m-0 text-[14px] leading-num-24 text-darkslategray-100 font-jost">
-          Privacy Policy and Terms &amp; Conditions.
-        </p>
       </Container>
     </section>
   );

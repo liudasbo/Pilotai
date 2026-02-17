@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
+import { SITE_CONFIG } from "@/lib/siteConfig";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -14,6 +15,21 @@ const NAV_LINKS = [
   { label: "About Us", href: "/about-us" },
   { label: "Contacts", href: "/contact-us" },
 ];
+
+const SOCIAL_LINKS = [
+  {
+    label: "FB.",
+    mobileLabel: "Facebook",
+    href: SITE_CONFIG.socials.facebook,
+    ariaLabel: "Facebook",
+  },
+  {
+    label: "IN.",
+    mobileLabel: "Instagram",
+    href: SITE_CONFIG.socials.instagram,
+    ariaLabel: "Instagram",
+  },
+].filter((item) => Boolean(item.href));
 
 function NavLink({ link, onClick, mobile, className = "" }) {
   return (
@@ -73,45 +89,47 @@ export default function Header({
     };
   }, []);
 
-  const desktopHeaderTone = hasScrolled
-    ? "bg-white/92 backdrop-blur-md border-b border-black/10"
+  const desktopHeaderTone = useDarkTone
+    ? "bg-white border-b border-black/10"
     : "bg-transparent border-b border-transparent";
-  const mobileHeaderTone = hasScrolled
-    ? "bg-white/92 backdrop-blur-md border-b border-black/10"
+  const mobileHeaderTone = useDarkTone
+    ? "bg-white border-b border-black/10"
     : "bg-transparent border-b border-transparent";
 
-  return (
+  const headerContent = (
     <header
-      className={`w-full flex flex-col items-start z-10 shrink-0 text-left text-[12px] ${
+      className={`w-full flex flex-col items-start shrink-0 text-left text-[12px] ${
         useDarkTone ? "text-black" : "text-white"
-      } font-jost fixed top-0 left-0 z-[2147482000] transition-[background-color,border-color,backdrop-filter,color] duration-500 ${className}`}
+      } font-jost fixed top-0 left-0 z-[2147483647] transition-[background-color,border-color,backdrop-filter,color] duration-500 ${className}`}
     >
       <div
         className={`hidden desktop:flex w-full flex-col items-start transition-[background-color,border-color,backdrop-filter] duration-500 ${desktopHeaderTone}`}
       >
         <div
-          className={`self-stretch h-8 border-gray-400 border-solid border-b-[1px] box-border ${
-            topSocialGray ? "bg-whitesmoke-100" : ""
+          className={`self-stretch h-8 border-solid border-b-[1px] box-border ${
+            useDarkTone
+              ? "border-black/10 bg-white"
+              : topSocialGray
+                ? "border-gray-400 bg-whitesmoke-100"
+                : "border-white/20 bg-transparent"
           }`}
         >
           <div className="h-full flex items-center justify-end pr-[60px] gap-3">
-            <Link
-              href="/"
-              aria-label="Facebook"
-              className="social-link"
-            >
-              FB.
-            </Link>
-            <Link
-              href="/"
-              aria-label="Instagram"
-              className="social-link"
-            >
-              IN.
-            </Link>
+            {SOCIAL_LINKS.map((social) => (
+              <a
+                key={social.ariaLabel}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.ariaLabel}
+                className="social-link"
+              >
+                {social.label}
+              </a>
+            ))}
           </div>
         </div>
-        <div className="self-stretch flex items-center py-num-14 px-[60px] gap-[260px]">
+        <div className="self-stretch flex items-center py-num-14 px-[60px]">
           <Link
             href="/"
             className="w-num-140_6 flex flex-col items-center gap-[8.2px]"
@@ -127,7 +145,7 @@ export default function Header({
             />
           </Link>
           <nav
-            className={`m-0 flex items-center gap-12 text-left text-num-13 ${
+            className={`m-0 ml-auto flex items-center gap-12 text-left text-num-13 ${
               useDarkTone ? "text-black" : "text-white"
             } font-jost`}
           >
@@ -257,14 +275,21 @@ export default function Header({
                     >
                       Contact Us
                     </Link>
-                    <div className="mt-5 flex items-center justify-between text-white/70 text-[12px] tracking-[1px]">
-                      <Link href="/" className="hover:text-white">
-                        Facebook
-                      </Link>
-                      <Link href="/" className="hover:text-white">
-                        Instagram
-                      </Link>
-                    </div>
+                    {SOCIAL_LINKS.length > 0 ? (
+                      <div className="mt-5 flex items-center justify-between text-white/70 text-[12px] tracking-[1px]">
+                        {SOCIAL_LINKS.map((social) => (
+                          <a
+                            key={social.mobileLabel}
+                            href={social.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-white"
+                          >
+                            {social.mobileLabel}
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               </aside>
@@ -274,4 +299,7 @@ export default function Header({
         : null}
     </header>
   );
+
+  // Render header at document root to avoid local stacking-context clipping.
+  return isMounted ? createPortal(headerContent, document.body) : headerContent;
 }

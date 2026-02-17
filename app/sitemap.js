@@ -45,6 +45,18 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: "https://pilotaiprogram.com/privacy-policy",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://pilotaiprogram.com/terms-and-conditions",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: "https://pilotaiprogram.com/contact-us",
       lastModified,
       changeFrequency: "weekly",

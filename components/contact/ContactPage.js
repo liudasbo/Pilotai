@@ -4,6 +4,9 @@ import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import RunningTicker from "@/components/ui/RunningTicker";
 import SectionHeading from "@/components/ui/SectionHeading";
+import ContactForm from "@/components/forms/ContactForm";
+import NewsletterSection from "@/components/forms/NewsletterSection";
+import { SITE_CONFIG } from "@/lib/siteConfig";
 
 function ContactFormSection() {
   return (
@@ -21,46 +24,7 @@ function ContactFormSection() {
             <SectionHeading as="h1" className="text-black">
               You can contact us
             </SectionHeading>
-            <form className="w-full flex flex-col items-start gap-6 text-num-14 text-darkslategray-100 font-red-hat-display">
-              <label className="w-full border-b border-gainsboro pb-1">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  className="w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 placeholder:text-darkslategray-100 placeholder:opacity-100"
-                />
-              </label>
-              <label className="w-full border-b border-gainsboro pb-1">
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone number"
-                  className="w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 placeholder:text-darkslategray-100 placeholder:opacity-100"
-                />
-              </label>
-              <label className="w-full border-b border-gainsboro pb-1">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  className="w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 placeholder:text-darkslategray-100 placeholder:opacity-100"
-                />
-              </label>
-              <label className="w-full border-b border-gainsboro pb-1">
-                <textarea
-                  name="message"
-                  rows={3}
-                  placeholder="Enter Message"
-                  className="w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 resize-none placeholder:text-darkslategray-100 placeholder:opacity-100"
-                />
-              </label>
-              <button
-                type="submit"
-                className="cursor-pointer border-none py-3.5 px-[42px] bg-[#cc6e36] text-num-13 tracking-[0.39px] leading-[15.6px] uppercase font-semibold font-jost text-white focus-visible:outline-none"
-              >
-                Send
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>
@@ -72,7 +36,7 @@ function ContactInfoBand() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-whitesmoke-100 py-[70px] px-[30px] text-num-16 text-black font-red-hat-display"
+      className="w-full bg-whitesmoke-100 py-[70px] px-[30px] text-num-16 text-black font-jost"
     >
       <Container className="max-w-[1374px] flex flex-wrap items-start justify-between gap-8">
         <div className="flex flex-col items-start gap-[2.5px]">
@@ -80,7 +44,12 @@ function ContactInfoBand() {
             Email us
           </h3>
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
-            info@pilotaiprogram.com
+            <a
+              href={`mailto:${SITE_CONFIG.contact.email}`}
+              className="hover:underline"
+            >
+              {SITE_CONFIG.contact.email}
+            </a>
           </p>
         </div>
         <div className="flex flex-col items-start gap-[2.5px]">
@@ -88,7 +57,9 @@ function ContactInfoBand() {
             Call us
           </h3>
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
-            +370 604 46088
+            <a href="tel:+37060446088" className="hover:underline">
+              {SITE_CONFIG.contact.phone}
+            </a>
           </p>
         </div>
         <div className="flex flex-col items-start gap-[2.5px]">
@@ -96,7 +67,7 @@ function ContactInfoBand() {
             Address
           </h3>
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
-            Kaunas, Lithuania
+            {SITE_CONFIG.contact.location}
           </p>
         </div>
         <div className="flex flex-col items-start gap-[3px]">
@@ -104,47 +75,9 @@ function ContactInfoBand() {
             Working hours
           </h3>
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
-            9.00 am - 6.00pm
+            {SITE_CONFIG.contact.workingHours}
           </p>
         </div>
-      </Container>
-    </section>
-  );
-}
-
-function ContactNewsletterSection() {
-  return (
-    <section
-      data-motion="reveal"
-      className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[119px] px-4 sm:px-6 text-center"
-    >
-      <Container className="max-w-[802px] flex flex-col items-center gap-[22px]">
-        <SectionHeading as="h2" className="text-black text-center">
-          Our Newsletter
-        </SectionHeading>
-        <p className="m-0 text-num-16 leading-num-24 text-darkslategray-100 font-jost">
-          No invitations only pure fly content
-        </p>
-        <form className="w-full border-b border-black flex items-center justify-between gap-4 py-2">
-          <input
-            type="email"
-            placeholder="Email Address"
-            aria-label="Email Address"
-            className="w-full border-none outline-none bg-transparent text-num-16 leading-num-24 text-darkslategray-100 placeholder:text-darkslategray-100 placeholder:opacity-100 font-jost"
-          />
-          <button type="submit" aria-label="Subscribe to newsletter">
-            <Image
-              src="/images/Button.svg"
-              alt=""
-              width={17}
-              height={12}
-              className="w-[17px] h-3"
-            />
-          </button>
-        </form>
-        <p className="m-0 text-num-14 leading-num-24 text-darkslategray-100 font-jost">
-          Privacy Policy and Terms &amp; Conditions.
-        </p>
       </Container>
     </section>
   );
@@ -153,13 +86,13 @@ function ContactNewsletterSection() {
 export default function ContactPage() {
   return (
     <div className="w-full bg-white overflow-x-hidden flex flex-col items-stretch motion-scope">
-      <main className="w-full">
+      <main className="w-full pt-[72px] desktop:pt-[124px]">
         <Header textColor="black" topSocialGray />
         <ContactFormSection />
       </main>
       <ContactInfoBand />
       <RunningTicker text="More than flying. A way of being." />
-      <ContactNewsletterSection />
+      <NewsletterSection />
       <Footer />
     </div>
   );

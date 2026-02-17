@@ -97,10 +97,16 @@ export default function Footer({ className = "" }) {
                 Activities
               </Link>
               <Link
-                href="/pilot-license-policy"
+                href="/privacy-policy"
                 className="leading-num-23 hover:text-white"
               >
                 Privacy policy
+              </Link>
+              <Link
+                href="/terms-and-conditions"
+                className="leading-num-23 hover:text-white"
+              >
+                Terms &amp; Conditions
               </Link>
             </div>
           </div>

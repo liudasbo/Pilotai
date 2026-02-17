@@ -11,8 +11,7 @@ import {
   STAGGER_PRESET,
 } from "@/lib/animations/presets";
 
-const AUTO_REVEAL_SELECTOR =
-  ".motion-scope > [data-motion='reveal'], .motion-scope > [data-motion='text-only'], .motion-scope main [data-motion='reveal'], .motion-scope main [data-motion='text-only']";
+const AUTO_REVEAL_SELECTOR = "[data-motion='reveal'], [data-motion='text-only']";
 const TEXT_ONLY_SELECTOR =
   "h1, h2, h3, p, li, a, button, input, textarea, [data-motion='stagger-item']";
 const DEFAULT_SELECTOR = TEXT_ONLY_SELECTOR;
@@ -28,6 +27,8 @@ export function useRevealMotion() {
     ).matches;
 
     if (prefersReducedMotion) return;
+    const motionScope = document.querySelector(".motion-scope");
+    if (!motionScope) return;
 
     const { gsap, ScrollTrigger } = getGsapClient();
     const ctx = gsap.context(() => {
@@ -78,7 +79,7 @@ export function useRevealMotion() {
       });
 
       const parallaxTargets = gsap.utils.toArray(
-        ".motion-scope [data-motion='parallax']"
+        "[data-motion='parallax']"
       );
 
       parallaxTargets.forEach((target) => {
@@ -94,7 +95,7 @@ export function useRevealMotion() {
           },
         });
       });
-    }, document.body);
+    }, motionScope);
 
     return () => {
       ctx.revert();
