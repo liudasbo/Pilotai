@@ -20,13 +20,13 @@ const SOCIAL_LINKS = [
   {
     label: "FB.",
     mobileLabel: "Facebook",
-    href: SITE_CONFIG.socials.facebook || "https://facebook.com",
+    href: SITE_CONFIG.socials.facebook,
     ariaLabel: "Facebook",
   },
   {
     label: "IN.",
     mobileLabel: "Instagram",
-    href: SITE_CONFIG.socials.instagram || "https://instagram.com",
+    href: SITE_CONFIG.socials.instagram,
     ariaLabel: "Instagram",
   },
 ];

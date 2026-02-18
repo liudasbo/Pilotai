@@ -91,12 +91,6 @@ export default function Footer({ className = "" }) {
             </div>
             <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
               <Link
-                href="/activities"
-                className="leading-num-23 hover:text-white"
-              >
-                Activities
-              </Link>
-              <Link
                 href="/privacy-policy"
                 className="leading-num-23 hover:text-white"
               >
