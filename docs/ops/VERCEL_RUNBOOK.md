@@ -3,8 +3,13 @@
 ## 1. Required Environment Variables
 Configure in Vercel Project Settings:
 
-- `CONTACT_WEBHOOK_URL` (required for production)
-- `NEWSLETTER_WEBHOOK_URL` (required for production)
+- `SMTP_HOST` (required for production)
+- `SMTP_PORT` (required for production, usually `465`)
+- `SMTP_SECURE` (`true` for SSL 465, `false` for STARTTLS 587)
+- `SMTP_USER` (required for production)
+- `SMTP_PASS` (required for production)
+- `MAIL_FROM` (required for production)
+- `MAIL_TO` (recommended, defaults to `info@pilotaiprogram.com`)
 - `ALLOW_FORM_FALLBACK=false` (recommended for production)
 - `NEXT_PUBLIC_FACEBOOK_URL` (optional but recommended)
 - `NEXT_PUBLIC_INSTAGRAM_URL` (optional but recommended)
@@ -12,8 +17,8 @@ Configure in Vercel Project Settings:
 Reference template: `/.env.example`
 
 ## 2. Preview vs Production Parity
-- Keep the same form integration shape in preview and production.
-- Use separate webhook endpoints for preview/prod if needed.
+- Keep the same SMTP integration shape in preview and production.
+- Use separate mailbox credentials for preview/prod if needed.
 - Validate both `/api/contact` and `/api/newsletter` in preview before promote.
 
 ## 3. Pre-Deploy Checklist
@@ -27,8 +32,8 @@ Run locally or in CI:
 
 ## 4. Deployment Verification
 After deploy to Vercel production:
-- Submit contact form with valid payload and verify webhook delivery.
-- Submit newsletter form with valid payload and verify webhook delivery.
+- Submit contact form with valid payload and verify email delivery to `MAIL_TO`.
+- Submit newsletter form with valid payload and verify email delivery to `MAIL_TO`.
 - Confirm robots and sitemap routes:
   - `/robots.txt`
   - `/sitemap.xml`
@@ -40,10 +45,10 @@ After deploy to Vercel production:
 - In Vercel dashboard, open Deployments.
 - Select the last known good deployment.
 - Promote it to production.
-- Re-run form smoke tests and verify webhook delivery.
+- Re-run form smoke tests and verify SMTP email delivery.
 
 ## 6. Incident Notes
 If form API returns `503 SERVICE_UNAVAILABLE` in production:
-- Check webhook env vars in Vercel.
-- Verify webhook endpoint health.
+- Check SMTP env vars in Vercel.
+- Verify mailbox credentials and SMTP host/port/secure mode.
 - Re-deploy after fixing configuration.

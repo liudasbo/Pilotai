@@ -1,6 +1,7 @@
 import { apiError, apiSuccess } from "@/lib/api/contracts";
 import { checkRateLimit } from "@/lib/api/rateLimit";
 import { getClientIp } from "@/lib/api/clientIp";
+import { sendNewsletterSubscriberEmail } from "@/lib/api/mailer";
 import {
   getFieldErrors,
   newsletterFormSchema,
@@ -11,27 +12,13 @@ const NEWSLETTER_WINDOW_MS = 10 * 60 * 1000;
 const DUPLICATE_WINDOW_MS = 24 * 60 * 60 * 1000;
 const recentSubscriptions = new Map();
 
+export const runtime = "nodejs";
+
 function cleanupDuplicates(now) {
   for (const [email, expiresAt] of recentSubscriptions.entries()) {
     if (now > expiresAt) {
       recentSubscriptions.delete(email);
     }
-  }
-}
-
-async function sendToWebhook(webhookUrl, payload) {
-  const response = await fetch(webhookUrl, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(payload),
-    cache: "no-store",
-    signal: AbortSignal.timeout(8000),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Webhook returned ${response.status}`);
   }
 }
 
@@ -108,36 +95,16 @@ export async function POST(request) {
     );
   }
 
-  const payload = {
-    type: "newsletter_subscription",
-    receivedAt: new Date().toISOString(),
-    source: "pilotai-web",
-    email,
-  };
-
-  const webhookUrl = process.env.NEWSLETTER_WEBHOOK_URL;
+  const receivedAt = new Date().toISOString();
   const allowLocalFallback =
     process.env.NODE_ENV !== "production" &&
     process.env.ALLOW_FORM_FALLBACK !== "false";
 
   try {
-    if (webhookUrl) {
-      await sendToWebhook(webhookUrl, payload);
-    } else if (allowLocalFallback) {
-      console.info(
-        "[newsletter] webhook is not set, using local fallback",
-        payload
-      );
-    } else {
-      return apiError(
-        {
-          code: "SERVICE_UNAVAILABLE",
-          message: "Newsletter service is temporarily unavailable.",
-        },
-        503
-      );
-    }
-
+    await sendNewsletterSubscriberEmail({
+      email,
+      receivedAt,
+    });
     recentSubscriptions.set(email, now + DUPLICATE_WINDOW_MS);
 
     return apiSuccess(
@@ -147,7 +114,32 @@ export async function POST(request) {
       201
     );
   } catch (error) {
-    console.error("[newsletter] subscribe failed", error);
+    if (error?.code === "SMTP_CONFIG_MISSING" && allowLocalFallback) {
+      console.info(
+        "[newsletter] SMTP config missing, using local fallback",
+        { email, receivedAt }
+      );
+
+      recentSubscriptions.set(email, now + DUPLICATE_WINDOW_MS);
+
+      return apiSuccess(
+        {
+          message: "Subscribed successfully. Thank you.",
+        },
+        201
+      );
+    }
+
+    if (error?.code === "SMTP_CONFIG_MISSING") {
+      return apiError(
+        {
+          code: "SERVICE_UNAVAILABLE",
+          message: "Newsletter service is temporarily unavailable.",
+        },
+        503
+      );
+    }
+    console.error("[newsletter] SMTP send failed", error);
 
     return apiError(
       {

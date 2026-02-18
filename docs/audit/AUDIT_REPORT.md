@@ -12,7 +12,7 @@ Target: Public-ready + reliability on Vercel
 - Internal route reference check: PASS (`npm run test:links`)
 - Security audit (prod deps): PASS (`npm audit --omit=dev`)
 
-Current release decision: **NO-GO** until production form webhooks are configured in Vercel and deployment runbook checks are completed.
+Current release decision: **NO-GO** until production SMTP env is configured in Vercel and deployment runbook checks are completed.
 
 ## Findings by Severity
 
@@ -22,7 +22,7 @@ Current release decision: **NO-GO** until production form webhooks are configure
 | P0-01 | Contact and newsletter forms had no backend delivery path | previous static forms in `/components/contact/ContactPage.js` and repeated newsletter sections | Fixed in code | Added `/app/api/contact/route.js` and `/app/api/newsletter/route.js` with validation, anti-spam honeypot, rate-limit, standardized API responses |
 | P0-02 | No automated CI quality gates | no workflow before | Fixed in code | Added `/.github/workflows/ci.yml` with lint, build, unit, e2e, link checks |
 | P0-03 | Legal links pointed to unrelated policy page | footer “Privacy policy” linked to pilot policy | Fixed in code | Added dedicated legal routes `/privacy-policy`, `/terms-and-conditions` and updated links |
-| P0-04 | Production form destination can be missing | API returns 503 in production if webhook env is not set | Open (ops) | Configure `CONTACT_WEBHOOK_URL` and `NEWSLETTER_WEBHOOK_URL` in Vercel before launch |
+| P0-04 | Production form destination can be missing | API returns 503 in production if SMTP env is not set | Open (ops) | Configure `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `MAIL_FROM` and `MAIL_TO` in Vercel before launch |
 
 ### P1 (High priority after launch or before performance-sensitive launch)
 | ID | Finding | Evidence | Recommendation |
@@ -36,7 +36,7 @@ Current release decision: **NO-GO** until production form webhooks are configure
 |---|---|---|
 | P2-01 | Mixed legacy token naming and many pixel-precise classes | Continue design token normalization and remove unused token variants |
 | P2-02 | Contact/legal copy can be expanded for compliance maturity | Replace short legal pages with legal-reviewed policy text |
-| P2-03 | Add synthetic monitoring for form APIs | Add uptime checks for `/api/contact` and `/api/newsletter` webhook delivery |
+| P2-03 | Add synthetic monitoring for form APIs | Add uptime checks for `/api/contact` and `/api/newsletter` SMTP delivery |
 
 ## Implemented Changes (This Execution)
 - Added centralized validation with `zod` in `/lib/validation/forms.js`.

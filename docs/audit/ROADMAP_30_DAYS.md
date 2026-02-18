@@ -9,7 +9,7 @@
 
 ## Week 2 (P1)
 - Add production monitoring and alerts:
-  - Form webhook success/failure tracking.
+  - Form SMTP success/failure tracking.
   - API route error-rate dashboards.
   - Synthetic checks for contact/newsletter flow.
 - Deliverable: monitoring dashboard links + alert runbook section.

@@ -1,26 +1,13 @@
 import { apiError, apiSuccess } from "@/lib/api/contracts";
 import { checkRateLimit } from "@/lib/api/rateLimit";
 import { getClientIp } from "@/lib/api/clientIp";
+import { sendContactSubmissionEmail } from "@/lib/api/mailer";
 import { contactFormSchema, getFieldErrors } from "@/lib/validation/forms";
 
 const CONTACT_LIMIT = 5;
 const CONTACT_WINDOW_MS = 10 * 60 * 1000;
 
-async function sendToWebhook(webhookUrl, payload) {
-  const response = await fetch(webhookUrl, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(payload),
-    cache: "no-store",
-    signal: AbortSignal.timeout(8000),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Webhook returned ${response.status}`);
-  }
-}
+export const runtime = "nodejs";
 
 export async function POST(request) {
   const contentType = request.headers.get("content-type") || "";
@@ -82,24 +69,38 @@ export async function POST(request) {
     );
   }
 
-  const payload = {
-    type: "contact_submission",
-    receivedAt: new Date().toISOString(),
-    source: "pilotai-web",
-    ...submission,
-  };
-
-  const webhookUrl = process.env.CONTACT_WEBHOOK_URL;
+  const receivedAt = new Date().toISOString();
   const allowLocalFallback =
     process.env.NODE_ENV !== "production" &&
     process.env.ALLOW_FORM_FALLBACK !== "false";
 
   try {
-    if (webhookUrl) {
-      await sendToWebhook(webhookUrl, payload);
-    } else if (allowLocalFallback) {
-      console.info("[contact] webhook is not set, using local fallback", payload);
-    } else {
+    await sendContactSubmissionEmail({
+      ...submission,
+      receivedAt,
+    });
+    return apiSuccess(
+      {
+        message: "Thank you. We received your message and will contact you shortly.",
+      },
+      201
+    );
+  } catch (error) {
+    if (error?.code === "SMTP_CONFIG_MISSING" && allowLocalFallback) {
+      console.info("[contact] SMTP config missing, using local fallback", {
+        ...submission,
+        receivedAt,
+      });
+
+      return apiSuccess(
+        {
+          message: "Thank you. We received your message and will contact you shortly.",
+        },
+        201
+      );
+    }
+
+    if (error?.code === "SMTP_CONFIG_MISSING") {
       return apiError(
         {
           code: "SERVICE_UNAVAILABLE",
@@ -108,15 +109,7 @@ export async function POST(request) {
         503
       );
     }
-
-    return apiSuccess(
-      {
-        message: "Thank you. We received your message and will contact you shortly.",
-      },
-      201
-    );
-  } catch (error) {
-    console.error("[contact] submit failed", error);
+    console.error("[contact] SMTP send failed", error);
 
     return apiError(
       {

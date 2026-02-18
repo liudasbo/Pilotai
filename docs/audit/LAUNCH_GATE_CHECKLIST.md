@@ -1,6 +1,6 @@
 # Launch Gate Checklist
 
-Decision: **NO-GO** (until webhook env and Vercel ops checks are completed)
+Decision: **NO-GO** (until SMTP env and Vercel ops checks are completed)
 
 ## Gate 0: Baseline
 - [x] Severity model applied (`P0/P1/P2`)
@@ -14,7 +14,7 @@ Decision: **NO-GO** (until webhook env and Vercel ops checks are completed)
 - [x] Honeypot and rate-limit protection added
 - [x] Placeholder social links removed from `/` fallback
 - [x] Privacy/terms legal pages added
-- [ ] Production webhook env configured in Vercel (`CONTACT_WEBHOOK_URL`, `NEWSLETTER_WEBHOOK_URL`)
+- [ ] Production SMTP env configured in Vercel (`SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `MAIL_FROM`, `MAIL_TO`)
 
 ## Gate 2: Performance
 - [ ] Vercel preview Lighthouse mobile/desktop reports attached
