@@ -42,9 +42,9 @@ export default function UltralightLicenseSection() {
             <div className="self-stretch flex flex-col items-start gap-[23px] text-section-body">
               <div className="self-stretch relative leading-num-24">
                 Participants will have the chance to earn an ultralight pilot
-                license, fly different types of aircraft, and enjoy a variety
-                of leisure activities-all while exploring the beauty of
-                Lithuania from the ground and the sky.
+                license, fly different types of aircraft, and enjoy a variety of
+                leisure activities-all while exploring the beauty of Lithuania
+                from the ground and the sky.
               </div>
               <div className="self-stretch relative leading-num-24">
                 Training using Bristell aircraft to obtain an ultralight pilot
@@ -54,13 +54,11 @@ export default function UltralightLicenseSection() {
           </div>
           <Button
             as={Link}
-            href="/activities"
+            href="/pilot-license"
             variant="accent"
             className="px-10 flex flex-col items-center justify-center"
           >
-            <div className="relative text-left">
-              View More
-            </div>
+            <div className="relative text-left">View More</div>
           </Button>
         </section>
       </Container>

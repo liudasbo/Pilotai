@@ -38,7 +38,7 @@ export default function HeroSection() {
           </div>
           <div className="self-stretch flex items-center flex-wrap content-center gap-x-6 sm:gap-x-10 desktop:gap-x-[111px] gap-y-5 sm:gap-y-[25px] text-[14px] font-jost">
             <Link
-              href="/#license"
+              href="/pilot-license"
               className="border-neutral-100 border-solid border-b-[1px] flex items-center pt-1 px-0 pb-0.5 gap-2"
             >
               <span className="relative leading-4 font-medium">
