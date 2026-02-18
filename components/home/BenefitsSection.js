@@ -11,10 +11,26 @@ const redHatDisplay = Red_Hat_Display({
 });
 
 const BENEFIT_ITEMS = [
-  { label: "Pilot licence", image: "/images/j@2x.png", href: "/pilot-license" },
-  { label: "Fly Varied Aircraft", image: "/images/sr7-mask@2x.png", href: "/aircraft" },
-  { label: "Explore Lithuania", image: "/images/sr7-mask2@2x.png", href: "/activities" },
-  { label: "Membership in The Club", image: "/images/Photos@2x.png", href: "/the-club" },
+  {
+    label: "Pilot licence",
+    image: "/images/Pilotlicence.jpg",
+    href: "/pilot-license",
+  },
+  {
+    label: "Fly Varied Aircraft",
+    image: "/images/FlyVariedAircraft.jpg",
+    href: "/aircraft",
+  },
+  {
+    label: "Explore Lithuania",
+    image: "/images/ExploreLithuania.jpg",
+    href: "/activities",
+  },
+  {
+    label: "Membership in The Club",
+    image: "/images/MembershipinTheClub.jpg",
+    href: "/the-club",
+  },
 ];
 
 const STACK_LAYER_CLASSES = [
@@ -26,10 +42,8 @@ const STACK_LAYER_CLASSES = [
 
 export default function BenefitsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const previewIndex = hoveredIndex ?? activeIndex;
   const orderedIndices = BENEFIT_ITEMS.map(
-    (_, index) => (previewIndex + index) % BENEFIT_ITEMS.length,
+    (_, index) => (activeIndex + index) % BENEFIT_ITEMS.length,
   );
 
   return (
@@ -45,17 +59,14 @@ export default function BenefitsSection() {
             </div>
             <ul className="mt-8 flex list-none flex-col gap-8 p-0 desktop:mt-[42px]">
               {BENEFIT_ITEMS.map((item, index) => {
-                const isActive = previewIndex === index;
+                const isActive = activeIndex === index;
 
                 return (
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                      onFocus={() => setHoveredIndex(index)}
-                      onBlur={() => setHoveredIndex(null)}
-                      onClick={() => setActiveIndex(index)}
+                      onMouseEnter={() => setActiveIndex(index)}
+                      onFocus={() => setActiveIndex(index)}
                       className={`${redHatDisplay.className} group inline-flex bg-transparent p-0 text-left text-[36px] font-medium uppercase tracking-[0.9px] transition-[color,opacity] duration-300 sm:text-[48px] sm:leading-[52px] desktop:text-[60px] desktop:leading-[60px] ${
                         isActive
                           ? "text-black opacity-100"

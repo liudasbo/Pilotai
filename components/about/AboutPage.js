@@ -33,8 +33,7 @@ const ABOUT_PILLARS = [
   {
     number: "05",
     title: "Tailored Journey",
-    description:
-      "A fully personalized program shaped around each participant.",
+    description: "A fully personalized program shaped around each participant.",
   },
   {
     number: "06",
@@ -50,20 +49,12 @@ function AboutHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image
-        src="/images/Parallax-Image@3x.png"
+        src="/images/AboutUsHero.jpg"
         alt="Pilotai Program team near aircraft"
         fill
         priority
         className="object-cover"
       />
-      <Image
-        src="/images/Vector.svg"
-        alt=""
-        width={2052}
-        height={1306}
-        className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[145%] desktop:w-[120%] max-w-none opacity-80"
-      />
-      <div className="absolute inset-0 bg-[#0f2943]/55" />
       <div className="relative z-[1] min-h-[500px] desktop:min-h-[600px] flex flex-col">
         <Header />
         <div className="flex-1 flex items-center justify-center px-4 pb-10">
@@ -85,14 +76,14 @@ function PurposeSection() {
       <Container className="grid grid-cols-1 desktop:grid-cols-[631px_1fr] gap-10 desktop:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image
-            src="/images/sr7-mask-sr7-img@2x.png"
+            src="/images/AboutUs1.jpg"
             alt="Pilot training cockpit controls"
             width={301}
             height={402}
             className="w-full h-auto object-cover"
           />
           <Image
-            src="/images/sr7-mask-sr7-img1@2x.png"
+            src="/images/AboutUs2.jpg"
             alt="Aircraft interior details"
             width={301}
             height={402}
@@ -150,7 +141,7 @@ function AboutCtaSection() {
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
-          src="/images/Photos@2x.png"
+          src="/images/AboutUs3.jpg"
           alt="Aircraft prepared for takeoff"
           width={550}
           height={499.2}
@@ -163,7 +154,8 @@ function AboutCtaSection() {
             </SectionHeading>
             <p className="m-0 text-section-body">
               Pilotai Program is an invitation into a world of mastery,
-              prestige, and extraordinary experiences reserved for a select few.
+              prestige, and extraordinary experiences — reserved for a select
+              few.
             </p>
           </div>
           <Button
@@ -183,10 +175,8 @@ function AboutCtaSection() {
 function HubSection() {
   return (
     <ScenicSection
-      backgroundSrc="/images/Parallax-Image@3x.png"
+      backgroundSrc="/images/AboutUs4.jpg"
       backgroundAlt="Vilnius city skyline at sunset"
-      overlaySrc="/images/Vector1.svg"
-      tintClassName="bg-[#182739]/45"
     >
       <div className="w-full max-w-[707px] flex flex-col items-start gap-2">
         <p className="m-0 text-num-13 tracking-[0.46px] leading-num-26 font-medium text-whitesmoke-100">
@@ -216,7 +206,7 @@ function StorySection() {
       <Container className="flex flex-col gap-16 desktop:gap-[70px]">
         <div className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[70px] items-center">
           <Image
-            src="/images/Photos1@2x.png"
+            src="/images/AboutUs5.jpg"
             alt="Aircraft in hangar"
             width={550}
             height={463.6}
@@ -248,7 +238,7 @@ function StorySection() {
             </p>
           </div>
           <Image
-            src="/images/Photos2@2x.png"
+            src="/images/AboutUs6.jpg"
             alt="Aircraft from top view over water"
             width={550}
             height={463.6}

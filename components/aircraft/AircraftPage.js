@@ -36,20 +36,12 @@ function AircraftHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image
-        src="/images/aircraftBg.jpg"
+        src="/images/aircraftHero.jpg"
         alt="Bristell NG5 aircraft in flight"
         fill
         priority
         className="object-cover"
       />
-      <Image
-        src="/images/Vector.svg"
-        alt=""
-        width={2052}
-        height={1306}
-        className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[145%] desktop:w-[120%] max-w-none opacity-80"
-      />
-      <div className="absolute inset-0 bg-[#0f2943]/55" />
       <div className="relative z-[1] min-h-[500px] desktop:min-h-[600px] flex flex-col">
         <Header />
         <div className="flex-1 flex items-center justify-center px-4 pb-10">
@@ -70,7 +62,7 @@ function AircraftIntroSection() {
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
-          src="/images/Photos@2x.png"
+          src="/images/Aircraft.jpg"
           alt="Bristell NG5 cockpit view while flying"
           width={550}
           height={499.2}
@@ -130,7 +122,7 @@ function AircraftSafetySection() {
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
-          src="/images/Photos1@2x.png"
+          src="/images/SafestyFirst.jpg"
           alt="Bristell NG5 panel and avionics detail"
           width={550}
           height={499.2}
@@ -165,14 +157,14 @@ function AircraftDetailsSection() {
       <Container className="max-w-[1274px] grid grid-cols-1 desktop:grid-cols-[631px_443px] gap-10 desktop:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image
-            src="/images/sr7-mask-sr7-img@2x.png"
+            src="/images/bristel.jpg"
             alt="Bristell NG5 cockpit interior"
             width={301}
             height={402}
             className="w-full h-auto object-cover"
           />
           <Image
-            src="/images/sr7-mask-sr7-img1@2x.png"
+            src="/images/bristel2.jpg"
             alt="Bristell NG5 seats and interior details"
             width={301}
             height={402}
@@ -216,7 +208,7 @@ export default function AircraftPage() {
         <AircraftIntroSection />
         <AircraftStatsSection />
         <ScenicSection
-          backgroundSrc="/images/Container@2x.png"
+          backgroundSrc="/images/Aircraft2.jpg"
           backgroundAlt="Lithuanian landscape from above"
           showOverlay={false}
           tintClassName=""

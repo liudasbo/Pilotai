@@ -11,10 +11,38 @@ import PartnerStrip from "@/components/ui/PartnerStrip";
 import { PARTNER_LOGOS } from "@/lib/content/partners";
 
 const CLUB_PRIVILEGES = [
-  "Private aviation and flight experiences",
-  "Invitation-only social and business gatherings",
-  "Priority access to Pilotai events and new programs",
-  "Exclusive partner benefits (luxury lifestyle)",
+  {
+    text: "Private aviation and flight experiences",
+    iconSrc: "/images/ab-icon-1@2x.png",
+    iconAlt: "Private aviation icon",
+    iconWidth: 60,
+    iconHeight: 60,
+    iconClassName: "w-[18px] h-[18px] mt-1 object-contain",
+  },
+  {
+    text: "Invitation-only social and business gatherings",
+    iconSrc: "/images/ab-icon-3.svg",
+    iconAlt: "Invitation icon",
+    iconWidth: 30,
+    iconHeight: 28,
+    iconClassName: "w-[18px] h-[18px] mt-1 object-contain",
+  },
+  {
+    text: "Priority access to Pilotai events and new programs",
+    iconSrc: "/images/ab-icon-2.svg",
+    iconAlt: "Priority access icon",
+    iconWidth: 25,
+    iconHeight: 19,
+    iconClassName: "w-[18px] h-[18px] mt-1 object-contain",
+  },
+  {
+    text: "Exclusive partner benefits (luxury lifestyle)",
+    iconSrc: "/images/ab-icon-4.svg",
+    iconAlt: "Partner benefits icon",
+    iconWidth: 17,
+    iconHeight: 12,
+    iconClassName: "w-[18px] h-[18px] mt-1 object-contain",
+  },
 ];
 
 function TheClubHero() {
@@ -24,20 +52,12 @@ function TheClubHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image
-        src="/images/Photo@3x.png"
+        src="/images/TheClubHero.jpg"
         alt="The Club hero with aircraft backdrop"
         fill
         priority
         className="object-cover"
       />
-      <Image
-        src="/images/Vector.svg"
-        alt=""
-        width={2052}
-        height={1306}
-        className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[145%] desktop:w-[120%] max-w-none opacity-80"
-      />
-      <div className="absolute inset-0 bg-[#0f2943]/60" />
       <div className="relative z-[1] min-h-[500px] desktop:min-h-[600px] flex flex-col">
         <Header />
         <div className="flex-1 flex flex-col items-center justify-center px-4 pb-10 gap-4">
@@ -70,7 +90,7 @@ function ClubOverviewSection() {
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
-          src="/images/Photo@3x.png"
+          src="/images/theClubPhoto.jpg"
           alt="Pilotai Club members gathered by aircraft"
           width={550}
           height={499.2}
@@ -84,11 +104,10 @@ function ClubOverviewSection() {
             More Than a Program. A Lifetime Network.
           </SectionHeading>
           <p className="m-0 text-section-body">
-            Pilotai Club is an exclusive community of high-achieving
-            individuals brought together by shared ambition, refined taste, and
-            a passion for aviation. It is a space where meaningful
-            relationships, business opportunities, and extraordinary experiences
-            naturally emerge.
+            Pilotai Club is an exclusive community of high-achieving individuals
+            brought together by shared ambition, refined taste, and a passion
+            for aviation. It is a space where meaningful relationships, business
+            opportunities, and extraordinary experiences naturally emerge.
           </p>
         </div>
       </Container>
@@ -99,7 +118,7 @@ function ClubOverviewSection() {
 function ClubParallaxImage() {
   return (
     <Image
-      src="/images/Container@2x.png"
+      src="/images/TheClubSection.jpg"
       alt="Silhouettes in premium aviation lounge"
       width={1512}
       height={560}
@@ -117,17 +136,10 @@ function ClubPrivilegesSection() {
       <Container className="grid grid-cols-1 desktop:grid-cols-[551px_1fr] gap-10 desktop:gap-[60px] items-center">
         <div className="relative w-full max-w-[551px] h-[500px] overflow-hidden">
           <Image
-            src="/images/Free-Bag-Mockup-on-the-Wall-copy2-1@2x.png"
+            src="/images/clubPrivileges.jpg"
             alt="Pilotai Club branded bag"
             fill
             className="object-cover"
-          />
-          <Image
-            src="/images/Tshirt-copy-1@2x.png"
-            alt="Pilotai Club branded t-shirt"
-            width={982.6}
-            height={734}
-            className="absolute top-[-158px] left-[-78px] w-[982px] h-auto max-w-none"
           />
         </div>
         <div className="w-full max-w-[491px] flex flex-col items-start gap-10 desktop:gap-12">
@@ -142,16 +154,16 @@ function ClubPrivilegesSection() {
           </div>
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
             {CLUB_PRIVILEGES.map((item) => (
-              <div key={item} className="flex items-start gap-[18px]">
+              <div key={item.text} className="flex items-start gap-[18px]">
                 <Image
-                  src="/images/ab-icon-1@2x.png"
-                  alt=""
-                  width={30}
-                  height={30}
-                  className="w-[18px] h-[18px] mt-1"
+                  src={item.iconSrc}
+                  alt={item.iconAlt}
+                  width={item.iconWidth}
+                  height={item.iconHeight}
+                  className={item.iconClassName}
                 />
                 <p className="m-0 text-num-16 tracking-num-0_24 leading-num-24 uppercase font-medium text-black">
-                  {item}
+                  {item.text}
                 </p>
               </div>
             ))}
@@ -170,7 +182,7 @@ function ClubIdentitySection() {
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
         <Image
-          src="/images/Photo1@3x.png"
+          src="/images/Bentley.jpg"
           alt="Luxury car in hangar environment"
           width={550}
           height={499.2}

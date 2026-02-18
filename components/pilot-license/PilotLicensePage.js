@@ -16,20 +16,12 @@ function PilotLicenseHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image
-        src="/images/IMG-7135@2x.png"
+        src="/images/PilotLicenseHero.jpg"
         alt="Ultralight pilot license hero"
         fill
         priority
         className="object-cover"
       />
-      <Image
-        src="/images/Vector.svg"
-        alt=""
-        width={2052}
-        height={1306}
-        className="absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[145%] desktop:w-[120%] max-w-none opacity-80"
-      />
-      <div className="absolute inset-0 bg-[#0f2943]/60" />
       <div className="relative z-[1] min-h-[500px] desktop:min-h-[600px] flex flex-col">
         <Header />
         <div className="flex-1 flex items-center justify-center px-4 pb-10">
@@ -90,10 +82,8 @@ function IntroSplitSection() {
 function EntryRequirementsSection() {
   return (
     <ScenicSection
-      backgroundSrc="/images/Parallax-Image@3x.png"
+      backgroundSrc="/images/PilotLiSec.jpg"
       backgroundAlt="Entry requirements background"
-      overlaySrc="/images/Vector1.svg"
-      tintClassName="bg-[#182739]/35"
     >
       <div className="w-full max-w-[707px] flex flex-col items-start gap-[13px] text-white">
         <SectionHeading as="h2" className="text-white">
@@ -105,7 +95,9 @@ function EntryRequirementsSection() {
           <br />
           <span>Valid Medical Certificate</span>
           <br />
-          <span>Commitment to complete a full professional training program</span>
+          <span>
+            Commitment to complete a full professional training program
+          </span>
         </p>
       </div>
     </ScenicSection>

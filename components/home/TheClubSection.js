@@ -16,7 +16,7 @@ export default function TheClubSection() {
         height={499.2}
         sizes="100vw"
         alt=""
-        src="/images/Photos@2x.png"
+        src="/images/TheClub.jpg"
       />
       <section className="w-full max-w-[486px] flex flex-col items-start gap-8 desktop:gap-9 text-left text-num-37 text-black font-jost">
         <div className="self-stretch flex flex-col items-start gap-6">
@@ -26,8 +26,8 @@ export default function TheClubSection() {
             </SectionHeading>
             <div className="text-section-body w-full max-w-[448.8px] relative flex items-center">
               Pilotai Club brings together a select circle of ambitious,
-              high-caliber individuals united by a shared passion for excellence,
-              aviation, and extraordinary experiences.
+              high-caliber individuals united by a shared passion for
+              excellence, aviation, and extraordinary experiences.
             </div>
           </div>
           <div className="self-stretch flex flex-col sm:flex-row items-start pt-0 px-0 pb-[13px] box-border gap-8 sm:gap-12 desktop:gap-16 text-num-16 font-jost">
@@ -63,9 +63,7 @@ export default function TheClubSection() {
           variant="accent"
           className="pl-[41px] pr-10 flex flex-col items-start"
         >
-          <div className="relative text-left">
-            View More
-          </div>
+          <div className="relative text-left">View More</div>
         </Button>
       </section>
     </section>

@@ -60,14 +60,12 @@ function ActivitiesHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image
-        src="/images/activitiesBg.jpg"
+        src="/images/ActivitiesHero.jpg"
         alt="Activities hero with aircraft background"
         fill
         priority
         className="object-cover"
       />
-
-      <div className="absolute inset-0 bg-[#0f2943]/60" />
       <div className="relative z-[1] min-h-[500px] desktop:min-h-[600px] flex flex-col">
         <Header />
         <div className="flex-1 flex flex-col items-center justify-center px-4 pb-10 gap-4">
@@ -125,10 +123,8 @@ function ActivitySplitSection({ image, title, description }) {
 function JetExperienceSection() {
   return (
     <ScenicSection
-      backgroundSrc="/images/IMG-71351@2x.png"
+      backgroundSrc="/images/Jet.jpg"
       backgroundAlt="Jet team flight experience"
-      overlaySrc="/images/Vector.svg"
-      tintClassName="bg-[#182739]/45"
     >
       <div className="w-full max-w-[473px] flex flex-col items-start gap-[13px]">
         <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-whitesmoke-100">
@@ -151,10 +147,8 @@ function JetExperienceSection() {
 function WakeboardingSection() {
   return (
     <ScenicSection
-      backgroundSrc="/images/Parallax-Image@3x.png"
+      backgroundSrc="/images/WakeBo.jpg"
       backgroundAlt="Wakeboarding activity scene"
-      overlaySrc="/images/Vector1.svg"
-      tintClassName="bg-[#182739]/45"
     >
       <div className="w-full max-w-[473px] flex flex-col items-start gap-[13px]">
         <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-whitesmoke-100">
