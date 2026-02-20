@@ -41,9 +41,7 @@ export default function HeroSection() {
               href="/pilot-license"
               className="border-neutral-100 border-solid border-b-[1px] flex items-center pt-1 px-0 pb-0.5 gap-2"
             >
-              <span className="relative leading-4 font-medium">
-                Pilot License
-              </span>
+              <span className="relative leading-4 font-medium">Training</span>
             </Link>
             <Link
               href="/the-club"
