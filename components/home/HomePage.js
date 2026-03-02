@@ -15,9 +15,9 @@ export default function HomePage() {
     <div className="page-root motion-scope">
       <HeroSection />
       <BecomePilotSection />
-      <TickerSection />
-      <UltralightLicenseSection />
       <BenefitsSection />
+      <UltralightLicenseSection />
+      <TickerSection />
       <WhyLithuaniaSection />
       <BristellSection />
       <TheClubSection />
