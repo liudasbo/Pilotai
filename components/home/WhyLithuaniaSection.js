@@ -17,7 +17,7 @@ export default function WhyLithuaniaSection() {
             className="ml-0 desktop:ml-[-330px] h-auto desktop:h-num-402 w-[45%] desktop:w-[301px] relative object-cover shrink-0"
             width={301}
             height={402}
-            sizes="100vw"
+            sizes="(min-width: 1024px) 301px, 45vw"
             alt=""
             src="/images/sr7-mask2@2x.png"
           />
@@ -27,7 +27,7 @@ export default function WhyLithuaniaSection() {
               loading="lazy"
               width={301}
               height={402}
-              sizes="100vw"
+              sizes="(min-width: 1024px) 301px, 45vw"
               alt=""
               src="/images/sr7-mask3@2x.png"
             />

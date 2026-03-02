@@ -81,6 +81,7 @@ function PurposeSection() {
             alt="Pilot training cockpit controls"
             width={301}
             height={402}
+            sizes="(min-width: 1024px) 301px, 45vw"
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
@@ -88,6 +89,7 @@ function PurposeSection() {
             alt="Aircraft interior details"
             width={301}
             height={402}
+            sizes="(min-width: 1024px) 301px, 45vw"
             className="w-full h-auto object-cover mt-0 desktop:mt-[62px]"
           />
         </div>

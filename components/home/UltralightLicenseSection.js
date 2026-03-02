@@ -18,7 +18,7 @@ export default function UltralightLicenseSection() {
             loading="lazy"
             width={301}
             height={402}
-            sizes="100vw"
+            sizes="(min-width: 1024px) 301px, 45vw"
             alt=""
             src="/images/sr7-mask@2x.png"
           />
@@ -28,7 +28,7 @@ export default function UltralightLicenseSection() {
               loading="lazy"
               width={301}
               height={402}
-              sizes="100vw"
+              sizes="(min-width: 1024px) 301px, 45vw"
               alt=""
               src="/images/sr7-mask1@2x.png"
             />

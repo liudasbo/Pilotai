@@ -48,6 +48,7 @@ function IntroSplitSection() {
             alt="Bristell aircraft in yellow livery"
             width={301}
             height={402}
+            sizes="(min-width: 1024px) 301px, 45vw"
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
@@ -55,6 +56,7 @@ function IntroSplitSection() {
             alt="Hangar and training aircraft"
             width={301}
             height={402}
+            sizes="(min-width: 1024px) 301px, 45vw"
             className="w-full h-auto object-cover mt-0 desktop:mt-[62px]"
           />
         </div>
@@ -156,6 +158,7 @@ function EliteTheorySection() {
             alt="Pilot in cockpit with sunglasses"
             width={301}
             height={402}
+            sizes="(min-width: 1024px) 301px, 45vw"
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
@@ -163,6 +166,7 @@ function EliteTheorySection() {
             alt="Pilot training portrait"
             width={301}
             height={402}
+            sizes="(min-width: 1024px) 301px, 45vw"
             className="w-full h-auto object-cover mt-0 desktop:mt-[62px]"
           />
         </div>
@@ -278,6 +282,7 @@ function DistinctiveJourneySection() {
             alt="Aircraft exterior close-up"
             width={301}
             height={402}
+            sizes="(min-width: 1024px) 301px, 45vw"
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
@@ -285,6 +290,7 @@ function DistinctiveJourneySection() {
             alt="Aircraft in sunset"
             width={301}
             height={402}
+            sizes="(min-width: 1024px) 301px, 45vw"
             className="w-full h-auto object-cover mt-0 desktop:mt-[62px]"
           />
         </div>
