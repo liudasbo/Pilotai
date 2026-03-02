@@ -27,7 +27,7 @@ export default function PrivateLuxurySection() {
           <div className="self-stretch overflow-hidden shrink-0 flex items-start max-w-full">
             <div className="w-full flex items-center flex-wrap content-center gap-6 max-w-full">
               <section className="flex-1 flex flex-col items-start gap-[17px] min-w-[280px] desktop:min-w-[409px] text-left text-[20px] text-white font-jost">
-                <Image
+                <Image quality={90}
                   className="self-stretch h-[300px] sm:h-[360px] desktop:h-[417px] relative max-w-full overflow-hidden shrink-0 object-cover"
                   loading="lazy"
                   width={629}
@@ -44,7 +44,7 @@ export default function PrivateLuxurySection() {
                 </div>
               </section>
               <section className="flex-1 flex flex-col items-start gap-[17px] min-w-[280px] desktop:min-w-[409px] text-left text-[20px] text-white font-jost">
-                <Image
+                <Image quality={90}
                   className="self-stretch h-[300px] sm:h-[360px] desktop:h-[417px] relative max-w-full overflow-hidden shrink-0 object-cover"
                   loading="lazy"
                   width={629}

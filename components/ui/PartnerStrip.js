@@ -13,7 +13,7 @@ export default function PartnerStrip({ partners, className = "" }) {
             key={partner.src}
             className="w-full min-h-[72px] desktop:min-h-[86px] flex items-center justify-center"
           >
-            <Image
+            <Image quality={90}
               src={partner.src}
               alt={partner.alt}
               width={partner.width}

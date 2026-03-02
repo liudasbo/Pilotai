@@ -46,7 +46,7 @@ export default function RecreationalActivitiesSection() {
         </div>
       </section>
       <section className="w-full desktop:w-[760px] min-h-[320px] sm:min-h-[420px] desktop:min-h-[520px] overflow-hidden relative max-w-full">
-        <Image
+        <Image quality={90}
           className="absolute inset-0 w-full h-full object-cover"
           width={847.4}
           height={652.9}

@@ -19,14 +19,15 @@ export default function ScenicSection({
       data-motion="reveal"
       className={`relative w-full overflow-hidden min-h-[560px] desktop:min-h-[560px] ${sectionClassName}`.trim()}
     >
-      <Image
+      <Image quality={90}
         src={backgroundSrc}
         alt={backgroundAlt}
         fill
+        sizes="100vw"
         className="object-cover"
       />
       {showOverlay ? (
-        <Image
+        <Image quality={90}
           src={overlaySrc}
           alt={overlayAlt}
           width={945}

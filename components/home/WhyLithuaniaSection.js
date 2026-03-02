@@ -13,7 +13,7 @@ export default function WhyLithuaniaSection() {
     >
       <Container className="flex flex-col gap-10 desktop:flex-row desktop:items-center desktop:gap-[116px]">
         <section className="w-full desktop:w-[627px] flex items-start justify-center pt-0 pb-0 desktop:pb-[53px] pl-0 desktop:pl-[329px] pr-0 desktop:pr-0 box-border gap-4 desktop:gap-[29px]">
-          <Image
+          <Image quality={90}
             className="ml-0 desktop:ml-[-330px] h-auto desktop:h-num-402 w-[45%] desktop:w-[301px] relative object-cover shrink-0"
             width={301}
             height={402}
@@ -22,7 +22,7 @@ export default function WhyLithuaniaSection() {
             src="/images/sr7-mask2@2x.png"
           />
           <div className="w-[45%] desktop:w-[301px] h-auto desktop:h-num-402 flex flex-col items-start pt-8 desktop:pt-[55px] px-0 pb-0 box-border shrink-0">
-            <Image
+            <Image quality={90}
               className="w-full desktop:w-[301px] h-auto desktop:h-num-402 relative object-cover"
               loading="lazy"
               width={301}

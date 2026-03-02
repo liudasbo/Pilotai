@@ -141,7 +141,7 @@ export default function Header({
             href="/"
             className="w-num-140_6 flex flex-col items-center gap-[8.2px]"
           >
-            <Image
+            <Image quality={90}
               className="w-num-140_6 h-auto"
               loading="lazy"
               width={140.6}
@@ -172,7 +172,7 @@ export default function Header({
           className={`self-stretch flex items-center justify-between py-num-14 px-4 sm:px-6 relative z-[10020] transition-[background-color,border-color,backdrop-filter] duration-500 ${mobileHeaderTone}`}
         >
           <Link href="/" className="flex items-center gap-2">
-            <Image
+            <Image quality={90}
               className="h-[40px] w-auto"
               width={140.6}
               height={63.8}

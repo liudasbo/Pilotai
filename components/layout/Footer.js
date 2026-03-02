@@ -13,7 +13,7 @@ export default function Footer({ className = "" }) {
             In partnership with:
           </h3>
           <div className="flex flex-wrap items-center gap-6 desktop:gap-[38.5px]">
-            <Image
+            <Image quality={90}
               className="w-[80px] desktop:w-[90.4px] relative max-h-full object-cover"
               loading="lazy"
               width={90.4}
@@ -22,7 +22,7 @@ export default function Footer({ className = "" }) {
               alt=""
               src="/images/Pilotailt-atnaujintas-1@2x.png"
             />
-            <Image
+            <Image quality={90}
               className="w-[150px] desktop:w-[176.3px] relative max-h-full object-cover"
               loading="lazy"
               width={176.3}
@@ -31,7 +31,7 @@ export default function Footer({ className = "" }) {
               alt=""
               src="/images/bristell-logo-1200-1@2x.png"
             />
-            <Image
+            <Image quality={90}
               className="h-[32px] w-[98px] desktop:h-[38.5px] desktop:w-[118.5px] relative"
               loading="lazy"
               width={118.5}
@@ -118,7 +118,7 @@ export default function Footer({ className = "" }) {
           <div className="order-2 desktop:order-1 leading-num-23 text-center desktop:text-left">
             © 2026 Pilotai program. Web Solutions P.idea
           </div>
-          <Image
+          <Image quality={90}
             className="order-1 desktop:order-2 w-num-140_6 h-auto"
             loading="lazy"
             width={140.6}

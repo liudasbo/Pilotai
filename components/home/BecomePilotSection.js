@@ -12,7 +12,7 @@ export default function BecomePilotSection() {
     >
       <Container className="flex flex-col items-center gap-10 desktop:flex-row desktop:items-start desktop:justify-between desktop:gap-16">
         <div className="hidden desktop:flex desktop:order-1 justify-center desktop:justify-start desktop:pt-[97px]">
-          <Image
+          <Image quality={90}
             className="w-[150px] sm:w-[180px] desktop:w-[193px] relative h-auto object-cover"
             loading="lazy"
             width={192.9}
@@ -23,7 +23,7 @@ export default function BecomePilotSection() {
           />
         </div>
         <section className="order-1 desktop:order-2 w-full max-w-[567px] flex flex-col items-center gap-8 text-center text-num-37 text-black font-jost">
-          <Image
+          <Image quality={90}
             className="w-[65px] h-auto desktop:w-[85.7px] desktop:h-[151.2px] relative"
             loading="lazy"
             width={85.7}
@@ -52,7 +52,7 @@ export default function BecomePilotSection() {
           </Button>
         </section>
         <div className="order-2 desktop:hidden w-full flex items-center justify-center gap-6">
-          <Image
+          <Image quality={90}
             className="w-[150px] sm:w-[180px] relative h-auto object-cover"
             loading="lazy"
             width={192.9}
@@ -61,7 +61,7 @@ export default function BecomePilotSection() {
             alt=""
             src="/images/Right-img@2x.png"
           />
-          <Image
+          <Image quality={90}
             className="w-[150px] sm:w-[180px] relative h-auto object-cover"
             loading="lazy"
             width={192.9}
@@ -72,7 +72,7 @@ export default function BecomePilotSection() {
           />
         </div>
         <div className="hidden desktop:flex order-3 justify-center desktop:justify-end desktop:pt-[195px]">
-          <Image
+          <Image quality={90}
             className="w-[150px] sm:w-[180px] desktop:w-[193px] relative h-auto object-cover"
             loading="lazy"
             width={192.9}

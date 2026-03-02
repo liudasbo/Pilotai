@@ -101,7 +101,7 @@ export default function BenefitsSection() {
                         key={item.label}
                         className={`absolute inset-[4%] origin-center overflow-hidden transition-all duration-500 ease-out will-change-transform sm:inset-[5%] desktop:inset-[6%] ${layerClassName}`}
                       >
-                        <Image
+                        <Image quality={90}
                           className="h-full w-full object-cover object-center"
                           fill
                           sizes="(min-width: 1024px) 42vw, (min-width: 640px) 92vw, 100vw"

@@ -30,75 +30,95 @@ export function useRevealMotion() {
     const motionScope = document.querySelector(".motion-scope");
     if (!motionScope) return;
 
-    const { gsap, ScrollTrigger } = getGsapClient();
-    const ctx = gsap.context(() => {
-      ScrollTrigger.clearScrollMemory("manual");
+    let isCancelled = false;
+    let ctx;
+    let idleHandle;
 
-      const revealTargets = gsap.utils.toArray(AUTO_REVEAL_SELECTOR);
+    const runMotionSetup = async () => {
+      const { gsap, ScrollTrigger } = await getGsapClient();
+      if (isCancelled) return;
 
-      revealTargets.forEach((target) => {
-        if (!(target instanceof HTMLElement)) return;
-        if (target.closest("footer")) return;
+      ctx = gsap.context(() => {
+        ScrollTrigger.clearScrollMemory("manual");
 
-        const isHeroBlock =
-          target.closest("main")?.querySelector("h1") &&
-          target.closest("main")?.contains(target) &&
-          target.querySelector("h1");
+        const revealTargets = gsap.utils.toArray(AUTO_REVEAL_SELECTOR);
 
-        const preset = isHeroBlock ? HERO_REVEAL_PRESET : REVEAL_PRESET;
+        revealTargets.forEach((target) => {
+          if (!(target instanceof HTMLElement)) return;
+          if (target.closest("footer")) return;
 
-        const children = target.querySelectorAll(
-          target.dataset.motion === "text-only"
-            ? TEXT_ONLY_SELECTOR
-            : DEFAULT_SELECTOR
-        );
+          const isHeroBlock =
+            target.closest("main")?.querySelector("h1") &&
+            target.closest("main")?.contains(target) &&
+            target.querySelector("h1");
 
-        if (children.length > 0) {
-          gsap.fromTo(
-            children,
-            { ...preset.from },
-            {
-              ...preset.to,
-              stagger: STAGGER_PRESET,
-              scrollTrigger: {
-                ...SCROLL_TRIGGER_DEFAULTS,
-                trigger: target,
-              },
-            }
+          const preset = isHeroBlock ? HERO_REVEAL_PRESET : REVEAL_PRESET;
+
+          const children = target.querySelectorAll(
+            target.dataset.motion === "text-only"
+              ? TEXT_ONLY_SELECTOR
+              : DEFAULT_SELECTOR
           );
-          return;
-        }
 
-        gsap.fromTo(target, preset.from, {
-          ...preset.to,
-          scrollTrigger: {
-            ...SCROLL_TRIGGER_DEFAULTS,
-            trigger: target,
-          },
+          if (children.length > 0) {
+            gsap.fromTo(
+              children,
+              { ...preset.from },
+              {
+                ...preset.to,
+                stagger: STAGGER_PRESET,
+                scrollTrigger: {
+                  ...SCROLL_TRIGGER_DEFAULTS,
+                  trigger: target,
+                },
+              }
+            );
+            return;
+          }
+
+          gsap.fromTo(target, preset.from, {
+            ...preset.to,
+            scrollTrigger: {
+              ...SCROLL_TRIGGER_DEFAULTS,
+              trigger: target,
+            },
+          });
         });
-      });
 
-      const parallaxTargets = gsap.utils.toArray(
-        "[data-motion='parallax']"
-      );
+        const parallaxTargets = gsap.utils.toArray("[data-motion='parallax']");
 
-      parallaxTargets.forEach((target) => {
-        if (!(target instanceof HTMLElement)) return;
-        if (target.closest("footer")) return;
+        parallaxTargets.forEach((target) => {
+          if (!(target instanceof HTMLElement)) return;
+          if (target.closest("footer")) return;
 
-        gsap.to(target, {
-          ...PARALLAX_LIGHT_PRESET,
-          scrollTrigger: {
-            trigger: target,
-            start: "top bottom",
-            end: "bottom top",
-          },
+          gsap.to(target, {
+            ...PARALLAX_LIGHT_PRESET,
+            scrollTrigger: {
+              trigger: target,
+              start: "top bottom",
+              end: "bottom top",
+            },
+          });
         });
-      });
-    }, motionScope);
+      }, motionScope);
+    };
+
+    if ("requestIdleCallback" in window) {
+      idleHandle = window.requestIdleCallback(runMotionSetup, { timeout: 900 });
+    } else {
+      idleHandle = window.setTimeout(runMotionSetup, 0);
+    }
 
     return () => {
-      ctx.revert();
+      isCancelled = true;
+      if ("cancelIdleCallback" in window && typeof idleHandle === "number") {
+        window.cancelIdleCallback(idleHandle);
+      } else {
+        window.clearTimeout(idleHandle);
+      }
+      if (ctx) {
+        ctx.revert();
+      }
     };
   }, [pathname]);
 }

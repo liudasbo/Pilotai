@@ -59,10 +59,11 @@ function ActivitiesHero() {
       data-motion="text-only"
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
-      <Image
+      <Image quality={90}
         src="/images/ActivitiesHero.jpg"
         alt="Activities hero with aircraft background"
         fill
+        sizes="100vw"
         priority
         className="object-cover"
       />
@@ -99,7 +100,7 @@ function ActivitySplitSection({ image, title, description }) {
       className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]"
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
-        <Image
+        <Image quality={90}
           src={image}
           alt={`${title} activity`}
           width={550}

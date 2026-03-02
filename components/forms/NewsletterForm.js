@@ -104,7 +104,7 @@ export default function NewsletterForm() {
           disabled={isSubmitting}
           className="disabled:opacity-60"
         >
-          <Image
+          <Image quality={90}
             src="/images/Button.svg"
             alt=""
             width={17}

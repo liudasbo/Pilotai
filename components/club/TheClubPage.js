@@ -51,10 +51,11 @@ function TheClubHero() {
       data-motion="text-only"
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
-      <Image
+      <Image quality={90}
         src="/images/Theclub-hero.png"
         alt="The Club hero with aircraft backdrop"
         fill
+        sizes="100vw"
         priority
         className="object-cover"
       />
@@ -89,7 +90,7 @@ function ClubOverviewSection() {
       className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]"
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
-        <Image
+        <Image quality={90}
           src="/images/theClubPhoto.jpg"
           alt="Pilotai Club members gathered by aircraft"
           width={550}
@@ -117,7 +118,7 @@ function ClubOverviewSection() {
 
 function ClubParallaxImage() {
   return (
-    <Image
+    <Image quality={90}
       src="/images/TheClubSection.jpg"
       alt="Silhouettes in premium aviation lounge"
       width={1512}
@@ -135,10 +136,11 @@ function ClubPrivilegesSection() {
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[551px_1fr] gap-10 desktop:gap-[60px] items-center">
         <div className="relative w-full max-w-[551px] h-[500px] overflow-hidden">
-          <Image
+          <Image quality={90}
             src="/images/clubPrivileges.jpg"
             alt="Pilotai Club branded bag"
             fill
+            sizes="(min-width: 1024px) 551px, 100vw"
             className="object-cover"
           />
         </div>
@@ -155,7 +157,7 @@ function ClubPrivilegesSection() {
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
             {CLUB_PRIVILEGES.map((item) => (
               <div key={item.text} className="flex items-start gap-[18px]">
-                <Image
+                <Image quality={90}
                   src={item.iconSrc}
                   alt={item.iconAlt}
                   width={item.iconWidth}
@@ -181,7 +183,7 @@ function ClubIdentitySection() {
       className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]"
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
-        <Image
+        <Image quality={90}
           src="/images/Bentley.jpg"
           alt="Luxury car in hangar environment"
           width={550}

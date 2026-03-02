@@ -48,10 +48,11 @@ function AboutHero() {
       data-motion="text-only"
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
-      <Image
+      <Image quality={90}
         src="/images/AboutUsHero.jpg"
         alt="Pilotai Program team near aircraft"
         fill
+        sizes="100vw"
         priority
         className="object-cover"
       />
@@ -75,14 +76,14 @@ function PurposeSection() {
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[631px_1fr] gap-10 desktop:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
-          <Image
+          <Image quality={90}
             src="/images/AboutUs1.jpg"
             alt="Pilot training cockpit controls"
             width={301}
             height={402}
             className="w-full h-auto object-cover"
           />
-          <Image
+          <Image quality={90}
             src="/images/AboutUs2.jpg"
             alt="Aircraft interior details"
             width={301}
@@ -140,7 +141,7 @@ function AboutCtaSection() {
       className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]"
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
-        <Image
+        <Image quality={90}
           src="/images/AboutUs3.jpg"
           alt="Aircraft prepared for takeoff"
           width={550}
@@ -205,7 +206,7 @@ function StorySection() {
     >
       <Container className="flex flex-col gap-16 desktop:gap-[70px]">
         <div className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[70px] items-center">
-          <Image
+          <Image quality={90}
             src="/images/AboutUs5.jpg"
             alt="Aircraft in hangar"
             width={550}
@@ -237,7 +238,7 @@ function StorySection() {
               uncompromising quality.
             </p>
           </div>
-          <Image
+          <Image quality={90}
             src="/images/AboutUs6.jpg"
             alt="Aircraft from top view over water"
             width={550}

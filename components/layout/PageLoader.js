@@ -1,39 +1,58 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const MIN_VISIBLE_MS = 500;
-const FAILSAFE_MS = 9000;
+const SHOW_DELAY_MS = 160;
+const MIN_VISIBLE_MS = 280;
+const FAILSAFE_MS = 5000;
 
 export default function PageLoader() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const shownAtRef = useRef(null);
 
   useEffect(() => {
-    const startedAt = performance.now();
+    if (document.readyState === "interactive" || document.readyState === "complete") {
+      return undefined;
+    }
+
+    let showTimerId;
     let hideTimerId;
     let failsafeTimerId;
 
+    const show = () => {
+      shownAtRef.current = performance.now();
+      setIsVisible(true);
+    };
+
     const hide = () => {
-      const elapsed = performance.now() - startedAt;
-      const remaining = Math.max(0, MIN_VISIBLE_MS - elapsed);
+      window.clearTimeout(showTimerId);
+
+      if (shownAtRef.current == null) {
+        setIsVisible(false);
+        return;
+      }
+
+      const elapsedSinceVisible = performance.now() - shownAtRef.current;
+      const remaining = Math.max(0, MIN_VISIBLE_MS - elapsedSinceVisible);
+
       hideTimerId = window.setTimeout(() => {
         setIsVisible(false);
       }, remaining);
     };
 
-    if (document.readyState === "complete") {
-      hide();
-    } else {
-      window.addEventListener("load", hide, { once: true });
-    }
+    showTimerId = window.setTimeout(show, SHOW_DELAY_MS);
+    document.addEventListener("DOMContentLoaded", hide, { once: true });
+    window.addEventListener("load", hide, { once: true });
 
     failsafeTimerId = window.setTimeout(() => {
       setIsVisible(false);
     }, FAILSAFE_MS);
 
     return () => {
+      document.removeEventListener("DOMContentLoaded", hide);
       window.removeEventListener("load", hide);
+      window.clearTimeout(showTimerId);
       window.clearTimeout(hideTimerId);
       window.clearTimeout(failsafeTimerId);
     };
@@ -47,12 +66,11 @@ export default function PageLoader() {
       }`}
     >
       <div className="flex flex-col items-center gap-5">
-        <Image
+        <Image quality={90}
           src="/images/logoBlack.svg"
           alt="Pilotai Program"
           width={140.6}
           height={63.8}
-          priority
         />
         <div className="w-10 h-10 border-[2px] border-black/20 border-t-black rounded-full animate-spin" />
       </div>

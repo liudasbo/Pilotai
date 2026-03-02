@@ -23,7 +23,7 @@ export default function HeroSection() {
               className="group inline-flex items-center gap-5 sm:gap-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               aria-label="Request Your Invitation"
             >
-              <Image
+              <Image quality={90}
                 src="/images/arrow.svg"
                 alt=""
                 aria-hidden="true"

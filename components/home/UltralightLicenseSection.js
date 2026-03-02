@@ -13,7 +13,7 @@ export default function UltralightLicenseSection() {
     >
       <Container className="flex flex-col gap-10 desktop:flex-row desktop:items-center desktop:gap-28">
         <section className="w-full desktop:w-[631px] flex items-start justify-center pt-0 pb-0 desktop:pb-[53px] pl-0 desktop:pl-[329px] pr-0 box-border gap-4 desktop:gap-[29px] max-w-full">
-          <Image
+          <Image quality={90}
             className="ml-0 desktop:ml-[-330px] h-auto desktop:h-num-402 w-[45%] desktop:w-[301px] relative object-cover shrink-0"
             loading="lazy"
             width={301}
@@ -23,7 +23,7 @@ export default function UltralightLicenseSection() {
             src="/images/sr7-mask@2x.png"
           />
           <div className="w-[45%] desktop:w-auto h-auto desktop:h-num-402 flex flex-col items-start pt-8 desktop:pt-[55px] px-0 pb-0 box-border shrink-0">
-            <Image
+            <Image quality={90}
               className="w-full h-auto desktop:h-num-402 relative object-cover"
               loading="lazy"
               width={301}

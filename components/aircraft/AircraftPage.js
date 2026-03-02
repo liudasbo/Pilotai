@@ -35,10 +35,11 @@ function AircraftHero() {
       data-motion="text-only"
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
-      <Image
+      <Image quality={90}
         src="/images/Aircraft-hero.png"
         alt="Bristell NG5 aircraft in flight"
         fill
+        sizes="100vw"
         priority
         className="object-cover"
       />
@@ -61,7 +62,7 @@ function AircraftIntroSection() {
       className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]"
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
-        <Image
+        <Image quality={90}
           src="/images/Aircraft.jpg"
           alt="Bristell NG5 cockpit view while flying"
           width={550}
@@ -97,7 +98,7 @@ function AircraftStatsSection() {
       <Container className="flex flex-col desktop:flex-row items-start desktop:items-center justify-between gap-10 desktop:gap-8">
         {AIRCRAFT_STATS.map((item) => (
           <div key={item.text} className="flex items-center gap-5">
-            <Image
+            <Image quality={90}
               src={item.image}
               alt=""
               width={item.width}
@@ -121,7 +122,7 @@ function AircraftSafetySection() {
       className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]"
     >
       <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
-        <Image
+        <Image quality={90}
           src="/images/SafestyFirst.jpg"
           alt="Bristell NG5 panel and avionics detail"
           width={550}
@@ -156,14 +157,14 @@ function AircraftDetailsSection() {
     >
       <Container className="max-w-[1274px] grid grid-cols-1 desktop:grid-cols-[631px_443px] gap-10 desktop:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
-          <Image
+          <Image quality={90}
             src="/images/bristel.jpg"
             alt="Bristell NG5 cockpit interior"
             width={301}
             height={402}
             className="w-full h-auto object-cover"
           />
-          <Image
+          <Image quality={90}
             src="/images/bristel2.jpg"
             alt="Bristell NG5 seats and interior details"
             width={301}

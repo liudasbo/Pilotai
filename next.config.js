@@ -16,8 +16,8 @@ const securityHeaders = [
 
 const nextConfig = {
   images: {
-    // Serve source files as-is to preserve maximum visual quality.
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 2678400,
     remotePatterns: [
       { protocol: "https", hostname: "picsum.photos", pathname: "/**" },
       { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
@@ -25,6 +25,18 @@ const nextConfig = {
   },
   async headers() {
     return [
+      {
+        source: "/images/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        source: "/videos/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
       {
         source: "/(.*)",
         headers: securityHeaders,
