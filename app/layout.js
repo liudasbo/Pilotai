@@ -1,6 +1,7 @@
 import { Jost } from "next/font/google";
 import "./globals.css";
 import SiteMotionOrchestrator from "@/components/motion/SiteMotionOrchestrator";
+import PageLoader from "@/components/layout/PageLoader";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -71,6 +72,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={jost.variable}>
       <body className="antialiased" suppressHydrationWarning>
+        <PageLoader />
         <SiteMotionOrchestrator />
         {children}
       </body>
