@@ -108,7 +108,7 @@ function ActivitySplitSection({ image, title, description }) {
           className="w-full max-w-[550px] h-auto object-cover"
         />
         <div className="w-full max-w-[490px] flex flex-col items-start gap-[13px]">
-          <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-gray-200">
+          <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
             Activities
           </div>
           <SectionHeading as="h2" className="text-black">

@@ -118,7 +118,7 @@ function PillarsSection() {
       <Container className="grid grid-cols-1 sm:grid-cols-2 desktop:grid-cols-3 gap-x-8 desktop:gap-x-[72px] gap-y-12">
         {ABOUT_PILLARS.map((pillar) => (
           <article key={pillar.number} className="flex items-start gap-5">
-            <span className="text-[44px] leading-[48px] text-silver font-medium">
+            <span className="text-[44px] leading-[48px] text-slategray font-medium">
               {pillar.number}
             </span>
             <div className="flex flex-col items-start gap-2.5">

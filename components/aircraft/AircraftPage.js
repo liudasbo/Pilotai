@@ -70,7 +70,7 @@ function AircraftIntroSection() {
           className="w-full max-w-[550px] h-auto object-cover"
         />
         <div className="w-full max-w-[490px] flex flex-col items-start gap-6 text-left">
-          <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-gray-200">
+          <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
             Aircraft
           </div>
           <SectionHeading as="h2" className="text-black">
@@ -130,7 +130,7 @@ function AircraftSafetySection() {
           className="w-full max-w-[550px] h-auto object-cover"
         />
         <div className="w-full max-w-[473px] flex flex-col items-start gap-6 text-left">
-          <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-gray-200">
+          <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
             Aircraft
           </div>
           <SectionHeading as="h2" className="text-black">
@@ -174,7 +174,7 @@ function AircraftDetailsSection() {
         </div>
         <div className="w-full max-w-[443px] flex flex-col items-start gap-9 text-left">
           <div className="w-full flex flex-col items-start gap-[18px]">
-            <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-gray-200">
+            <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
               Aircraft
             </div>
             <SectionHeading as="h2" className="text-black">

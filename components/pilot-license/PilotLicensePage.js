@@ -62,7 +62,7 @@ function IntroSplitSection() {
         </div>
         <div className="w-full max-w-[515px] flex flex-col items-start gap-[13px]">
           <div className="w-full flex flex-col items-start gap-1">
-            <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-gray-200">
+            <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
               Ultralight Pilot License
             </div>
             <SectionHeading as="h2" className="text-black">
@@ -116,7 +116,7 @@ function EliteTheorySection() {
       <Container className="max-w-[1274px] grid grid-cols-1 desktop:grid-cols-[1fr_631px] gap-10 desktop:gap-28 items-center">
         <div className="w-full max-w-[515px] flex flex-col items-start gap-[13px] order-2 desktop:order-1">
           <div className="w-full flex flex-col items-start gap-1">
-            <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-gray-200">
+            <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
               Ultralight Pilot License
             </div>
             <SectionHeading as="h2" className="text-black">
@@ -192,7 +192,7 @@ function ExcellenceSection() {
           />
           <div className="w-full flex flex-col items-start gap-[13px]">
             <div className="w-full flex flex-col items-start gap-1">
-              <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-gray-200">
+              <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
                 Ultralight Pilot License
               </div>
               <SectionHeading as="h2" className="text-black">
@@ -224,7 +224,7 @@ function ExcellenceSection() {
         <div className="grid grid-cols-1 desktop:grid-cols-[1fr_550px] gap-10 desktop:gap-[70px] items-center">
           <div className="w-full flex flex-col items-start gap-[13px] order-2 desktop:order-1">
             <div className="w-full flex flex-col items-start gap-1">
-              <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-gray-200">
+              <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
                 Ultralight Pilot License
               </div>
               <SectionHeading as="h2" className="text-black">
@@ -297,7 +297,7 @@ function DistinctiveJourneySection() {
         <div className="w-full max-w-[515px] flex flex-col items-start gap-9">
           <div className="w-full flex flex-col items-start gap-[13px]">
             <div className="w-full flex flex-col items-start gap-1">
-              <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-gray-200">
+              <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
                 Ultralight Pilot License
               </div>
               <SectionHeading as="h2" className="text-black">

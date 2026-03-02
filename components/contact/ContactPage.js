@@ -40,9 +40,9 @@ function ContactInfoBand() {
     >
       <Container className="max-w-[1374px] flex flex-wrap items-start justify-between gap-8">
         <div className="flex flex-col items-start gap-[2.5px]">
-          <h3 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
+          <h2 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
             Email us
-          </h3>
+          </h2>
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
             <a
               href={`mailto:${SITE_CONFIG.contact.email}`}
@@ -53,9 +53,9 @@ function ContactInfoBand() {
           </p>
         </div>
         <div className="flex flex-col items-start gap-[2.5px]">
-          <h3 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
+          <h2 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
             Call us
-          </h3>
+          </h2>
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
             <a href="tel:+37060446088" className="hover:underline">
               {SITE_CONFIG.contact.phone}
@@ -63,17 +63,17 @@ function ContactInfoBand() {
           </p>
         </div>
         <div className="flex flex-col items-start gap-[2.5px]">
-          <h3 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
+          <h2 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
             Address
-          </h3>
+          </h2>
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
             {SITE_CONFIG.contact.location}
           </p>
         </div>
         <div className="flex flex-col items-start gap-[3px]">
-          <h3 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
+          <h2 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
             Working hours
-          </h3>
+          </h2>
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
             {SITE_CONFIG.contact.workingHours}
           </p>

@@ -227,6 +227,7 @@ export default function Header({
                   : "opacity-0 pointer-events-none"
               }`}
               aria-hidden={!menuOpen}
+              inert={!menuOpen}
             >
               <div
                 className="absolute inset-0 bg-black/65 backdrop-blur-[2px]"
