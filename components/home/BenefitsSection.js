@@ -49,7 +49,7 @@ export default function BenefitsSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full max-w-full px-4 py-16 sm:px-6 sm:py-20 desktop:px-num-20 desktop:py-[95px]"
+      className="w-full max-w-full px-4 pt-0 pb-16 sm:px-6 sm:pt-0 sm:pb-20 desktop:px-num-20 desktop:pt-0 desktop:pb-[95px]"
     >
       <div className="section-container max-w-[1154px]">
         <div className="flex flex-col gap-10 desktop:flex-row desktop:items-center desktop:gap-6">
