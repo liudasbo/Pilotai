@@ -38,6 +38,7 @@ module.exports = {
       fontFamily: {
         jost: ["var(--font-jost)", "Jost", "system-ui", "sans-serif"],
         heading: [
+          "var(--font-heading)",
           "ZT Nature",
           "var(--font-jost)",
           "Jost",

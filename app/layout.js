@@ -1,4 +1,5 @@
 import { Jost } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import SiteMotionOrchestrator from "@/components/motion/SiteMotionOrchestrator";
 import PageLoader from "@/components/layout/PageLoader";
@@ -6,6 +7,33 @@ import PageLoader from "@/components/layout/PageLoader";
 const jost = Jost({
   subsets: ["latin"],
   variable: "--font-jost",
+});
+
+const ztNature = localFont({
+  src: [
+    {
+      path: "./fonts/zt-nature/ZTNature-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/zt-nature/ZTNature-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/zt-nature/ZTNature-SemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/zt-nature/ZTNature-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-heading",
+  display: "swap",
 });
 
 export const metadata = {
@@ -70,7 +98,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={jost.variable}>
+    <html lang="en" className={`${jost.variable} ${ztNature.variable}`}>
       <body className="antialiased" suppressHydrationWarning>
         <PageLoader />
         <SiteMotionOrchestrator />
