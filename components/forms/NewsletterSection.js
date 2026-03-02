@@ -7,7 +7,7 @@ export default function NewsletterSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[119px] px-4 sm:px-6 text-center"
+      className="w-full bg-whitesmoke-100 py-16 sm:py-20 desktop:py-[96px] 2xl:py-[112px] px-4 sm:px-6 text-center"
     >
       <Container className="max-w-[802px] flex flex-col items-center gap-[22px]">
         <SectionHeading as="h2" className="text-black text-center">
@@ -20,7 +20,7 @@ export default function NewsletterSection() {
         <NewsletterForm />
 
         <p className="m-0 text-num-14 leading-num-24 text-darkslategray-100 font-jost">
-          <Link href="/privacy-policy" className="underline hover:no-underline">
+          <Link href="/privacy-policy" className="touch-target underline hover:no-underline">
             Privacy Policy
           </Link>
           {" "}
@@ -28,7 +28,7 @@ export default function NewsletterSection() {
           {" "}
           <Link
             href="/terms-and-conditions"
-            className="underline hover:no-underline"
+            className="touch-target underline hover:no-underline"
           >
             Terms &amp; Conditions
           </Link>

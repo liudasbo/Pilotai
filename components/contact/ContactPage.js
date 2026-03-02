@@ -11,7 +11,7 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 function ContactFormSection() {
   return (
     <section data-motion="text-only" className="w-full bg-white">
-      <div className="w-full flex flex-col desktop:flex-row items-stretch desktop:h-[602px]">
+      <div className="w-full flex flex-col desktop:flex-row items-stretch desktop:min-h-[602px]">
         <Image quality={90}
           src="/images/Contact-form.png"
           alt="Aircraft above city skyline"
@@ -36,9 +36,9 @@ function ContactInfoBand() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-whitesmoke-100 py-[70px] px-[30px] text-num-16 text-black font-jost"
+      className="w-full bg-whitesmoke-100 py-14 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 text-num-16 text-black font-jost"
     >
-      <Container className="max-w-[1374px] flex flex-wrap items-start justify-between gap-8">
+      <Container className="max-w-[1274px] flex flex-wrap items-start justify-between gap-8">
         <div className="flex flex-col items-start gap-[2.5px]">
           <h2 className="m-0 text-num-16 tracking-num-0_24 leading-num-22 uppercase font-medium">
             Email us
@@ -46,7 +46,7 @@ function ContactInfoBand() {
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
             <a
               href={`mailto:${SITE_CONFIG.contact.email}`}
-              className="hover:underline"
+              className="touch-target hover:underline"
             >
               {SITE_CONFIG.contact.email}
             </a>
@@ -57,7 +57,7 @@ function ContactInfoBand() {
             Call us
           </h2>
           <p className="m-0 leading-num-23 font-jost text-darkslategray-100">
-            <a href="tel:+37060446088" className="hover:underline">
+            <a href="tel:+37060446088" className="touch-target hover:underline">
               {SITE_CONFIG.contact.phone}
             </a>
           </p>
@@ -86,7 +86,7 @@ function ContactInfoBand() {
 export default function ContactPage() {
   return (
     <div className="w-full bg-white overflow-x-hidden flex flex-col items-stretch motion-scope">
-      <main className="w-full pt-[72px] desktop:pt-[124px]">
+      <main className="w-full pt-[72px] xl:pt-[124px]">
         <Header textColor="black" topSocialGray />
         <ContactFormSection />
       </main>

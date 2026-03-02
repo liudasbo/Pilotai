@@ -80,7 +80,7 @@ export default function NewsletterForm() {
           placeholder="Email Address"
           aria-label="Email Address"
           autoComplete="email"
-          className="w-full border-none outline-none bg-transparent text-num-16 leading-num-24 text-darkslategray-100 placeholder:text-darkslategray-100 placeholder:opacity-100 font-jost"
+          className="form-control w-full border-none outline-none bg-transparent text-num-16 leading-num-24 text-darkslategray-100 placeholder:text-darkslategray-100 placeholder:opacity-100 font-jost"
         />
 
         <label htmlFor="newsletter-website" className="sr-only">
@@ -102,7 +102,7 @@ export default function NewsletterForm() {
           type="submit"
           aria-label="Subscribe to newsletter"
           disabled={isSubmitting}
-          className="disabled:opacity-60"
+          className="touch-target justify-center disabled:opacity-60"
         >
           <Image quality={90}
             src="/images/Button.svg"

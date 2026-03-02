@@ -7,7 +7,7 @@ export default function Footer({ className = "" }) {
       id="contacts"
       className={`self-stretch flex flex-col items-center text-left text-[21px] text-white font-jost bg-darkslategray-200 ${className}`}
     >
-      <div className="self-stretch flex flex-col desktop:flex-row desktop:items-start desktop:justify-between py-16 sm:py-20 desktop:py-[124px] px-4 sm:px-6 desktop:px-num-119 gap-12 desktop:gap-5">
+      <div className="self-stretch flex flex-col desktop:flex-row desktop:items-start desktop:justify-between py-16 sm:py-20 desktop:py-[104px] 2xl:py-[120px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 gap-12 desktop:gap-8">
         <div className="flex flex-col items-start gap-8">
           <h2 className="m-0 relative text-[21px] tracking-[0.31px] leading-[26px] uppercase font-normal">
             In partnership with:
@@ -46,7 +46,7 @@ export default function Footer({ className = "" }) {
           </div>
         </div>
 
-        <div className="w-full desktop:w-[538px] flex flex-col sm:flex-row items-start gap-10 sm:gap-12 text-num-16 font-jost">
+        <div className="w-full desktop:w-full xl:w-[538px] flex flex-col sm:flex-row items-start gap-10 sm:gap-12 text-num-16 font-jost">
           <div className="w-full sm:flex-1 flex flex-col items-start gap-5">
             <div className="self-stretch tracking-num-0_24 leading-num-22 uppercase font-medium">
               Pages
@@ -54,25 +54,25 @@ export default function Footer({ className = "" }) {
             <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
               <Link
                 href="/"
-                className="relative leading-num-23 hover:text-white"
+                className="touch-target relative leading-num-23 hover:text-white"
               >
                 Home
               </Link>
               <Link
                 href="/activities"
-                className="relative leading-num-23 hover:text-white"
+                className="touch-target relative leading-num-23 hover:text-white"
               >
                 Activities
               </Link>
               <Link
                 href="/the-club"
-                className="relative leading-num-23 hover:text-white"
+                className="touch-target relative leading-num-23 hover:text-white"
               >
                 The club
               </Link>
               <Link
                 href="/aircraft"
-                className="relative leading-num-23 hover:text-white"
+                className="touch-target relative leading-num-23 hover:text-white"
               >
                 Aircraft
               </Link>
@@ -85,13 +85,13 @@ export default function Footer({ className = "" }) {
             <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
               <Link
                 href="/about-us"
-                className="leading-num-23 hover:text-white"
+                className="touch-target leading-num-23 hover:text-white"
               >
                 About Us
               </Link>
               <Link
                 href="/contact-us"
-                className="leading-num-23 hover:text-white"
+                className="touch-target leading-num-23 hover:text-white"
               >
                 Contacts
               </Link>
@@ -104,19 +104,19 @@ export default function Footer({ className = "" }) {
             <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
               <Link
                 href="/privacy-policy"
-                className="leading-num-23 hover:text-white"
+                className="touch-target leading-num-23 hover:text-white"
               >
                 Privacy policy
               </Link>
               <Link
                 href="/terms-and-conditions"
-                className="leading-num-23 hover:text-white"
+                className="touch-target leading-num-23 hover:text-white"
               >
                 Terms &amp; Conditions
               </Link>
               <Link
                 href="/pilot-license-policy"
-                className="leading-num-23 hover:text-white"
+                className="touch-target leading-num-23 hover:text-white"
               >
                 Pilot License Policy
               </Link>
@@ -126,7 +126,7 @@ export default function Footer({ className = "" }) {
       </div>
 
       <div className="self-stretch border-slategray border-solid border-t-[1px] box-border text-num-13 text-silver font-jost">
-        <div className="w-full py-6 sm:py-8 desktop:py-[26px] px-4 sm:px-6 desktop:px-num-119">
+        <div className="w-full py-6 sm:py-8 desktop:py-[26px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24">
           <div className="grid items-center grid-cols-1 desktop:grid-cols-3 gap-4 sm:gap-5 desktop:gap-0">
             <div className="leading-num-23 text-center lg:text-left">
               © 2026 Pilotai program. Web Solutions P.idea

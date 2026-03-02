@@ -8,7 +8,7 @@ export default function TheClubSection() {
     <section
       id="the-club"
       data-motion="reveal"
-      className="self-stretch flex items-center justify-center py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px] box-border gap-10 desktop:gap-[60px] max-w-full flex-col desktop:flex-row"
+      className="self-stretch flex items-center justify-center py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 box-border gap-10 xl:gap-[60px] max-w-full flex-col xl:flex-row"
     >
       <Image quality={90}
         className="w-full max-w-[550px] relative max-h-full object-cover"
@@ -18,7 +18,7 @@ export default function TheClubSection() {
         alt=""
         src="/images/TheClub.jpg"
       />
-      <section className="w-full max-w-[486px] flex flex-col items-start gap-8 desktop:gap-9 text-left text-num-37 text-black font-jost">
+      <section className="w-full max-w-[486px] flex flex-col items-start gap-8 xl:gap-9 text-left text-num-37 text-black font-jost">
         <div className="self-stretch flex flex-col items-start gap-6">
           <div className="self-stretch flex flex-col items-start gap-6">
             <SectionHeading className="self-stretch relative flex items-center">
@@ -30,8 +30,8 @@ export default function TheClubSection() {
               excellence, aviation, and extraordinary experiences.
             </div>
           </div>
-          <div className="self-stretch flex flex-col sm:flex-row items-start pt-0 px-0 pb-[13px] box-border gap-8 sm:gap-12 desktop:gap-16 text-num-16 font-jost">
-            <div className="flex flex-col items-start gap-8 desktop:gap-12">
+          <div className="self-stretch flex flex-col sm:flex-row items-start pt-0 px-0 pb-[13px] box-border gap-8 sm:gap-12 xl:gap-16 text-num-16 font-jost">
+            <div className="flex flex-col items-start gap-8 xl:gap-12">
               <div className="flex items-center">
                 <div className="w-[199px] relative tracking-num-0_24 leading-num-24 uppercase font-medium flex items-center shrink-0">
                   A curated circle of high-achievers

@@ -6,7 +6,7 @@ export default function PrivateLuxurySection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-gray-300 shrink-0 flex flex-col items-center py-16 sm:py-20 desktop:py-[98px] px-4 sm:px-6 desktop:px-[99px] box-border"
+      className="w-full bg-gray-300 shrink-0 flex flex-col items-center py-16 sm:py-20 desktop:py-[98px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 box-border"
     >
       <div className="w-full flex items-start justify-center py-0 px-0 box-border max-w-full">
         <Container className="flex flex-col items-start gap-8 desktop:gap-9">

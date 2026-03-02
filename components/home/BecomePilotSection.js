@@ -8,7 +8,7 @@ export default function BecomePilotSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full shrink-0 py-16 sm:py-20 desktop:py-[110px] px-4 sm:px-6 desktop:px-[60px]"
+      className="w-full shrink-0 py-16 sm:py-20 desktop:py-[104px] 2xl:py-[110px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
       <Container className="flex flex-col items-center gap-10 desktop:flex-row desktop:items-start desktop:justify-between desktop:gap-16">
         <div className="hidden desktop:flex desktop:order-1 justify-center desktop:justify-start desktop:pt-[97px]">

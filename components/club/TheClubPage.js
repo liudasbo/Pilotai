@@ -87,9 +87,9 @@ function ClubOverviewSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
+      <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
           src="/images/theClubPhoto.jpg"
           alt="Pilotai Club members gathered by aircraft"
@@ -132,9 +132,9 @@ function ClubPrivilegesSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="grid grid-cols-1 desktop:grid-cols-[551px_1fr] gap-10 desktop:gap-[60px] items-center">
+      <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[551px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <div className="relative w-full max-w-[551px] h-[500px] overflow-hidden">
           <Image quality={90}
             src="/images/clubPrivileges.jpg"
@@ -180,9 +180,9 @@ function ClubIdentitySection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[206px]"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
+      <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
           src="/images/Bentley.jpg"
           alt="Luxury car in hangar environment"

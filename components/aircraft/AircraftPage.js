@@ -59,9 +59,9 @@ function AircraftIntroSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
+      <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
           src="/images/Aircraft.jpg"
           alt="Bristell NG5 cockpit view while flying"
@@ -93,7 +93,7 @@ function AircraftStatsSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-whitesmoke-100 py-12 desktop:py-[110px] px-4 sm:px-6 desktop:px-[60px]"
+      className="w-full bg-whitesmoke-100 py-12 desktop:py-[110px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
       <Container className="flex flex-col desktop:flex-row items-start desktop:items-center justify-between gap-10 desktop:gap-8">
         {AIRCRAFT_STATS.map((item) => (
@@ -119,9 +119,9 @@ function AircraftSafetySection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
+      <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
           src="/images/SafestyFirst.jpg"
           alt="Bristell NG5 panel and avionics detail"
@@ -153,9 +153,9 @@ function AircraftDetailsSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[121px] px-4 sm:px-6 desktop:px-num-119"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[112px] 2xl:py-[121px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="max-w-[1274px] grid grid-cols-1 desktop:grid-cols-[631px_443px] gap-10 desktop:gap-28 items-center">
+      <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(360px,1fr)_minmax(300px,0.75fr)] xl:grid-cols-[631px_443px] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
             src="/images/bristel.jpg"

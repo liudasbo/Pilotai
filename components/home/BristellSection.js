@@ -18,7 +18,7 @@ export default function BristellSection() {
         <div className="text-[17px] leading-num-23">Aircraft</div>
         <Link
           href="/aircraft"
-          className="w-[85px] text-num-13 text-white no-underline hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="touch-target w-[120px] text-num-13 text-white no-underline hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           aria-label="Know more about aircraft"
         >
           <span className="mt-[-1px] flex flex-col items-start gap-px">

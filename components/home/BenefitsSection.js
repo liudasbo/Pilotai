@@ -67,7 +67,7 @@ export default function BenefitsSection() {
                       href={item.href}
                       onMouseEnter={() => setActiveIndex(index)}
                       onFocus={() => setActiveIndex(index)}
-                      className={`${redHatDisplay.className} group inline-flex bg-transparent p-0 text-left text-[36px] font-medium uppercase tracking-[0.9px] transition-[color,opacity] duration-300 sm:text-[48px] sm:leading-[52px] desktop:text-[60px] desktop:leading-[60px] ${
+                      className={`${redHatDisplay.className} group inline-flex bg-transparent p-0 text-left text-[36px] font-medium uppercase tracking-[0.9px] transition-[color,opacity] duration-300 sm:text-[48px] sm:leading-[52px] desktop:text-[52px] desktop:leading-[54px] xl:text-[60px] xl:leading-[60px] ${
                         isActive
                           ? "text-black opacity-100"
                           : "text-black/65 opacity-90 hover:text-black"
@@ -88,7 +88,7 @@ export default function BenefitsSection() {
           </section>
 
           <div className="w-full desktop:flex-1">
-            <div className="relative h-[400px] w-full overflow-hidden sm:h-[520px] desktop:h-[660px]">
+            <div className="relative h-[400px] w-full overflow-hidden sm:h-[520px] desktop:h-[560px] xl:h-[660px]">
               <div className="absolute inset-0">
                 <div className="relative isolate h-full w-full overflow-hidden">
                   {orderedIndices.map((itemIndex, layerIndex) => {

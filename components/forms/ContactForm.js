@@ -95,7 +95,7 @@ export default function ContactForm() {
           onChange={handleChange}
           autoComplete="name"
           placeholder="Name"
-          className="w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 placeholder:text-darkslategray-100 placeholder:opacity-100"
+          className="form-control w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 placeholder:text-darkslategray-100 placeholder:opacity-100"
           aria-invalid={Boolean(fieldErrors.name)}
           aria-describedby={fieldErrors.name ? "contact-name-error" : undefined}
         />
@@ -118,7 +118,7 @@ export default function ContactForm() {
           onChange={handleChange}
           autoComplete="tel"
           placeholder="Phone number"
-          className="w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 placeholder:text-darkslategray-100 placeholder:opacity-100"
+          className="form-control w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 placeholder:text-darkslategray-100 placeholder:opacity-100"
           aria-invalid={Boolean(fieldErrors.phone)}
           aria-describedby={fieldErrors.phone ? "contact-phone-error" : undefined}
         />
@@ -141,7 +141,7 @@ export default function ContactForm() {
           onChange={handleChange}
           autoComplete="email"
           placeholder="Email"
-          className="w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 placeholder:text-darkslategray-100 placeholder:opacity-100"
+          className="form-control w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 placeholder:text-darkslategray-100 placeholder:opacity-100"
           aria-invalid={Boolean(fieldErrors.email)}
           aria-describedby={fieldErrors.email ? "contact-email-error" : undefined}
         />
@@ -163,7 +163,7 @@ export default function ContactForm() {
           value={values.message}
           onChange={handleChange}
           placeholder="Enter Message"
-          className="w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 resize-none placeholder:text-darkslategray-100 placeholder:opacity-100"
+          className="form-control min-h-[96px] w-full border-none outline-none bg-transparent tracking-num-0_56 leading-num-24 resize-none placeholder:text-darkslategray-100 placeholder:opacity-100"
           aria-invalid={Boolean(fieldErrors.message)}
           aria-describedby={fieldErrors.message ? "contact-message-error" : undefined}
         />
@@ -192,7 +192,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="cursor-pointer border-none py-3.5 px-[42px] bg-[#cc6e36] text-num-13 tracking-[0.39px] leading-[15.6px] uppercase font-semibold font-jost text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:opacity-60 disabled:cursor-not-allowed"
+        className="cursor-pointer border-none min-h-[44px] py-3.5 px-[42px] bg-[#cc6e36] text-num-13 tracking-[0.39px] leading-[15.6px] uppercase font-semibold font-jost text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Sending..." : "Send"}
       </button>

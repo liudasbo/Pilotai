@@ -110,7 +110,7 @@ export default function Header({
       } font-jost fixed top-0 left-0 z-[1200] transition-[background-color,border-color,backdrop-filter,color] duration-500 ${className}`}
     >
       <div
-        className={`hidden desktop:flex w-full flex-col items-start transition-[background-color,border-color,backdrop-filter] duration-500 ${desktopHeaderTone}`}
+        className={`hidden xl:flex w-full flex-col items-start transition-[background-color,border-color,backdrop-filter] duration-500 ${desktopHeaderTone}`}
       >
         <div
           className={`self-stretch h-8 border-solid border-b-[1px] box-border ${
@@ -121,7 +121,7 @@ export default function Header({
                 : "border-white/20 bg-transparent"
           }`}
         >
-          <div className="h-full flex items-center justify-end pr-[60px] gap-3">
+          <div className="h-full flex items-center justify-end pr-6 lg:pr-10 xl:pr-14 2xl:pr-16 gap-3">
             {SOCIAL_LINKS.map((social) => (
               <a
                 key={social.ariaLabel}
@@ -136,7 +136,7 @@ export default function Header({
             ))}
           </div>
         </div>
-        <div className="self-stretch flex items-center py-num-14 px-[60px]">
+        <div className="self-stretch flex items-center py-num-14 px-6 lg:px-10 xl:px-14 2xl:px-16">
           <Link
             href="/"
             className="w-num-140_6 flex flex-col items-center gap-[8.2px]"
@@ -152,7 +152,7 @@ export default function Header({
             />
           </Link>
           <nav
-            className={`m-0 ml-auto flex items-center gap-12 text-left text-num-13 ${
+            className={`m-0 ml-auto flex items-center gap-6 2xl:gap-10 text-left text-num-13 ${
               useDarkTone ? "text-black" : "text-white"
             } font-jost`}
           >
@@ -167,11 +167,11 @@ export default function Header({
         </div>
       </div>
 
-      <div className="flex desktop:hidden w-full flex-col items-start">
+      <div className="flex xl:hidden w-full flex-col items-start">
         <div
           className={`self-stretch flex items-center justify-between py-num-14 px-4 sm:px-6 relative z-[10020] transition-[background-color,border-color,backdrop-filter] duration-500 ${mobileHeaderTone}`}
         >
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="touch-target flex items-center gap-2">
             <Image quality={90}
               className="h-[40px] w-auto"
               width={140.6}
@@ -183,7 +183,7 @@ export default function Header({
           </Link>
           <button
             type="button"
-            className={`w-10 h-10 flex items-center justify-center ${
+            className={`touch-target w-11 h-11 justify-center ${
               useDarkTone ? "text-black" : "text-white"
             }`}
             aria-expanded={menuOpen}
@@ -221,7 +221,7 @@ export default function Header({
         ? createPortal(
             <div
               id="frame-mobile-menu"
-              className={`desktop:hidden fixed inset-0 z-[1300] transition-opacity duration-300 ease-out ${
+              className={`xl:hidden fixed inset-0 z-[1300] transition-opacity duration-300 ease-out ${
                 menuOpen
                   ? "opacity-100 pointer-events-auto"
                   : "opacity-0 pointer-events-none"
@@ -244,7 +244,7 @@ export default function Header({
                     type="button"
                     onClick={closeMenu}
                     aria-label="Close navigation menu"
-                    className="absolute top-5 right-5 w-10 h-10 inline-flex items-center justify-center text-white/85 hover:text-white"
+                    className="absolute top-5 right-5 touch-target w-11 h-11 justify-center text-white/85 hover:text-white"
                   >
                     <svg
                       className="w-6 h-6"
@@ -290,7 +290,7 @@ export default function Header({
                           href={social.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:text-white"
+                          className="touch-target hover:text-white"
                         >
                           {social.mobileLabel}
                         </a>

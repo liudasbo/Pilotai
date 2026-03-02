@@ -108,8 +108,8 @@ export default function PilotLicensePolicyPage() {
     <div className="w-full bg-white overflow-x-hidden motion-scope">
       <Header textColor="black" topSocialGray />
 
-      <main className="w-full bg-white pt-[120px] sm:pt-[136px] desktop:pt-[221px] pb-12 sm:pb-16 desktop:pb-[97px] px-4 sm:px-6 desktop:px-num-119">
-        <Container className="max-w-[1274px] flex flex-col items-start gap-5 text-left">
+      <main className="w-full bg-white pt-[120px] sm:pt-[136px] xl:pt-[221px] pb-12 sm:pb-16 xl:pb-[97px] px-4 sm:px-6 xl:px-num-119">
+        <Container className="prose-legal flex flex-col items-start gap-5 text-left">
           <h1 className="m-0 max-w-[860px] text-[30px] leading-[36px] desktop:text-num-37 desktop:leading-num-42 tracking-num-0_56 uppercase font-medium text-black">
             Ultralight Pilot Training Program Policy
           </h1>

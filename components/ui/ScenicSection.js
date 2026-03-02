@@ -39,7 +39,7 @@ export default function ScenicSection({
         <div className={`absolute inset-0 ${tintClassName}`} />
       ) : null}
       <div
-        className={`relative z-[1] min-h-[560px] flex items-end py-14 desktop:py-[92px] px-4 sm:px-6 desktop:px-[70px] ${containerClassName}`.trim()}
+        className={`relative z-[1] min-h-[560px] flex items-end py-14 desktop:py-[92px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24 ${containerClassName}`.trim()}
       >
         {children}
       </div>

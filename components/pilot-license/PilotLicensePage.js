@@ -39,9 +39,9 @@ function IntroSplitSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[97px] px-4 sm:px-6 desktop:px-num-119"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[97px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="max-w-[1274px] grid grid-cols-1 desktop:grid-cols-[631px_1fr] gap-10 desktop:gap-28 items-center">
+      <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(360px,52%)_minmax(0,1fr)] xl:grid-cols-[631px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
             src="/images/sr7-mask-sr7-img@2x.png"
@@ -88,7 +88,7 @@ function EntryRequirementsSection() {
       backgroundSrc="/images/PilotLiSec.jpg"
       backgroundAlt="Entry requirements background"
     >
-      <div className="w-full max-w-[707px] flex flex-col items-start gap-[13px] text-white">
+      <div className="w-full max-w-[620px] flex flex-col items-start gap-[13px] text-white">
         <SectionHeading as="h2" className="text-white">
           Entry Requirements
         </SectionHeading>
@@ -111,9 +111,9 @@ function EliteTheorySection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[97px] px-4 sm:px-6 desktop:px-num-119"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[97px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="max-w-[1274px] grid grid-cols-1 desktop:grid-cols-[1fr_631px] gap-10 desktop:gap-28 items-center">
+      <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(360px,52%)] xl:grid-cols-[minmax(0,1fr)_631px] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="w-full max-w-[515px] flex flex-col items-start gap-[13px] order-2 desktop:order-1">
           <div className="w-full flex flex-col items-start gap-1">
             <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
@@ -179,10 +179,10 @@ function ExcellenceSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[102px] px-4 sm:px-6 desktop:px-[206px]"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[102px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
       <Container className="max-w-[1274px] flex flex-col gap-10 desktop:gap-[70px]">
-        <div className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[70px] items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-[70px] items-center">
           <Image quality={90}
             src="/images/Photos@2x.png"
             alt="Aircraft instrument panel"
@@ -190,7 +190,7 @@ function ExcellenceSection() {
             height={499}
             className="w-full h-auto object-cover"
           />
-          <div className="w-full flex flex-col items-start gap-[13px]">
+          <div className="w-full max-w-[620px] flex flex-col items-start gap-[13px]">
             <div className="w-full flex flex-col items-start gap-1">
               <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
                 Ultralight Pilot License
@@ -221,8 +221,8 @@ function ExcellenceSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 desktop:grid-cols-[1fr_550px] gap-10 desktop:gap-[70px] items-center">
-          <div className="w-full flex flex-col items-start gap-[13px] order-2 desktop:order-1">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(320px,46%)] xl:grid-cols-[minmax(0,1fr)_550px] gap-10 lg:gap-14 xl:gap-[70px] items-center">
+          <div className="w-full max-w-[620px] flex flex-col items-start gap-[13px] order-2 desktop:order-1">
             <div className="w-full flex flex-col items-start gap-1">
               <div className="text-num-13 tracking-[0.46px] leading-num-26 uppercase font-medium text-darkslategray-100">
                 Ultralight Pilot License
@@ -273,9 +273,9 @@ function DistinctiveJourneySection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white pt-0 pb-16 sm:pb-20 desktop:pb-[97px] px-4 sm:px-6 desktop:px-num-119"
+      className="w-full bg-white pt-0 pb-16 sm:pb-20 desktop:pb-[97px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="max-w-[1274px] grid grid-cols-1 desktop:grid-cols-[631px_1fr] gap-10 desktop:gap-28 items-center">
+      <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(360px,52%)_minmax(0,1fr)] xl:grid-cols-[631px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
             src="/images/sr7-mask-sr7-img@2x.png"

@@ -72,9 +72,9 @@ function PurposeSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[97px] px-4 sm:px-6 desktop:px-num-119"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[97px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="grid grid-cols-1 desktop:grid-cols-[631px_1fr] gap-10 desktop:gap-28 items-center">
+      <Container className="grid grid-cols-1 lg:grid-cols-[minmax(360px,52%)_minmax(0,1fr)] xl:grid-cols-[631px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
             src="/images/AboutUs1.jpg"
@@ -140,9 +140,9 @@ function AboutCtaSection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 desktop:px-[60px]"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[103px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
-      <Container className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[60px] items-center">
+      <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
           src="/images/AboutUs3.jpg"
           alt="Aircraft prepared for takeoff"
@@ -181,7 +181,7 @@ function HubSection() {
       backgroundSrc="/images/AboutUs4.jpg"
       backgroundAlt="Vilnius city skyline at sunset"
     >
-      <div className="w-full max-w-[707px] flex flex-col items-start gap-2">
+      <div className="w-full max-w-[620px] flex flex-col items-start gap-2">
         <p className="m-0 text-num-13 tracking-[0.46px] leading-num-26 font-medium text-whitesmoke-100">
           Redefining how the world experiences flight, lifestyle, and
           destination
@@ -204,10 +204,10 @@ function StorySection() {
   return (
     <section
       data-motion="reveal"
-      className="w-full bg-white py-16 sm:py-20 desktop:py-[102px] px-4 sm:px-6 desktop:px-[206px]"
+      className="w-full bg-white py-16 sm:py-20 desktop:py-[102px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24"
     >
       <Container className="flex flex-col gap-16 desktop:gap-[70px]">
-        <div className="grid grid-cols-1 desktop:grid-cols-[550px_1fr] gap-10 desktop:gap-[70px] items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-[70px] items-center">
           <Image quality={90}
             src="/images/AboutUs5.jpg"
             alt="Aircraft in hangar"
@@ -228,7 +228,7 @@ function StorySection() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 desktop:grid-cols-[1fr_550px] gap-10 desktop:gap-[102px] items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(320px,46%)] xl:grid-cols-[minmax(0,1fr)_550px] gap-10 lg:gap-14 xl:gap-[86px] items-center">
           <div className="w-full max-w-[399px] flex flex-col items-start gap-6 order-2 desktop:order-1">
             <SectionHeading as="h2" className="text-black">
               Designed With Precision
