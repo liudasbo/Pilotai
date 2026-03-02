@@ -26,7 +26,7 @@ export default function HeroBackgroundMedia() {
           type="video/mp4"
           media="(max-width: 767px)"
         />
-        <source src="/videos/home-hero.mp4" type="video/mp4" />
+        <source src="/videos/pilotai-1080p-fpv.mp4" type="video/mp4" />
       </video>
     </div>
   );
