@@ -29,6 +29,12 @@ const SOCIAL_LINKS = [
     href: SITE_CONFIG.socials.instagram,
     ariaLabel: "Instagram",
   },
+  {
+    label: "LI.",
+    mobileLabel: "LinkedIn",
+    href: SITE_CONFIG.socials.linkedin,
+    ariaLabel: "LinkedIn",
+  },
 ];
 
 function NavLink({ link, onClick, mobile, className = "" }) {

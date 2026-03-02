@@ -52,7 +52,7 @@ function TheClubHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image
-        src="/images/TheClubHero.jpg"
+        src="/images/Theclub-hero.png"
         alt="The Club hero with aircraft backdrop"
         fill
         priority

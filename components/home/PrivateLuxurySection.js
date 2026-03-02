@@ -55,7 +55,7 @@ export default function PrivateLuxurySection() {
                 />
                 <div className="flex items-center gap-2.5">
                   <h3 className="m-0 relative text-[20px] tracking-[-0.4px] leading-[27px] font-normal">
-                    Birstonas Mineral Spa
+                    Vytautas Mineral Spa
                   </h3>
                   <div className="h-[18px] w-px relative bg-gray-200" />
                 </div>

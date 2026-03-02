@@ -16,6 +16,8 @@ const securityHeaders = [
 
 const nextConfig = {
   images: {
+    // Serve source files as-is to preserve maximum visual quality.
+    unoptimized: true,
     remotePatterns: [
       { protocol: "https", hostname: "picsum.photos", pathname: "/**" },
       { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },

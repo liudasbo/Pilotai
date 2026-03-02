@@ -24,6 +24,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env*.local
 
 # vercel
@@ -31,3 +32,7 @@ yarn-error.log*
 
 # ide
 .idea
+
+# test artifacts
+/playwright-report
+/test-results

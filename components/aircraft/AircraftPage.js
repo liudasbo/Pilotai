@@ -36,7 +36,7 @@ function AircraftHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image
-        src="/images/aircraftHero.jpg"
+        src="/images/Aircraft-hero.png"
         alt="Bristell NG5 aircraft in flight"
         fill
         priority
