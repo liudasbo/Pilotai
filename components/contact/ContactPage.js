@@ -19,12 +19,14 @@ function ContactFormSection() {
           height={602}
           className="w-full desktop:w-1/2 h-[320px] sm:h-[460px] desktop:h-full object-cover"
         />
-        <div className="w-full desktop:w-1/2 h-full py-8 sm:py-10 desktop:py-0 px-4 sm:px-6 desktop:px-[40px] flex items-center">
-          <div className="w-full max-w-[596px] mx-auto flex flex-col items-start gap-7">
-            <SectionHeading as="h1" className="text-black">
+        <div className="w-full desktop:w-1/2 h-full p-6 sm:p-8 desktop:p-10 flex items-center justify-center">
+          <div className="w-full max-w-[520px] mx-auto flex flex-col items-center gap-7">
+            <SectionHeading as="h1" className="text-black text-center">
               You can contact us
             </SectionHeading>
-            <ContactForm />
+            <div className="w-full">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </div>

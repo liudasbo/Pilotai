@@ -217,17 +217,11 @@ export default function Header({
         </div>
       </div>
 
-      {isMounted
+      {isMounted && menuOpen
         ? createPortal(
             <div
               id="frame-mobile-menu"
-              className={`xl:hidden fixed inset-0 z-[1300] transition-opacity duration-300 ease-out ${
-                menuOpen
-                  ? "opacity-100 pointer-events-auto"
-                  : "opacity-0 pointer-events-none"
-              }`}
-              aria-hidden={!menuOpen}
-              inert={!menuOpen}
+              className="xl:hidden fixed inset-0 z-[1300] opacity-100 pointer-events-auto transition-opacity duration-300 ease-out"
             >
               <div
                 className="absolute inset-0 bg-black/65 backdrop-blur-[2px]"
@@ -235,9 +229,7 @@ export default function Header({
                 aria-hidden
               />
               <aside
-                className={`absolute top-0 right-0 h-full w-[88%] max-w-[420px] bg-[#122232]/95 backdrop-blur-xl border-l border-white/10 shadow-2xl transition-transform duration-300 ease-out will-change-transform ${
-                  menuOpen ? "translate-x-0" : "translate-x-full"
-                }`}
+                className="absolute top-0 right-0 h-full w-[88%] max-w-[420px] bg-[#122232]/95 backdrop-blur-xl border-l border-white/10 shadow-2xl transition-transform duration-300 ease-out will-change-transform translate-x-0"
               >
                 <div className="h-full flex flex-col px-6 sm:px-8 pb-8 pt-24">
                   <button

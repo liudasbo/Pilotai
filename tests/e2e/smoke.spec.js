@@ -5,10 +5,10 @@ test("main navigation works", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("h1")).toContainText("Built around the aircraft");
 
-  await page.getByRole("link", { name: "Activities" }).first().click();
+  await page.getByRole("link", { name: "Activities", exact: true }).first().click();
   await expect(page).toHaveURL(/\/activities$/);
 
-  await page.getByRole("link", { name: "Aircraft" }).first().click();
+  await page.getByRole("link", { name: "Aircraft", exact: true }).first().click();
   await expect(page).toHaveURL(/\/aircraft$/);
 });
 
