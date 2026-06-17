@@ -34,7 +34,7 @@ export default function BecomePilotSection() {
           />
           <div className="self-stretch flex flex-col items-center gap-6">
             <SectionHeading className="self-stretch relative">
-              Adventures Takes Offf Here
+              Adventure Takes Off Here
             </SectionHeading>
             <div className="text-section-body w-full max-w-[521.5px] relative flex items-center justify-center">
               Experience unique 20-day journey in Lithuania that blends aviation
