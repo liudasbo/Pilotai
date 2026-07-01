@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/Footer";
 import BecomePilotSection from "@/components/home/BecomePilotSection";
+import VideoSection from "@/components/home/VideoSection";
 import BenefitsSection from "@/components/home/BenefitsSection";
 import BristellSection from "@/components/home/BristellSection";
 import HeroSection from "@/components/home/HeroSection";
@@ -15,6 +16,7 @@ export default function HomePage() {
     <div className="page-root motion-scope">
       <HeroSection />
       <BecomePilotSection />
+      <VideoSection />
       <BenefitsSection />
       <UltralightLicenseSection />
       <TickerSection />
