@@ -42,9 +42,22 @@ const STACK_LAYER_CLASSES = [
 
 export default function BenefitsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [tappedIndex, setTappedIndex] = useState(null);
   const orderedIndices = BENEFIT_ITEMS.map(
     (_, index) => (activeIndex + index) % BENEFIT_ITEMS.length,
   );
+
+  function handleTap(e, index, href) {
+    if (window.matchMedia("(hover: none)").matches) {
+      if (tappedIndex !== index) {
+        e.preventDefault();
+        setTappedIndex(index);
+        setActiveIndex(index);
+      } else {
+        setTappedIndex(null);
+      }
+    }
+  }
 
   return (
     <section
@@ -67,6 +80,7 @@ export default function BenefitsSection() {
                       href={item.href}
                       onMouseEnter={() => setActiveIndex(index)}
                       onFocus={() => setActiveIndex(index)}
+                      onClick={(e) => handleTap(e, index, item.href)}
                       className={`${redHatDisplay.className} group inline-flex bg-transparent p-0 text-left text-[36px] font-medium uppercase tracking-[0.9px] transition-[color,opacity] duration-300 sm:text-[48px] sm:leading-[52px] desktop:text-[52px] desktop:leading-[54px] xl:text-[60px] xl:leading-[60px] ${
                         isActive
                           ? "text-black opacity-100"

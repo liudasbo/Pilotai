@@ -123,7 +123,7 @@ function AircraftSafetySection() {
     >
       <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
-          src="/images/SafestyFirst.jpg"
+          src="/images/SafestyFirst.png"
           alt="Bristell NG5 panel and avionics detail"
           width={550}
           height={499.2}
@@ -158,14 +158,14 @@ function AircraftDetailsSection() {
       <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(360px,1fr)_minmax(300px,0.75fr)] xl:grid-cols-[631px_443px] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
-            src="/images/bristel.jpg"
+            src="/images/bristel.png"
             alt="Bristell NG5 cockpit interior"
             width={301}
             height={402}
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
-            src="/images/bristel2.jpg"
+            src="/images/bristel2.png"
             alt="Bristell NG5 seats and interior details"
             width={301}
             height={402}

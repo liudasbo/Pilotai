@@ -33,16 +33,6 @@ export default function Footer({ className = "" }) {
               alt=""
               src="/images/bristell-logo-1200-1@2x.png"
             />
-            <Image
-              quality={90}
-              className="h-[32px] w-[98px] desktop:h-[38.5px] desktop:w-[118.5px] relative"
-              loading="lazy"
-              width={118.5}
-              height={38.5}
-              sizes="100vw"
-              alt=""
-              src="/images/Layer-1.svg"
-            />
           </div>
         </div>
 
@@ -51,7 +41,7 @@ export default function Footer({ className = "" }) {
             <div className="self-stretch tracking-num-0_24 leading-num-22 uppercase font-medium">
               Pages
             </div>
-            <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
+            <div className="self-stretch flex flex-col items-start gap-[4px] text-silver font-jost">
               <Link
                 href="/"
                 className="touch-target relative leading-num-23 hover:text-white"
@@ -82,7 +72,7 @@ export default function Footer({ className = "" }) {
             <div className="self-stretch tracking-num-0_24 leading-num-22 uppercase font-medium">
               Our Company
             </div>
-            <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
+            <div className="self-stretch flex flex-col items-start gap-[4px] text-silver font-jost">
               <Link
                 href="/about-us"
                 className="touch-target leading-num-23 hover:text-white"
@@ -101,7 +91,7 @@ export default function Footer({ className = "" }) {
             <div className="self-stretch tracking-num-0_24 leading-num-22 uppercase font-medium">
               CUSTOMER CARE
             </div>
-            <div className="self-stretch flex flex-col items-start gap-[15px] text-silver font-jost">
+            <div className="self-stretch flex flex-col items-start gap-[4px] text-silver font-jost">
               <Link
                 href="/privacy-policy"
                 className="touch-target leading-num-23 hover:text-white"

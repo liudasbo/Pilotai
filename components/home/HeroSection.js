@@ -37,12 +37,12 @@ export default function HeroSection() {
               </span>
             </Link>
           </div>
-          <div className="self-stretch flex items-center flex-wrap content-center gap-x-6 sm:gap-x-10 desktop:gap-x-[111px] gap-y-5 sm:gap-y-[25px] text-[14px] font-jost">
+          <div className="self-stretch flex items-start flex-wrap content-start gap-x-6 sm:gap-x-10 desktop:gap-x-[111px] gap-y-5 sm:gap-y-[25px] text-[18px] font-jost">
             <Link
               href="/pilot-license"
               className="touch-target inline-flex items-center justify-center px-0"
             >
-              <span className="relative leading-4 font-medium border-neutral-100 border-solid border-b-[1px]">
+              <span className="relative leading-num-25 font-medium border-neutral-100 border-solid border-b-[1px]">
                 Training
               </span>
             </Link>
@@ -50,7 +50,7 @@ export default function HeroSection() {
               href="/the-club"
               className="touch-target inline-flex items-center justify-center px-0"
             >
-              <span className="relative leading-4 font-medium border-neutral-100 border-solid border-b-[1px]">
+              <span className="relative leading-num-25 font-medium border-neutral-100 border-solid border-b-[1px]">
                 The Club
               </span>
             </Link>
