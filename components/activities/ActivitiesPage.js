@@ -43,7 +43,7 @@ const HORSE_RIDING_ACTIVITY = {
   image: "/images/Photo4@2x.png",
   title: "Horse Riding",
   description:
-    "Horse riding at Harmony Park is truly exceptional. The park is home to prestigious OH (Oldenburger Horse) breeds known for elegance, strength, and world-class training standards. Surrounded by pristine nature, luxury villas, professional trainers, and beautifully designed stables, this offers a rare sense of harmony and refinement.",
+    "Royal Horse Resort offers an elegant equestrian experience in one of Lithuania's most refined horse estates. Whether enjoying a private riding lesson, meeting exceptional horses, or simply embracing the peaceful surroundings, every visit combines luxury, nature, and authentic horsemanship in a truly exclusive setting.",
 };
 
 const CONCIERGE_ACTIVITY = {
