@@ -9,7 +9,11 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Activities", href: "/activities" },
-  { label: "Aircraft", href: "/aircraft" },
+  {
+    label: "Aircraft",
+    href: "/aircraft",
+    children: [{ label: "Buy Aircraft", href: "/aircraft/buy" }],
+  },
   { label: "Pilot License", href: "/pilot-license" },
   { label: "The Club", href: "/the-club" },
   { label: "About Us", href: "/about-us" },
@@ -77,18 +81,62 @@ const SOCIAL_LINKS = [
 ];
 
 function NavLink({ link, onClick, mobile, className = "" }) {
+  if (link.children && !mobile) {
+    return (
+      <div className="relative group">
+        <Link
+          href={link.href}
+          className={`nav-link-base ${className}`}
+          onClick={onClick}
+        >
+          {link.label}
+        </Link>
+        <div className="absolute top-full left-0 pt-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200">
+          <div className="bg-white border border-black/10 shadow-lg py-1 min-w-[160px]">
+            {link.children.map((child) => (
+              <Link
+                key={child.label}
+                href={child.href}
+                className="block px-4 py-2.5 text-[13px] text-black/70 hover:text-black hover:bg-black/5 uppercase tracking-[0.39px] font-medium transition-colors duration-200"
+                onClick={onClick}
+              >
+                {child.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <Link
-      href={link.href}
-      className={`nav-link-base ${
-        mobile
-          ? "w-full py-3 min-h-[44px] flex items-center justify-between text-[22px] leading-[28px] tracking-[0.6px]"
-          : ""
-      } ${className}`}
-      onClick={onClick}
-    >
-      {link.label}
-    </Link>
+    <div className={mobile && link.children ? "flex flex-col" : ""}>
+      <Link
+        href={link.href}
+        className={`nav-link-base ${
+          mobile
+            ? "w-full py-3 min-h-[44px] flex items-center justify-between text-[22px] leading-[28px] tracking-[0.6px]"
+            : ""
+        } ${className}`}
+        onClick={onClick}
+      >
+        {link.label}
+      </Link>
+      {mobile && link.children && (
+        <div className="flex flex-col pl-4 border-l border-white/20 ml-1 mb-2">
+          {link.children.map((child) => (
+            <Link
+              key={child.label}
+              href={child.href}
+              className="py-2 text-[16px] text-white/60 hover:text-white tracking-[0.4px] uppercase font-medium transition-colors duration-200"
+              onClick={onClick}
+            >
+              {child.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 

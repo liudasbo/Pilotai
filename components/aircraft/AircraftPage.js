@@ -81,8 +81,12 @@ function AircraftIntroSection() {
             aircraft designed for both training and recreational flying. With
             its sleek composite airframe, jet-style forward-opening canopy,
             excellent visibility, and stable handling, it provides an ideal
-            platform for student pilots earning their Ultralight Pilot License.
+            platform for student pilots earning their Ultralight Pilot License.{" "}
+            <strong>Available for purchase through Pilotai Program.</strong>
           </p>
+          <Button as={Link} href="/aircraft/buy" className="pl-[41px] pr-10 mt-2">
+            <div className="relative text-left">Buy aircraft</div>
+          </Button>
         </div>
       </Container>
     </section>
