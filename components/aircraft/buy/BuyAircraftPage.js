@@ -246,7 +246,7 @@ function CtaSection() {
             Ready to take the next step?
           </SectionHeading>
           <p className="text-silver text-section-body">
-            Get in touch with our team. We'll help you choose the right model,
+            Get in touch with our team. We&apos;ll help you choose the right model,
             arrange a trial flight, and guide you through the entire purchase process.
           </p>
         </div>
