@@ -1,5 +1,6 @@
 import { Jost } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import PageLoader from "@/components/layout/PageLoader";
 import MotionBootstrap from "@/components/motion/MotionBootstrap";
@@ -99,6 +100,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jost.variable} ${ztNature.variable}`}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XCGKNMKSHB"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XCGKNMKSHB');
+          `}
+        </Script>
+      </head>
       <body className="antialiased" suppressHydrationWarning>
         <PageLoader />
         <MotionBootstrap />
