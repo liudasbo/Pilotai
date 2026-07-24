@@ -10,6 +10,7 @@ import TheClubSection from "@/components/home/TheClubSection";
 import TickerSection from "@/components/home/TickerSection";
 import UltralightLicenseSection from "@/components/home/UltralightLicenseSection";
 import WhyLithuaniaSection from "@/components/home/WhyLithuaniaSection";
+import OwnAircraftSection from "@/components/home/OwnAircraftSection";
 
 export default function HomePage() {
   return (
@@ -25,6 +26,7 @@ export default function HomePage() {
       <TheClubSection />
       <PrivateLuxurySection />
       <RecreationalActivitiesSection />
+      <OwnAircraftSection />
       <Footer />
     </div>
   );
