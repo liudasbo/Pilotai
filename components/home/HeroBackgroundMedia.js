@@ -41,7 +41,7 @@ export default function HeroBackgroundMedia() {
   return (
     <div className="absolute inset-0 overflow-hidden z-0" aria-hidden="true">
       <Image quality={90}
-        src="/images/home-hero-poster.jpg"
+        src="/images/home/home-hero-poster.jpg"
         alt=""
         fill
         priority
@@ -57,7 +57,7 @@ export default function HeroBackgroundMedia() {
           loop
           playsInline
           preload="none"
-          poster="/images/home-hero-poster.jpg"
+          poster="/images/home/home-hero-poster.jpg"
           style={{ objectFit: "cover", objectPosition: "62% center" }}
         >
           <source

@@ -34,7 +34,7 @@ export default function PrivateLuxurySection() {
                   height={417}
                   sizes="100vw"
                   alt=""
-                  src="/images/c@2x.png"
+                  src="/images/home/c@2x.png"
                 />
                 <div className="flex items-center gap-2.5">
                   <h3 className="m-0 relative text-[20px] tracking-[-0.4px] leading-[27px] font-normal">
@@ -51,7 +51,7 @@ export default function PrivateLuxurySection() {
                   height={417}
                   sizes="100vw"
                   alt=""
-                  src="/images/c1@2x.png"
+                  src="/images/home/c1@2x.png"
                 />
                 <div className="flex items-center gap-2.5">
                   <h3 className="m-0 relative text-[20px] tracking-[-0.4px] leading-[27px] font-normal">

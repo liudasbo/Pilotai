@@ -7,6 +7,7 @@ const INITIAL_STATE = {
   phone: "",
   email: "",
   message: "",
+  privacyPolicy: false,
   honeypot: "",
 };
 
@@ -25,10 +26,10 @@ export default function ContactForm() {
   }, [status]);
 
   function handleChange(event) {
-    const { name, value } = event.target;
+    const { name, value, type, checked } = event.target;
     setValues((previous) => ({
       ...previous,
-      [name]: value,
+      [name]: type === "checkbox" ? checked : value,
     }));
 
     if (fieldErrors[name]) {
@@ -189,9 +190,33 @@ export default function ContactForm() {
         aria-hidden="true"
       />
 
+      <div className="flex items-start gap-3">
+        <input
+          id="contact-privacy-policy"
+          type="checkbox"
+          name="privacyPolicy"
+          checked={values.privacyPolicy}
+          onChange={handleChange}
+          required
+          className="mt-0.5 cursor-pointer accent-[#cc6e36] w-4 h-4 shrink-0"
+          aria-describedby={fieldErrors.privacyPolicy ? "contact-privacy-error" : undefined}
+        />
+        <label htmlFor="contact-privacy-policy" className="text-num-14 tracking-num-0_56 leading-num-24 cursor-pointer">
+          I agree with the{" "}
+          <a href="/privacy-policy" className="underline hover:opacity-70" target="_blank" rel="noopener noreferrer">
+            Privacy Policy
+          </a>
+        </label>
+      </div>
+      {fieldErrors.privacyPolicy?.[0] ? (
+        <p id="contact-privacy-error" className="m-0 text-[13px] text-red-700">
+          {fieldErrors.privacyPolicy[0]}
+        </p>
+      ) : null}
+
       <button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !values.privacyPolicy}
         className="cursor-pointer border-none min-h-[44px] py-3.5 px-[42px] bg-[#cc6e36] text-num-13 tracking-[0.39px] leading-[15.6px] uppercase font-semibold font-jost text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Sending..." : "Send"}

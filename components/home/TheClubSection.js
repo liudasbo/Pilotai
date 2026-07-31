@@ -16,7 +16,7 @@ export default function TheClubSection() {
         height={499.2}
         sizes="100vw"
         alt=""
-        src="/images/TheClub.jpg"
+        src="/images/home/TheClub.jpg"
       />
       <section className="w-full max-w-[486px] flex flex-col items-start gap-8 xl:gap-9 text-left text-num-37 text-black font-jost">
         <div className="self-stretch flex flex-col items-start gap-6">

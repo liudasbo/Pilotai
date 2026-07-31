@@ -14,7 +14,7 @@ export const metadata = {
       "Explore Pilotai Program pilot license training path, flight curriculum, and progression from first briefing to independent flying.",
     images: [
       {
-        url: "/images/Photos@2x.png",
+        url: "/images/pilot-license/Photos@2x.png",
         width: 550,
         height: 499,
         alt: "Pilot license training cockpit",

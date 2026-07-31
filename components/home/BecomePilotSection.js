@@ -19,7 +19,7 @@ export default function BecomePilotSection() {
             height={176.4}
             sizes="100vw"
             alt=""
-            src="/images/Right-img@2x.png"
+            src="/images/home/Right-img@2x.png"
           />
         </div>
         <section className="order-1 desktop:order-2 w-full max-w-[567px] flex flex-col items-center gap-8 text-center text-num-37 text-black font-jost">
@@ -30,7 +30,7 @@ export default function BecomePilotSection() {
             height={151.2}
             sizes="100vw"
             alt=""
-            src="/images/Logo-symbol.svg"
+            src="/images/home/Logo-symbol.svg"
           />
           <div className="self-stretch flex flex-col items-center gap-6">
             <SectionHeading className="self-stretch relative">
@@ -59,7 +59,7 @@ export default function BecomePilotSection() {
             height={176.4}
             sizes="100vw"
             alt=""
-            src="/images/Right-img@2x.png"
+            src="/images/home/Right-img@2x.png"
           />
           <Image quality={90}
             className="w-[150px] sm:w-[180px] relative h-auto object-cover"
@@ -68,7 +68,7 @@ export default function BecomePilotSection() {
             height={176.2}
             sizes="100vw"
             alt=""
-            src="/images/Left-img@2x.png"
+            src="/images/home/Left-img@2x.png"
           />
         </div>
         <div className="hidden desktop:flex order-3 justify-center desktop:justify-end desktop:pt-[195px]">
@@ -79,7 +79,7 @@ export default function BecomePilotSection() {
             height={176.2}
             sizes="100vw"
             alt=""
-            src="/images/Left-img@2x.png"
+            src="/images/home/Left-img@2x.png"
           />
         </div>
       </Container>

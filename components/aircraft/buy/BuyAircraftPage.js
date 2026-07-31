@@ -9,7 +9,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 const AIRCRAFT_MODELS = [
   {
     name: "Bristell Classic",
-    image: "/images/Bristell Classic.webp",
+    image: "/images/aircraft/Bristell Classic.webp",
     tagline: "The proven workhorse of the skies",
     description:
       "The Bristell Classic is the ideal entry point into aircraft ownership — a refined, metal-construction sport aircraft built for reliability and comfort. With a spacious 130 cm wide cabin and a choice of Rotax engines, it suits both leisure pilots and those building serious flight hours.",
@@ -27,7 +27,7 @@ const AIRCRAFT_MODELS = [
   },
   {
     name: "Bristell B8",
-    image: "/images/Bristell B8.webp",
+    image: "/images/aircraft/Bristell B8.webp",
     tagline: "Performance meets elegance",
     description:
       "The B8 is Bristell's high-performance evolution — built for pilots who want more speed without compromising comfort. Its clean aerodynamics and 240 km/h cruise speed make it one of the fastest light sport aircraft available, yet it retains the cabin refinement Bristell is known for.",
@@ -45,7 +45,7 @@ const AIRCRAFT_MODELS = [
   },
   {
     name: "Bristell TDO",
-    image: "/images/Bristell TDO.webp",
+    image: "/images/aircraft/Bristell TDO.webp",
     tagline: "Tailwheel freedom, no compromises",
     description:
       "The TDO brings the thrill of tailwheel flying to the modern Bristell platform. Capable of reaching up to 310 km/h with the right engine configuration, it appeals to pilots who want a dynamic, classic-feel aircraft with contemporary avionics and construction quality.",
@@ -62,7 +62,7 @@ const AIRCRAFT_MODELS = [
   },
   {
     name: "Bristell RG",
-    image: "/images/Bristell RG.webp",
+    image: "/images/aircraft/Bristell RG.webp",
     tagline: "Retractable gear, serious cross-country capability",
     description:
       "With retractable landing gear and top speeds reaching 310 km/h, the Bristell RG is built for pilots who take long-distance flying seriously. It combines the build quality and comfort of the Bristell family with the aerodynamic efficiency of a retractable undercarriage.",
@@ -79,7 +79,7 @@ const AIRCRAFT_MODELS = [
   },
   {
     name: "Bristell B23",
-    image: "/images/Bristell B23.webp",
+    image: "/images/aircraft/Bristell B23.webp",
     tagline: "EASA certified. Ready for everything.",
     description:
       "The B23 is Bristell's fully EASA-certified aircraft — designed for pilots who need to operate in controlled airspace, fly IFR, or simply want the highest level of regulatory approval available. Built to the same exacting standards as the rest of the range, it opens doors that LSA aircraft cannot.",
@@ -119,7 +119,7 @@ function HeroSection() {
     <section className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate">
       <Image
         quality={90}
-        src="/images/Aircraft-hero.png"
+        src="/images/aircraft/Aircraft-hero.png"
         alt="Bristell aircraft"
         fill
         sizes="100vw"

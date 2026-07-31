@@ -12,42 +12,42 @@ import PartnerStrip from "@/components/ui/PartnerStrip";
 import { PARTNER_LOGOS } from "@/lib/content/partners";
 
 const AEROBATIC_ACTIVITY = {
-  image: "/images/Photo@2x.png",
+  image: "/images/activities/Photo@2x.png",
   title: "Aerobatic Experience",
   description:
     "Experience high-adrenaline aerobatics alongside national champions, pushing limits while learning from the best. This is not a passenger ride; you are invited to take the controls and feel what precision flying really means.",
 };
 
 const GOLF_ACTIVITY = {
-  image: "/images/Photo1@2x.png",
+  image: "/images/activities/Photo1@2x.png",
   title: "Golf",
   description:
     "Lithuania is home to multiple beautiful golf courses, many reachable by air. You fly yourself to selected courses, combining flying with golf sessions alongside trainers or Pilotai members, turning a round of golf into a true pilot's day out.",
 };
 
 const TENNIS_ACTIVITY = {
-  image: "/images/Photo2@2x.png",
+  image: "/images/activities/Photo2@2x.png",
   title: "Tennis",
   description:
     "Play tennis in scenic, nature-rich courts with Pilotai members or professional trainers. These sessions are designed to balance intense flying days with active recovery, connection, and relaxed competition in beautiful surroundings.",
 };
 
 const RACE_CAR_ACTIVITY = {
-  image: "/images/Photo3@2x.png",
+  image: "/images/activities/Photo3@2x.png",
   title: "Race Car Experience",
   description:
     "Take the thrill from the sky to the ground by driving high-performance race cars alongside champions. This experience is about precision, control, and speed, the same mindset that defines great pilots.",
 };
 
 const HORSE_RIDING_ACTIVITY = {
-  image: "/images/Photo4@2x.png",
+  image: "/images/activities/Photo4@2x.png",
   title: "Horse Riding",
   description:
-    "Royal Horse Resort offers an elegant equestrian experience in one of Lithuania's most refined horse estates. Whether enjoying a private riding lesson, meeting exceptional horses, or simply embracing the peaceful surroundings, every visit combines luxury, nature, and authentic horsemanship in a truly exclusive setting.",
+    "Set within the exclusive Royal Horse Resort, this unique equestrian experience invites guests to discover the elegance of horseback riding in a premium setting. From private riding sessions to unforgettable encounters with exceptional horses, every moment is tailored to create a sense of freedom, balance, and connection with nature – a perfect complement to life in the air.",
 };
 
 const CONCIERGE_ACTIVITY = {
-  image: "/images/Photo5@2x.png",
+  image: "/images/activities/Photo5@2x.png",
   title: "Concierge Experience",
   description:
     "Pilotai Program is a fully curated, concierge-level journey. Flights, ground transportation, and additional activities are arranged seamlessly. Each 20-day program is personally tailored around your interests, lifestyle, and pace, so every detail is handled from arrival to departure.",
@@ -60,7 +60,7 @@ function ActivitiesHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image quality={90}
-        src="/images/ActivitiesHero.jpg"
+        src="/images/activities/ActivitiesHero.jpg"
         alt="Activities hero with aircraft background"
         fill
         sizes="100vw"
@@ -124,7 +124,7 @@ function ActivitySplitSection({ image, title, description }) {
 function JetExperienceSection() {
   return (
     <ScenicSection
-      backgroundSrc="/images/Jet.jpg"
+      backgroundSrc="/images/activities/Jet.jpg"
       backgroundAlt="Jet team flight experience"
     >
       <div className="w-full max-w-[473px] flex flex-col items-start gap-[13px]">
@@ -148,7 +148,7 @@ function JetExperienceSection() {
 function WakeboardingSection() {
   return (
     <ScenicSection
-      backgroundSrc="/images/WakeBo.jpg"
+      backgroundSrc="/images/activities/WakeBo.jpg"
       backgroundAlt="Wakeboarding activity scene"
     >
       <div className="w-full max-w-[473px] flex flex-col items-start gap-[13px]">

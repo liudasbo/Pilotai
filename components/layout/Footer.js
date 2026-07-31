@@ -21,7 +21,7 @@ export default function Footer({ className = "" }) {
               height={80}
               sizes="100vw"
               alt=""
-              src="/images/Pilotailt-atnaujintas-1@2x.png"
+              src="/images/shared/Pilotailt-atnaujintas-1@2x.png"
             />
             <Image
               quality={90}
@@ -31,7 +31,7 @@ export default function Footer({ className = "" }) {
               height={54.8}
               sizes="100vw"
               alt=""
-              src="/images/bristell-logo-1200-1@2x.png"
+              src="/images/shared/bristell-logo-1200-1@2x.png"
             />
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function Footer({ className = "" }) {
                 height={63.8}
                 sizes="(min-width: 1024px) 140.6px, 118px"
                 alt="Pilotai Program"
-                src="/images/logo.svg"
+                src="/images/shared/logo.svg"
               />
             </div>
             <div className="hidden desktop:block" aria-hidden="true" />

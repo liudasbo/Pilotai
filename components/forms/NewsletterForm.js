@@ -105,7 +105,7 @@ export default function NewsletterForm() {
           className="touch-target justify-center disabled:opacity-60"
         >
           <Image quality={90}
-            src="/images/Button.svg"
+            src="/images/shared/Button.svg"
             alt=""
             width={17}
             height={12}

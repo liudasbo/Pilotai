@@ -13,22 +13,22 @@ const redHatDisplay = Red_Hat_Display({
 const BENEFIT_ITEMS = [
   {
     label: "Pilot licence",
-    image: "/images/Pilotlicence.jpg",
+    image: "/images/home/Pilotlicence.jpg",
     href: "/pilot-license",
   },
   {
     label: "Fly Varied Aircraft",
-    image: "/images/FlyVariedAircraft.jpg",
+    image: "/images/home/FlyVariedAircraft.jpg",
     href: "/aircraft",
   },
   {
     label: "Explore Lithuania",
-    image: "/images/ExploreLithuania.jpg",
+    image: "/images/home/ExploreLithuania.jpg",
     href: "/activities",
   },
   {
     label: "Membership in The Club",
-    image: "/images/MembershipinTheClub.jpg",
+    image: "/images/home/MembershipinTheClub.jpg",
     href: "/the-club",
   },
 ];

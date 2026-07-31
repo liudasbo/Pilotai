@@ -13,7 +13,7 @@ import { PARTNER_LOGOS } from "@/lib/content/partners";
 const CLUB_PRIVILEGES = [
   {
     text: "Private aviation and flight experiences",
-    iconSrc: "/images/ab-icon-1@2x.png",
+    iconSrc: "/images/the-club/ab-icon-1@2x.png",
     iconAlt: "Private aviation icon",
     iconWidth: 60,
     iconHeight: 60,
@@ -21,7 +21,7 @@ const CLUB_PRIVILEGES = [
   },
   {
     text: "Invitation-only social and business gatherings",
-    iconSrc: "/images/ab-icon-3.svg",
+    iconSrc: "/images/the-club/ab-icon-3.svg",
     iconAlt: "Invitation icon",
     iconWidth: 30,
     iconHeight: 28,
@@ -29,7 +29,7 @@ const CLUB_PRIVILEGES = [
   },
   {
     text: "Priority access to Pilotai events and new programs",
-    iconSrc: "/images/ab-icon-2.svg",
+    iconSrc: "/images/the-club/ab-icon-2.svg",
     iconAlt: "Priority access icon",
     iconWidth: 25,
     iconHeight: 19,
@@ -37,7 +37,7 @@ const CLUB_PRIVILEGES = [
   },
   {
     text: "Exclusive partner benefits (luxury lifestyle)",
-    iconSrc: "/images/ab-icon-4.svg",
+    iconSrc: "/images/the-club/ab-icon-4.svg",
     iconAlt: "Partner benefits icon",
     iconWidth: 17,
     iconHeight: 12,
@@ -52,7 +52,7 @@ function TheClubHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image quality={90}
-        src="/images/Theclub-hero.png"
+        src="/images/the-club/Theclub-hero.png"
         alt="The Club hero with aircraft backdrop"
         fill
         sizes="100vw"
@@ -91,7 +91,7 @@ function ClubOverviewSection() {
     >
       <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
-          src="/images/theClubPhoto.jpg"
+          src="/images/the-club/theClubPhoto.jpg"
           alt="Pilotai Club members gathered by aircraft"
           width={550}
           height={499.2}
@@ -119,7 +119,7 @@ function ClubOverviewSection() {
 function ClubParallaxImage() {
   return (
     <Image quality={90}
-      src="/images/TheClubSection.jpg"
+      src="/images/the-club/TheClubSection.jpg"
       alt="Silhouettes in premium aviation lounge"
       width={1512}
       height={560}
@@ -137,7 +137,7 @@ function ClubPrivilegesSection() {
       <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[551px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <div className="relative w-full max-w-[551px] h-[500px] overflow-hidden">
           <Image quality={90}
-            src="/images/clubPrivileges.jpg"
+            src="/images/the-club/clubPrivileges.jpg"
             alt="Pilotai Club branded bag"
             fill
             sizes="(min-width: 1024px) 551px, 100vw"
@@ -184,7 +184,7 @@ function ClubIdentitySection() {
     >
       <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
-          src="/images/Bentley.jpg"
+          src="/images/the-club/Bentley.jpg"
           alt="Luxury car in hangar environment"
           width={550}
           height={499.2}

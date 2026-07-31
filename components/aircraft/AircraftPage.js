@@ -10,19 +10,19 @@ import ScenicSection from "@/components/ui/ScenicSection";
 
 const AIRCRAFT_STATS = [
   {
-    image: "/images/01-h1@2x.png",
+    image: "/images/aircraft/01-h1@2x.png",
     text: "Cruise speed: approx. 200-220 km/h",
     width: 45,
     height: 41.5,
   },
   {
-    image: "/images/02-h1@2x.png",
+    image: "/images/aircraft/02-h1@2x.png",
     text: "Maximum speed: around 240 km/h",
     width: 51,
     height: 41,
   },
   {
-    image: "/images/03-h1@2x.png",
+    image: "/images/aircraft/03-h1@2x.png",
     text: "Endurance: up to 5-6 hours",
     width: 51,
     height: 41.4,
@@ -36,7 +36,7 @@ function AircraftHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image quality={90}
-        src="/images/Aircraft-hero.png"
+        src="/images/aircraft/Aircraft-hero.png"
         alt="Bristell NG5 aircraft in flight"
         fill
         sizes="100vw"
@@ -63,7 +63,7 @@ function AircraftIntroSection() {
     >
       <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
-          src="/images/Aircraft.jpg"
+          src="/images/aircraft/Aircraft.jpg"
           alt="Bristell NG5 cockpit view while flying"
           width={550}
           height={499.2}
@@ -127,7 +127,7 @@ function AircraftSafetySection() {
     >
       <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
-          src="/images/SafestyFirst.png"
+          src="/images/aircraft/SafestyFirst.png"
           alt="Bristell NG5 panel and avionics detail"
           width={550}
           height={499.2}
@@ -162,14 +162,14 @@ function AircraftDetailsSection() {
       <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(360px,1fr)_minmax(300px,0.75fr)] xl:grid-cols-[631px_443px] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
-            src="/images/bristel.png"
+            src="/images/aircraft/bristel.png"
             alt="Bristell NG5 cockpit interior"
             width={301}
             height={402}
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
-            src="/images/bristel2.png"
+            src="/images/aircraft/bristel2.png"
             alt="Bristell NG5 seats and interior details"
             width={301}
             height={402}
@@ -213,7 +213,7 @@ export default function AircraftPage() {
         <AircraftIntroSection />
         <AircraftStatsSection />
         <ScenicSection
-          backgroundSrc="/images/Aircraft2.jpg"
+          backgroundSrc="/images/aircraft/Aircraft2.jpg"
           backgroundAlt="Lithuanian landscape from above"
           showOverlay={false}
           tintClassName=""

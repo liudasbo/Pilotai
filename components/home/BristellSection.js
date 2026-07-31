@@ -5,7 +5,7 @@ export default function BristellSection() {
   return (
     <ScenicSection
       id="aircraft"
-      backgroundSrc="/images/YouWillFly.jpg"
+      backgroundSrc="/images/home/YouWillFly.jpg"
       backgroundAlt="Bristell aircraft background"
       showOverlay={false}
       tintClassName=""

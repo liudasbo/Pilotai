@@ -14,7 +14,7 @@ export const metadata = {
       "Own a Bristell aircraft. Five models, expert guidance, trial flights. Delivered through the Pilotai Program team.",
     images: [
       {
-        url: "/images/Aircraft-hero.png",
+        url: "/images/aircraft/Aircraft-hero.png",
         width: 1512,
         height: 853,
         alt: "Bristell aircraft",

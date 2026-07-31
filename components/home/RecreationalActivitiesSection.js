@@ -54,7 +54,7 @@ export default function RecreationalActivitiesSection() {
             height={652.9}
             sizes="(min-width: 1280px) 760px, (min-width: 768px) 100vw, 100vw"
             alt=""
-            src="/images/Rectangle-39887@2x.png"
+            src="/images/home/Rectangle-39887@2x.png"
           />
         </section>
       </Container>

@@ -4,7 +4,7 @@ export default function ScenicSection({
   id,
   backgroundSrc,
   backgroundAlt,
-  overlaySrc = "/images/Vector1.svg",
+  overlaySrc = "/images/shared/Vector1.svg",
   overlayAlt = "",
   overlayClassName = "absolute pointer-events-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] desktop:w-[62%] max-w-none opacity-70",
   showOverlay = false,

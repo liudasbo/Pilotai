@@ -16,7 +16,7 @@ function PilotLicenseHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image quality={90}
-        src="/images/PilotLicenseHero.jpg"
+        src="/images/pilot-license/PilotLicenseHero.jpg"
         alt="Ultralight pilot license hero"
         fill
         sizes="100vw"
@@ -44,7 +44,7 @@ function IntroSplitSection() {
       <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(360px,52%)_minmax(0,1fr)] xl:grid-cols-[631px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
-            src="/images/sr7-mask-sr7-img@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img@2x.png"
             alt="Bristell aircraft in yellow livery"
             width={301}
             height={402}
@@ -52,7 +52,7 @@ function IntroSplitSection() {
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
-            src="/images/sr7-mask-sr7-img1@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img1@2x.png"
             alt="Hangar and training aircraft"
             width={301}
             height={402}
@@ -85,7 +85,7 @@ function IntroSplitSection() {
 function EntryRequirementsSection() {
   return (
     <ScenicSection
-      backgroundSrc="/images/PilotLiSec.jpg"
+      backgroundSrc="/images/pilot-license/PilotLiSec.jpg"
       backgroundAlt="Entry requirements background"
     >
       <div className="w-full max-w-[620px] flex flex-col items-start gap-[13px] text-white">
@@ -154,7 +154,7 @@ function EliteTheorySection() {
         </div>
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start order-1 desktop:order-2">
           <Image quality={90}
-            src="/images/sr7-mask-sr7-img2@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img2@2x.png"
             alt="Pilot in cockpit with sunglasses"
             width={301}
             height={402}
@@ -162,7 +162,7 @@ function EliteTheorySection() {
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
-            src="/images/sr7-mask-sr7-img3@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img3@2x.png"
             alt="Pilot training portrait"
             width={301}
             height={402}
@@ -184,7 +184,7 @@ function ExcellenceSection() {
       <Container className="max-w-[1274px] flex flex-col gap-10 desktop:gap-[70px]">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-[70px] items-center">
           <Image quality={90}
-            src="/images/Photos@2x.png"
+            src="/images/pilot-license/Photos@2x.png"
             alt="Aircraft instrument panel"
             width={550}
             height={499}
@@ -257,7 +257,7 @@ function ExcellenceSection() {
             </p>
           </div>
           <Image quality={90}
-            src="/images/Photos1@2x.png"
+            src="/images/pilot-license/Photos1@2x.png"
             alt="Pilot with aviation headset"
             width={550}
             height={499}
@@ -278,7 +278,7 @@ function DistinctiveJourneySection() {
       <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(360px,52%)_minmax(0,1fr)] xl:grid-cols-[631px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
-            src="/images/sr7-mask-sr7-img@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img@2x.png"
             alt="Aircraft exterior close-up"
             width={301}
             height={402}
@@ -286,7 +286,7 @@ function DistinctiveJourneySection() {
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
-            src="/images/sr7-mask-sr7-img4@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img4@2x.png"
             alt="Aircraft in sunset"
             width={301}
             height={402}

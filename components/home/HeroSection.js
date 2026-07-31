@@ -25,7 +25,7 @@ export default function HeroSection() {
             >
               <Image
                 quality={90}
-                src="/images/arrow.svg"
+                src="/images/home/arrow.svg"
                 alt=""
                 aria-hidden="true"
                 width={82}

@@ -19,7 +19,7 @@ export default function WhyLithuaniaSection() {
             height={402}
             sizes="(min-width: 1280px) 301px, 45vw"
             alt=""
-            src="/images/sr7-mask2@2x.png"
+            src="/images/home/sr7-mask2@2x.png"
           />
           <div className="w-[45%] xl:w-[301px] h-auto xl:h-num-402 flex flex-col items-start pt-8 xl:pt-[55px] px-0 pb-0 box-border shrink-0">
             <Image quality={90}
@@ -29,7 +29,7 @@ export default function WhyLithuaniaSection() {
               height={402}
               sizes="(min-width: 1280px) 301px, 45vw"
               alt=""
-              src="/images/sr7-mask3@2x.png"
+              src="/images/home/sr7-mask3@2x.png"
             />
           </div>
         </section>

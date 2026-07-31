@@ -49,7 +49,7 @@ function AboutHero() {
       className="relative w-full min-h-[500px] desktop:min-h-[600px] overflow-hidden bg-darkslategray-200 isolate"
     >
       <Image quality={90}
-        src="/images/AboutUsHero.jpg"
+        src="/images/about/AboutUsHero.jpg"
         alt="Pilotai Program team near aircraft"
         fill
         sizes="100vw"
@@ -77,7 +77,7 @@ function PurposeSection() {
       <Container className="grid grid-cols-1 lg:grid-cols-[minmax(360px,52%)_minmax(0,1fr)] xl:grid-cols-[631px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
-            src="/images/AboutUs1.jpg"
+            src="/images/about/AboutUs1.jpg"
             alt="Pilot training cockpit controls"
             width={301}
             height={402}
@@ -85,7 +85,7 @@ function PurposeSection() {
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
-            src="/images/AboutUs2.jpg"
+            src="/images/about/AboutUs2.jpg"
             alt="Aircraft interior details"
             width={301}
             height={402}
@@ -144,7 +144,7 @@ function AboutCtaSection() {
     >
       <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
-          src="/images/AboutUs3.jpg"
+          src="/images/about/AboutUs3.jpg"
           alt="Aircraft prepared for takeoff"
           width={550}
           height={499.2}
@@ -178,7 +178,7 @@ function AboutCtaSection() {
 function HubSection() {
   return (
     <ScenicSection
-      backgroundSrc="/images/AboutUs4.jpg"
+      backgroundSrc="/images/about/AboutUs4.jpg"
       backgroundAlt="Vilnius city skyline at sunset"
     >
       <div className="w-full max-w-[620px] flex flex-col items-start gap-2">
@@ -209,7 +209,7 @@ function StorySection() {
       <Container className="flex flex-col gap-16 desktop:gap-[70px]">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-[70px] items-center">
           <Image quality={90}
-            src="/images/AboutUs5.jpg"
+            src="/images/about/AboutUs5.jpg"
             alt="Aircraft in hangar"
             width={550}
             height={463.6}
@@ -241,7 +241,7 @@ function StorySection() {
             </p>
           </div>
           <Image quality={90}
-            src="/images/AboutUs6.jpg"
+            src="/images/about/AboutUs6.jpg"
             alt="Aircraft from top view over water"
             width={550}
             height={463.6}

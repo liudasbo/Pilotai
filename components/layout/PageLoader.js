@@ -67,7 +67,7 @@ export default function PageLoader() {
     >
       <div className="flex flex-col items-center gap-5">
         <Image quality={90}
-          src="/images/logoBlack.svg"
+          src="/images/shared/logoBlack.svg"
           alt="Pilotai Program"
           width={140.6}
           height={63.8}

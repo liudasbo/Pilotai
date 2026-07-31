@@ -235,7 +235,7 @@ export default function Header({
               height={63.8}
               sizes="140.6px"
               alt="Pilotai Program"
-              src={useDarkTone ? "/images/logoBlack.svg" : "/images/logo.svg"}
+              src={useDarkTone ? "/images/shared/logoBlack.svg" : "/images/shared/logo.svg"}
             />
           </Link>
           <nav
@@ -265,7 +265,7 @@ export default function Header({
               height={63.8}
               sizes="120px"
               alt="Pilotai Program"
-              src={useDarkTone ? "/images/logoBlack.svg" : "/images/logo.svg"}
+              src={useDarkTone ? "/images/shared/logoBlack.svg" : "/images/shared/logo.svg"}
             />
           </Link>
           <button
