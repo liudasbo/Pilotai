@@ -53,78 +53,66 @@ export default function TestimonialWidget() {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      {/* Desktop — always visible */}
-      <div className="hidden lg:block absolute bottom-[15%] right-10 xl:right-14 2xl:right-16 z-[1] w-[300px]">
-        <div className="flex flex-col gap-4 p-6" style={glassStyle}>
-          {CARD_CONTENT}
-        </div>
-      </div>
-
-      {/* Mobile / tablet — trigger + card */}
-      <div className="lg:hidden absolute bottom-6 right-4 sm:right-6 z-[1]">
-        {/* Expanded card */}
-        <div
-          className="w-[272px] sm:w-[290px] flex flex-col gap-4 p-5 origin-bottom-right"
-          style={{
-            ...glassStyle,
-            opacity: open ? 1 : 0,
-            transform: open ? "scale(1) translateY(0)" : "scale(0.92) translateY(8px)",
-            pointerEvents: open ? "auto" : "none",
-            transition: "opacity 0.25s ease, transform 0.25s ease",
-            marginBottom: open ? "0" : "0",
-          }}
-          aria-hidden={!open}
-        >
-          {/* Close button */}
-          <button
-            onClick={() => setOpen(false)}
-            aria-label="Close testimonial"
-            className="absolute top-3 right-3 w-6 h-6 flex items-center justify-center text-white/50 hover:text-white transition-colors duration-150"
-          >
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M1 1l10 10M11 1L1 11"/>
-            </svg>
-          </button>
-          {CARD_CONTENT}
-        </div>
-
-        {/* Trigger pill */}
+    <div className="absolute bottom-6 right-4 sm:right-6 lg:bottom-[10%] lg:right-10 xl:right-14 2xl:right-16 z-[1]">
+      {/* Expanded card */}
+      <div
+        className="w-[272px] sm:w-[290px] lg:w-[300px] flex flex-col gap-4 p-5 lg:p-6 origin-bottom-right relative"
+        style={{
+          ...glassStyle,
+          opacity: open ? 1 : 0,
+          transform: open ? "scale(1) translateY(0)" : "scale(0.94) translateY(10px)",
+          pointerEvents: open ? "auto" : "none",
+          transition: "opacity 0.25s ease, transform 0.25s ease",
+        }}
+        aria-hidden={!open}
+      >
         <button
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Read client testimonial"
-          className="mt-3 flex items-center gap-2.5 px-3 py-2 transition-opacity duration-200"
-          style={{
-            ...glassStyle,
-            opacity: open ? 0 : 1,
-            pointerEvents: open ? "none" : "auto",
-            position: open ? "absolute" : "relative",
-            bottom: open ? 0 : undefined,
-          }}
+          onClick={() => setOpen(false)}
+          aria-label="Close testimonial"
+          className="absolute top-3 right-3 w-6 h-6 flex items-center justify-center text-white/50 hover:text-white transition-colors duration-150"
         >
-          <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0 bg-white/10">
-            <Image
-              src="/images/home/testimonial-avatar.png"
-              alt="Yousef Alseddeeqi"
-              width={28}
-              height={28}
-              className="w-full h-full object-cover"
-            />
-            <span
-              className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full flex items-center justify-center text-white"
-              style={{ background: "#cc6e36", fontSize: "8px", lineHeight: 1 }}
-            >
-              ❝
-            </span>
-          </div>
-          <span className="text-white font-jost text-[12px] tracking-[0.3px] opacity-90 whitespace-nowrap">
-            Client review
-          </span>
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="white" strokeWidth="1.5" opacity="0.6">
-            <path d="M5 8V2M2 5l3-3 3 3"/>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path d="M1 1l10 10M11 1L1 11"/>
           </svg>
         </button>
+        {CARD_CONTENT}
       </div>
-    </>
+
+      {/* Trigger pill */}
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-label="Read client testimonial"
+        className="mt-3 flex items-center gap-2.5 px-3 py-2 transition-opacity duration-200"
+        style={{
+          ...glassStyle,
+          opacity: open ? 0 : 1,
+          pointerEvents: open ? "none" : "auto",
+          position: open ? "absolute" : "relative",
+          bottom: open ? 0 : undefined,
+        }}
+      >
+        <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0 bg-white/10">
+          <Image
+            src="/images/home/testimonial-avatar.png"
+            alt="Yousef Alseddeeqi"
+            width={28}
+            height={28}
+            className="w-full h-full object-cover"
+          />
+          <span
+            className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full flex items-center justify-center text-white"
+            style={{ background: "#cc6e36", fontSize: "8px", lineHeight: 1 }}
+          >
+            ❝
+          </span>
+        </div>
+        <span className="text-white font-jost text-[12px] tracking-[0.3px] opacity-90 whitespace-nowrap">
+          Client review
+        </span>
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="white" strokeWidth="1.5" opacity="0.6">
+          <path d="M5 8V2M2 5l3-3 3 3"/>
+        </svg>
+      </button>
+    </div>
   );
 }
