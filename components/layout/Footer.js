@@ -119,7 +119,8 @@ export default function Footer({ className = "" }) {
         <div className="w-full py-6 sm:py-8 desktop:py-[26px] px-4 sm:px-6 lg:px-10 xl:px-16 2xl:px-24">
           <div className="grid items-center grid-cols-1 desktop:grid-cols-3 gap-4 sm:gap-5 desktop:gap-0">
             <div className="leading-num-23 text-center lg:text-left">
-              © 2026 Pilotai program. Web Solutions P.idea
+              © 2026 Pilotai program. Web Solutions{" "}
+              <a href="https://pidea.lt" target="_blank" rel="noopener noreferrer" className="hover:underline">P.idea</a>
             </div>
             <div className="flex justify-center mt-2 desktop:mt-0">
               <Image
