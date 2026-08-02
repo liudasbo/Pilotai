@@ -25,10 +25,21 @@ function PilotLicenseHero() {
       />
       <div className="relative z-[1] min-h-[500px] desktop:min-h-[600px] flex flex-col">
         <Header />
-        <div className="flex-1 flex items-center justify-center px-4 pb-10">
+        <div className="flex-1 flex flex-col items-center justify-center px-4 pb-10 gap-6">
           <h1 className="m-0 text-white text-[36px] leading-[44px] desktop:text-[47px] desktop:leading-[52px] tracking-[0.7px] uppercase font-medium text-center max-w-[520px]">
             Ultralight Pilot License
           </h1>
+          <p className="m-0 max-w-[484px] text-num-16 leading-num-24 text-center text-white font-jost">
+            A structured, hands-on program designed to take you from the ground to the sky — with expert guidance at every step.
+          </p>
+          <Button
+            as={Link}
+            href="/contact-us"
+            variant="accent"
+            className="px-[42px] flex items-center justify-center tracking-[1px]"
+          >
+            Request Your Invitation
+          </Button>
         </div>
       </div>
     </section>
