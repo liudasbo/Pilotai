@@ -80,9 +80,14 @@ module.exports = {
           "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "logo-in": "logoIn 0.6s ease-out forwards",
+        "marquee": "marquee 18s linear infinite",
       },
     },
   },

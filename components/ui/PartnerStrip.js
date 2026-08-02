@@ -2,18 +2,43 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 
 export default function PartnerStrip({ partners, className = "" }) {
+  const doubled = [...partners, ...partners];
+
   return (
     <section
       data-motion="reveal"
-      className={`w-full bg-whitesmoke-100 py-10 desktop:py-[70px] px-4 desktop:px-10 ${className}`.trim()}
+      className={`w-full bg-whitesmoke-100 py-10 desktop:py-[70px] desktop:px-10 ${className}`.trim()}
     >
-      <Container className="grid grid-cols-2 sm:grid-cols-3 desktop:grid-cols-5 gap-6 sm:gap-8 items-center">
+      {/* Mobile / tablet — scrolling marquee */}
+      <div className="desktop:hidden overflow-hidden">
+        <div className="flex animate-marquee gap-10 w-max">
+          {doubled.map((partner, i) => (
+            <div
+              key={`${partner.src}-${i}`}
+              className="shrink-0 min-h-[72px] flex items-center justify-center px-2"
+            >
+              <Image
+                quality={90}
+                src={partner.src}
+                alt={partner.alt}
+                width={partner.width}
+                height={partner.height}
+                className={`${partner.className || "h-auto"} object-contain`}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop — grid */}
+      <Container className="hidden desktop:grid grid-cols-5 gap-6 items-center">
         {partners.map((partner) => (
           <div
             key={partner.src}
-            className="w-full min-h-[72px] desktop:min-h-[86px] flex items-center justify-center"
+            className="w-full min-h-[86px] flex items-center justify-center"
           >
-            <Image quality={90}
+            <Image
+              quality={90}
               src={partner.src}
               alt={partner.alt}
               width={partner.width}
