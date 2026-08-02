@@ -13,7 +13,7 @@ function ContactFormSection() {
     <section data-motion="text-only" className="w-full bg-white">
       <div className="w-full flex flex-col desktop:flex-row items-stretch desktop:min-h-[602px]">
         <Image quality={90}
-          src="/images/contact-us/Contact-form.png"
+          src="/images/contact-us/Contact-form.webp"
           alt="Aircraft above city skyline"
           width={755}
           height={602}

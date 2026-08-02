@@ -155,7 +155,7 @@ function AboutCtaSection() {
     >
       <Container className="grid grid-cols-1 lg:grid-cols-[minmax(320px,46%)_minmax(0,1fr)] xl:grid-cols-[550px_minmax(0,1fr)] gap-10 xl:gap-[60px] items-center">
         <Image quality={90}
-          src="/images/about/AboutUs3.jpg"
+          src="/images/about/AboutUs3-new.webp"
           alt="Aircraft prepared for takeoff"
           width={550}
           height={499.2}

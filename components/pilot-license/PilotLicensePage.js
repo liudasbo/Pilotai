@@ -55,7 +55,7 @@ function IntroSplitSection() {
       <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(360px,52%)_minmax(0,1fr)] xl:grid-cols-[631px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
-            src="/images/pilot-license/sr7-mask-sr7-img@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img@2x.webp"
             alt="Bristell aircraft in yellow livery"
             width={301}
             height={402}
@@ -63,7 +63,7 @@ function IntroSplitSection() {
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
-            src="/images/pilot-license/sr7-mask-sr7-img1@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img1@2x.webp"
             alt="Hangar and training aircraft"
             width={301}
             height={402}
@@ -165,7 +165,7 @@ function EliteTheorySection() {
         </div>
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start order-1 desktop:order-2">
           <Image quality={90}
-            src="/images/pilot-license/sr7-mask-sr7-img2@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img2@2x.webp"
             alt="Pilot in cockpit with sunglasses"
             width={301}
             height={402}
@@ -173,7 +173,7 @@ function EliteTheorySection() {
             className="w-full h-auto object-cover"
           />
           <Image quality={90}
-            src="/images/pilot-license/sr7-mask-sr7-img3@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img3@2x.webp"
             alt="Pilot training portrait"
             width={301}
             height={402}
@@ -268,7 +268,7 @@ function ExcellenceSection() {
             </p>
           </div>
           <Image quality={90}
-            src="/images/pilot-license/Photos1@2x.png"
+            src="/images/pilot-license/Photos1@2x.webp"
             alt="Pilot with aviation headset"
             width={550}
             height={499}
@@ -289,7 +289,7 @@ function DistinctiveJourneySection() {
       <Container className="max-w-[1274px] grid grid-cols-1 lg:grid-cols-[minmax(360px,52%)_minmax(0,1fr)] xl:grid-cols-[631px_minmax(0,1fr)] gap-10 lg:gap-14 xl:gap-28 items-center">
         <div className="grid grid-cols-2 gap-6 desktop:gap-[29px] items-start">
           <Image quality={90}
-            src="/images/pilot-license/sr7-mask-sr7-img@2x.png"
+            src="/images/pilot-license/sr7-mask-sr7-img@2x.webp"
             alt="Aircraft exterior close-up"
             width={301}
             height={402}
