@@ -62,44 +62,42 @@ export default function TestimonialWidget() {
       </div>
 
       {/* Mobile / tablet — trigger + card */}
-      <div className="lg:hidden">
-        {/* Centered card — absolute within hero */}
+      <div className="lg:hidden absolute bottom-6 left-1/2 -translate-x-1/2 z-[1] flex flex-col items-center">
+        {/* Expanded card */}
         <div
-          className="absolute inset-0 z-[5] flex items-center justify-center px-6"
+          className="w-[272px] sm:w-[290px] flex flex-col gap-4 p-5 origin-bottom relative"
           style={{
+            ...glassStyle,
             opacity: open ? 1 : 0,
+            transform: open ? "scale(1) translateY(0)" : "scale(0.92) translateY(8px)",
             pointerEvents: open ? "auto" : "none",
-            transition: "opacity 0.25s ease",
+            transition: "opacity 0.25s ease, transform 0.25s ease",
           }}
+          aria-hidden={!open}
         >
-          <div
-            className="w-full max-w-[320px] flex flex-col gap-4 p-5 relative"
-            style={{
-              ...glassStyle,
-              transform: open ? "scale(1) translateY(0)" : "scale(0.94) translateY(8px)",
-              transition: "transform 0.25s ease",
-            }}
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Close testimonial"
+            className="absolute top-3 right-3 w-6 h-6 flex items-center justify-center text-white/50 hover:text-white transition-colors duration-150"
           >
-            <button
-              onClick={() => setOpen(false)}
-              aria-label="Close testimonial"
-              className="absolute top-3 right-3 w-6 h-6 flex items-center justify-center text-white/50 hover:text-white transition-colors duration-150"
-            >
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M1 1l10 10M11 1L1 11"/>
-              </svg>
-            </button>
-            {CARD_CONTENT}
-          </div>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M1 1l10 10M11 1L1 11"/>
+            </svg>
+          </button>
+          {CARD_CONTENT}
         </div>
 
-        {/* Trigger pill — bottom right */}
+        {/* Trigger pill */}
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label="Read client testimonial"
-          className="absolute bottom-6 right-4 sm:right-6 z-[1] flex items-center gap-2.5 px-3 py-2"
+          className="mt-3 flex items-center gap-2.5 px-3 py-2 transition-opacity duration-200"
           style={{
             ...glassStyle,
+            opacity: open ? 0 : 1,
+            pointerEvents: open ? "none" : "auto",
+            position: open ? "absolute" : "relative",
+            bottom: open ? 0 : undefined,
           }}
         >
           <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0 bg-white/10">
