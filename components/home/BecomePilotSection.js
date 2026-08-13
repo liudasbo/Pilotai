@@ -17,7 +17,7 @@ export default function BecomePilotSection() {
             loading="lazy"
             width={192.9}
             height={176.4}
-            sizes="100vw"
+            sizes="193px"
             alt=""
             src="/images/home/Right-img@2x.png"
           />
@@ -28,7 +28,7 @@ export default function BecomePilotSection() {
             loading="lazy"
             width={85.7}
             height={151.2}
-            sizes="100vw"
+            sizes="86px"
             alt=""
             src="/images/home/Logo-symbol.svg"
           />
@@ -57,7 +57,7 @@ export default function BecomePilotSection() {
             loading="lazy"
             width={192.9}
             height={176.4}
-            sizes="100vw"
+            sizes="180px"
             alt=""
             src="/images/home/Right-img@2x.png"
           />
@@ -66,7 +66,7 @@ export default function BecomePilotSection() {
             loading="lazy"
             width={192.9}
             height={176.2}
-            sizes="100vw"
+            sizes="180px"
             alt=""
             src="/images/home/Left-img@2x.png"
           />
@@ -77,7 +77,7 @@ export default function BecomePilotSection() {
             loading="lazy"
             width={192.9}
             height={176.2}
-            sizes="100vw"
+            sizes="193px"
             alt=""
             src="/images/home/Left-img@2x.png"
           />
