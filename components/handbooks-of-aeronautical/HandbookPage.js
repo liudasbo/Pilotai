@@ -147,10 +147,11 @@ function HandbookHero() {
         <h1 className="m-0 max-w-[820px] text-white text-[32px] leading-[38px] desktop:text-[47px] desktop:leading-[52px] tracking-[0.7px] uppercase font-medium">
           Pilot&apos;s Handbook of Aeronautical Knowledge
         </h1>
-        <p className="m-0 max-w-[600px] text-white/75 text-num-16 leading-num-24 font-jost">
-          The essentials about the aircraft you will fly — structure,
-          aerodynamics, controls, systems, instruments, and weight &amp;
-          balance — condensed for students arriving at our course.
+        <p className="m-0 max-w-[640px] text-white/75 text-num-16 leading-num-24 font-jost">
+          The complete foundation for students arriving at our course —
+          the aircraft, aerodynamics, systems, instruments, weather,
+          navigation, airspace, and decision-making — condensed from all
+          18 chapters of the FAA handbook.
         </p>
       </div>
     </section>
@@ -226,6 +227,63 @@ export default function HandbookPage() {
             {/* Content */}
             <article className="w-full min-w-0 flex flex-col items-stretch">
               <Section
+                id="intro"
+                eyebrow="Chapter 1"
+                title="Introduction to Flying"
+              >
+                <Sub id="intro-overview" title="What This Handbook Covers">
+                  <P>
+                    The FAA&apos;s <strong>Pilot&apos;s Handbook of Aeronautical
+                    Knowledge</strong> is the foundational reference for
+                    every student pilot — covering the aircraft itself,
+                    the physics of flight, weather, navigation, airspace,
+                    and the human factors behind safe decision-making. This
+                    page condenses it into the essentials you should arrive
+                    at the course already familiar with.
+                  </P>
+                </Sub>
+                <Sub id="intro-training" title="The Path to Becoming a Pilot">
+                  <P>
+                    Flight training blends <strong>ground knowledge</strong>{" "}
+                    (the subjects in this handbook) with{" "}
+                    <strong>flight experience</strong> under an instructor,
+                    building toward written, oral, and practical tests. Each
+                    lesson builds on the last, so understanding the
+                    fundamentals before you arrive lets you spend your
+                    training days actually flying rather than catching up on
+                    theory.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section
+                id="ground-ops"
+                eyebrow="Chapter 2"
+                title="Ground Operations"
+              >
+                <Sub id="ground-preflight" title="Preflight & Servicing">
+                  <P>
+                    Every flight starts with a <strong>preflight
+                    inspection</strong> — a systematic walk-around checking
+                    the airframe, control surfaces, fuel and oil levels,
+                    and tire condition against the aircraft&apos;s checklist.
+                    Fueling, towing, and engine starting all follow their
+                    own procedures to avoid damage or injury on the ramp.
+                  </P>
+                </Sub>
+                <Sub id="ground-safety" title="Ramp & Runway Safety">
+                  <P>
+                    Propeller and jet-blast hazards, wingtip clearance, and
+                    <strong> wake turbulence</strong> from larger aircraft
+                    make situational awareness on the ground as important as
+                    it is in the air. Hand signals, taxi lights, and
+                    standard right-of-way rules keep ramp and taxiway
+                    movement predictable.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section
                 id="structure"
                 eyebrow="Chapter 3"
                 title="Aircraft Structure"
@@ -298,6 +356,36 @@ export default function HandbookPage() {
                     low-energy impact damage can be invisible from the
                     outside, so any suspected impact should be inspected by
                     someone trained on composite structures.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section
+                id="principles"
+                eyebrow="Chapter 4"
+                title="Principles of Flight"
+              >
+                <Sub id="principles-atmosphere" title="The Atmosphere & Airflow">
+                  <P>
+                    Air is a fluid: it has <strong>density, pressure, and
+                    temperature</strong>, all of which decrease with
+                    altitude in the standard atmosphere. Because lift and
+                    engine power both depend on air density, the same
+                    airspeed and throttle setting produce less performance
+                    at higher altitudes or on hot days — a factor called{" "}
+                    <strong>density altitude</strong>.
+                  </P>
+                </Sub>
+                <Sub id="principles-lift-theory" title="How a Wing Produces Lift">
+                  <P>
+                    A wing generates lift by accelerating air over its
+                    curved upper surface and deflecting air downward,
+                    producing a net upward reaction force — explained
+                    together by <strong>Bernoulli&apos;s principle</strong>{" "}
+                    (faster airflow, lower pressure) and{" "}
+                    <strong>Newton&apos;s third law</strong> (the wing pushes
+                    air down, air pushes the wing up). Both effects act
+                    simultaneously; neither alone fully explains lift.
                   </P>
                 </Sub>
               </Section>
@@ -584,6 +672,35 @@ export default function HandbookPage() {
               </Section>
 
               <Section
+                id="manuals"
+                eyebrow="Chapter 9"
+                title="Flight Manuals & Documents"
+              >
+                <Sub id="manuals-poh" title="Pilot's Operating Handbook">
+                  <P>
+                    The <strong>Pilot&apos;s Operating Handbook (POH)</strong>{" "}
+                    — or Airplane Flight Manual — is the FAA-approved source
+                    for a specific aircraft&apos;s limitations, normal and
+                    emergency procedures, and performance data. Unlike this
+                    general handbook, it is aircraft-specific and legally
+                    required to be aboard during flight.
+                  </P>
+                </Sub>
+                <Sub id="manuals-airworthiness" title="Airworthiness & Required Documents">
+                  <P>
+                    An aircraft is legal to fly when both it and its pilot
+                    hold current documentation. The memory aid{" "}
+                    <strong>ARROW</strong> covers what must be on board:{" "}
+                    <strong>A</strong>irworthiness certificate,{" "}
+                    <strong>R</strong>egistration, <strong>R</strong>adio
+                    station license (international flights),{" "}
+                    <strong>O</strong>perating limitations, and{" "}
+                    <strong>W</strong>eight & balance data.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section
                 id="weight-balance"
                 eyebrow="Chapter 10"
                 title="Weight & Balance"
@@ -622,14 +739,242 @@ export default function HandbookPage() {
                 </Sub>
               </Section>
 
+              <Section
+                id="performance"
+                eyebrow="Chapter 11"
+                title="Aircraft Performance"
+              >
+                <Sub id="performance-factors" title="Factors Affecting Performance">
+                  <P>
+                    Takeoff and landing distance, climb rate, and range all
+                    depend on <strong>density altitude</strong>, aircraft{" "}
+                    <strong>weight</strong>, <strong>wind</strong>, and
+                    runway surface/slope. Hot, high, and heavy is the classic
+                    combination that erodes performance the most — longer
+                    takeoff rolls, shallower climb gradients, and reduced
+                    service ceiling.
+                  </P>
+                </Sub>
+                <Sub id="performance-charts" title="Using Performance Charts">
+                  <P>
+                    POH performance charts let a pilot calculate takeoff and
+                    landing distances, climb performance, and fuel burn for
+                    the actual conditions of the day — pressure altitude,
+                    temperature, weight, and wind — rather than relying on
+                    rules of thumb. Checking them before every flight is
+                    standard practice, not an optional step.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section
+                id="weather-theory"
+                eyebrow="Chapter 12"
+                title="Weather Theory"
+              >
+                <Sub id="weather-circulation" title="Atmospheric Circulation & Fronts">
+                  <P>
+                    Uneven solar heating drives global air circulation, which
+                    combined with the Earth&apos;s rotation (the{" "}
+                    <strong>Coriolis force</strong>) creates the prevailing
+                    wind belts and pressure systems. A <strong>front</strong>{" "}
+                    is the boundary between two air masses of different
+                    temperature/density — cold fronts bring sharp, fast-moving
+                    weather; warm fronts bring gradual, prolonged weather.
+                  </P>
+                </Sub>
+                <Sub id="weather-hazards" title="Thunderstorms, Icing & Turbulence">
+                  <P>
+                    <strong>Thunderstorms</strong> require moisture, unstable
+                    air, and a lifting force, and pass through developing,
+                    mature, and dissipating stages — the mature stage
+                    produces the heaviest rain, hail, lightning, and
+                    turbulence. <strong>Structural icing</strong> forms when
+                    an aircraft flies through visible moisture at or below
+                    freezing, adding weight and disrupting airflow;{" "}
+                    <strong>turbulence</strong> ranges from light chop to
+                    severe, often tied to thunderstorms, mountain waves, or
+                    wind shear.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section
+                id="weather-services"
+                eyebrow="Chapter 13"
+                title="Aviation Weather Services"
+              >
+                <Sub id="weather-reports" title="METARs & TAFs">
+                  <P>
+                    A <strong>METAR</strong> is a routine, coded surface
+                    weather observation issued hourly (wind, visibility, sky
+                    condition, temperature, altimeter setting); a{" "}
+                    <strong>TAF</strong> is a forecast of expected conditions
+                    at an airport, typically covering 24–30 hours. Both use
+                    the same standardized shorthand pilots learn to read at a
+                    glance.
+                  </P>
+                </Sub>
+                <Sub id="weather-charts" title="Charts & Briefings">
+                  <P>
+                    Surface analysis charts, radar and satellite imagery, and
+                    prognostic charts show the bigger picture beyond a single
+                    airport. A standard <strong>weather briefing</strong>{" "}
+                    before flight — self-briefed online or via a briefer —
+                    pulls these together with NOTAMs and AIRMET/SIGMET
+                    hazard advisories relevant to the planned route.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section
+                id="airport-ops"
+                eyebrow="Chapter 14"
+                title="Airport Operations"
+              >
+                <Sub id="airport-markings" title="Runway & Taxiway Markings">
+                  <P>
+                    Runways are identified by numbers derived from magnetic
+                    heading (e.g., Runway 27 faces roughly 270°), with white
+                    markings for centerlines, thresholds, and touchdown
+                    zones. <strong>Taxiways</strong> use yellow markings and
+                    signage to route aircraft between runway and ramp, with
+                    hold-short lines marking the boundary of the runway
+                    environment.
+                  </P>
+                </Sub>
+                <Sub id="airport-comms" title="Traffic Patterns & Communications">
+                  <P>
+                    A standard <strong>traffic pattern</strong> — departure,
+                    crosswind, downwind, base, and final legs, usually flown
+                    with left turns — sequences aircraft safely around an
+                    airport without a control tower. At towered airports,
+                    pilots follow ATC instructions; at non-towered fields,
+                    pilots self-announce position and intentions on a common
+                    frequency (CTAF).
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section id="airspace" eyebrow="Chapter 15" title="Airspace">
+                <Sub id="airspace-classes" title="Controlled & Uncontrolled Airspace">
+                  <P>
+                    U.S. airspace is divided into lettered classes — from{" "}
+                    <strong>Class A</strong> (high-altitude, IFR-only) down
+                    through <strong>B, C, D</strong> (progressively smaller
+                    zones around busier towered airports, each with its own
+                    entry and equipment requirements), <strong>Class E</strong>{" "}
+                    (controlled airspace not otherwise classified), and{" "}
+                    <strong>Class G</strong> (uncontrolled, mostly low
+                    altitude).
+                  </P>
+                </Sub>
+                <Sub id="airspace-special" title="Special Use Airspace">
+                  <P>
+                    <strong>Special use airspace</strong> — restricted areas,
+                    prohibited areas, military operations areas, and
+                    warning areas — flags regions where flight is limited or
+                    hazardous, often due to military activity. Temporary
+                    flight restrictions (TFRs) add short-notice, time-limited
+                    airspace closures that every pilot must check before
+                    flying.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section id="navigation" eyebrow="Chapter 16" title="Navigation">
+                <Sub id="navigation-pilotage" title="Pilotage & Dead Reckoning">
+                  <P>
+                    <strong>Pilotage</strong> means navigating by matching
+                    landmarks on the ground to a chart. <strong>Dead
+                    reckoning</strong> uses precomputed heading, groundspeed,
+                    and time to estimate position between checkpoints,
+                    accounting for wind drift with the wind correction
+                    angle. Both remain foundational skills even with modern
+                    GPS aboard.
+                  </P>
+                </Sub>
+                <Sub id="navigation-radio" title="Radio Navigation & GPS">
+                  <P>
+                    Ground-based aids like <strong>VOR</strong> stations
+                    provide radial course guidance, while modern{" "}
+                    <strong>GPS</strong> gives direct, highly accurate
+                    position and course information worldwide. Pilots are
+                    still trained to cross-check electronic navigation
+                    against charts and dead reckoning in case of equipment
+                    failure.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section
+                id="aeromedical"
+                eyebrow="Chapter 17"
+                title="Aeromedical Factors"
+              >
+                <Sub id="aeromedical-hypoxia" title="Hypoxia & Hyperventilation">
+                  <P>
+                    <strong>Hypoxia</strong> — insufficient oxygen to the
+                    brain — can occur at surprisingly modest altitudes and
+                    impairs judgment before a pilot notices anything is
+                    wrong; supplemental oxygen is required above defined
+                    altitude/time thresholds. <strong>Hyperventilation</strong>{" "}
+                    (often from stress) produces similar symptoms — dizziness,
+                    tingling, confusion — from breathing too fast, not too
+                    little oxygen.
+                  </P>
+                </Sub>
+                <Sub id="aeromedical-imsafe" title="Fitness to Fly (IMSAFE)">
+                  <P>
+                    The <strong>IMSAFE</strong> checklist is a personal
+                    self-assessment before every flight:{" "}
+                    <strong>I</strong>llness, <strong>M</strong>edication,{" "}
+                    <strong>S</strong>tress, <strong>A</strong>lcohol,{" "}
+                    <strong>F</strong>atigue, <strong>E</strong>ating. Any
+                    "yes" is a reason to reconsider flying that day.
+                  </P>
+                </Sub>
+              </Section>
+
+              <Section
+                id="adm"
+                eyebrow="Chapter 18"
+                title="Aeronautical Decision-Making"
+              >
+                <Sub id="adm-process" title="The Decision-Making Process">
+                  <P>
+                    <strong>Aeronautical Decision-Making (ADM)</strong> is a
+                    systematic approach to consistently choosing the best
+                    course of action in response to changing conditions —
+                    identifying the problem, evaluating options, and acting
+                    decisively, rather than relying on instinct alone.
+                    Hazardous attitudes (macho, anti-authority, impulsivity,
+                    invulnerability, resignation) are recognized and
+                    countered with a deliberate antidote thought.
+                  </P>
+                </Sub>
+                <Sub id="adm-risk" title="Risk Management & CFIT Avoidance">
+                  <P>
+                    Models like <strong>PAVE</strong> (Pilot, Aircraft,
+                    enVironment, External pressures) help identify risk
+                    before flight, while <strong>CFIT</strong>{" "}
+                    (controlled flight into terrain) remains a leading cause
+                    of fatal accidents — avoided through terrain awareness,
+                    conservative weather decisions, and a willingness to
+                    turn back or divert.
+                  </P>
+                </Sub>
+              </Section>
+
               <div className="w-full pt-4 pb-2">
                 <p className="m-0 text-num-13 leading-num-22 text-darkslategray-100/70 italic">
                   Condensed for Pilotai Program students from the U.S.
                   Federal Aviation Administration&apos;s{" "}
                   <em>Pilot&apos;s Handbook of Aeronautical Knowledge</em>{" "}
                   (FAA-H-8083-25C, 2023) — a public-domain reference covering
-                  aircraft structure, aerodynamics, flight controls, systems,
-                  instruments, and weight &amp; balance.
+                  all 18 chapters, from introductory flight theory through
+                  aircraft systems, weather, navigation, airspace, and
+                  aeronautical decision-making.
                 </p>
               </div>
             </article>
