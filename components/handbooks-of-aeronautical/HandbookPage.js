@@ -931,7 +931,7 @@ export default function HandbookPage() {
                     <strong>I</strong>llness, <strong>M</strong>edication,{" "}
                     <strong>S</strong>tress, <strong>A</strong>lcohol,{" "}
                     <strong>F</strong>atigue, <strong>E</strong>ating. Any
-                    "yes" is a reason to reconsider flying that day.
+                    “yes” is a reason to reconsider flying that day.
                   </P>
                 </Sub>
               </Section>
